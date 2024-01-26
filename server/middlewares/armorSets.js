@@ -1,13 +1,13 @@
 const armorAugPool = require('../data/armorAugPool.json');
 
 function getArmorSets(req, res) {
-    const setNames = armorAugPool.map(set => set.ArmorSeries);
+    const setNames = armorAugPool.map(set => set.name);
     res.json(setNames);
 }
 
 function getArmorSetDetails(req, res) {
     const setName = req.params.set;
-    const details = armorAugPool.find(set => set.ArmorSeries === setName);
+    const details = armorAugPool.find(set => set.name === setName);
 
     if (!details) {
         res.status(404);
