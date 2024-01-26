@@ -11,7 +11,8 @@ function getArmorSetDetails(req, res) {
 
     if (!details) {
         res.status(404);
-        res.send({message: "NOT_FOUND"});
+        res.json({message: "NOT_FOUND"});
+        return;
     }
 
     res.json(details);
