@@ -1,4 +1,5 @@
 const armorAugPool = require('../data/armorAugPool.json');
+const armorPieces = require('../data/armorPieces.json');
 
 function getArmorSets(req, res) {
     const setNames = armorAugPool.map(set => set.name);
@@ -15,6 +16,7 @@ function getArmorSetDetails(req, res) {
         return;
     }
 
+    details.pieces = armorPieces.filter(ap => ap.set === setName);
     res.json(details);
 }
 
