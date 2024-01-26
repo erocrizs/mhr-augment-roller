@@ -1,0 +1,776 @@
+[
+  {
+    "ArmorSeries": "Kamura Legacy",
+    "ID": 300,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Leather X",
+    "ID": 301,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Chainmail X",
+    "ID": 302,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Hunter X",
+    "ID": 303,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Alloy X",
+    "ID": 305,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Bone X",
+    "ID": 382,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Gargwa Mask X",
+    "ID": 342,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Rhenoplos X",
+    "ID": 344,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Bullfango Mask X",
+    "ID": 347,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Droth X",
+    "ID": 349,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Bnahabra X",
+    "ID": 346,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Hornetaur",
+    "ID": 409,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Vespoid",
+    "ID": 408,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Jaggi X",
+    "ID": 345,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Jaggi Mask X",
+    "ID": 377,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Velociprey",
+    "ID": 407,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Izuchi X",
+    "ID": 338,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Baggi X",
+    "ID": 352,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Kulu-Ya-Ku X",
+    "ID": 368,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Wroggi X",
+    "ID": 351,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Arzuros X",
+    "ID": 353,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Lagombi X",
+    "ID": 381,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Volvidon X",
+    "ID": 354,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Aknosom X",
+    "ID": 327,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Royal Ludroth X",
+    "ID": 355,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Barroth X",
+    "ID": 356,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Hermitaur",
+    "ID": 386,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Tetranadon X",
+    "ID": 328,
+    "AugPool": 1,
+    "Budget": 20
+  },
+  {
+    "ArmorSeries": "Ingot X",
+    "ID": 306,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Skalda X",
+    "ID": 318,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Spio X",
+    "ID": 319,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Grand Chaos",
+    "ID": 316,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Edel X",
+    "ID": 317,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Shell-Studded X",
+    "ID": 324,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Melahoa X",
+    "ID": 308,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Five Element",
+    "ID": 424,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Knight Squire",
+    "ID": 442,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Yukumo Sky",
+    "ID": 427,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Slagtoth X",
+    "ID": 343,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Khezu X",
+    "ID": 357,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Bishaten X",
+    "ID": 326,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Orangaten",
+    "ID": 396,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Pukei-Pukei X",
+    "ID": 369,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Jyuratodus X",
+    "ID": 370,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Basarios X",
+    "ID": 364,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Somnacanth X",
+    "ID": 329,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Auroracanth",
+    "ID": 397,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Rathian X",
+    "ID": 360,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Tobi-Kadachi X",
+    "ID": 371,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Anjanath X",
+    "ID": 372,
+    "AugPool": 2,
+    "Budget": 18
+  },
+  {
+    "ArmorSeries": "Skull X",
+    "ID": 375,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Dober X",
+    "ID": 304,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Vaik X",
+    "ID": 315,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Mosgharl X",
+    "ID": 311,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Mosgharl X",
+    "ID": 312,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Death Stench X",
+    "ID": 310,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Makluva X",
+    "ID": 309,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Aelucanth X",
+    "ID": 313,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Rhopessa X",
+    "ID": 314,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Royal Artillery Corps",
+    "ID": 443,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Guild Bard",
+    "ID": 412,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Scholar",
+    "ID": 413,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Guardian",
+    "ID": 425,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Brigade X",
+    "ID": 384,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Barioth X",
+    "ID": 359,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Sinister Demon",
+    "ID": 380,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Nargacuga X",
+    "ID": 358,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Goss Harag X",
+    "ID": 332,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Garangolm",
+    "ID": 404,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Ceanataur",
+    "ID": 387,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Almudron X",
+    "ID": 333,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Magmadron",
+    "ID": 400,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Rakna-Kadaki X",
+    "ID": 330,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Rakna-Kadaki X",
+    "ID": 331,
+    "AugPool": 3,
+    "Budget": 16
+  },
+  {
+    "ArmorSeries": "Pyre-Kadaki",
+    "ID": 398,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Pyre-Kadaki",
+    "ID": 399,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Utsushi True (Visible)",
+    "ID": 320,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Channeler (Spring)",
+    "ID": 321,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Utsushi True (Hidden)",
+    "ID": 322,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Medium (Light)",
+    "ID": 323,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Chrome Metal X",
+    "ID": 374,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Uroktor X",
+    "ID": 350,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Remobra X",
+    "ID": 348,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Mizutsune X",
+    "ID": 383,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Rathalos X",
+    "ID": 361,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Zinogre X",
+    "ID": 365,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Tigrex X",
+    "ID": 362,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Diablos X",
+    "ID": 363,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Gore Magala",
+    "ID": 389,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Seregios",
+    "ID": 392,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Astalos",
+    "ID": 393,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Lunagaron",
+    "ID": 403,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Espinas",
+    "ID": 406,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Heavy Knight",
+    "ID": 441,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Hawk",
+    "ID": 415,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Lecturer",
+    "ID": 416,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Dignified",
+    "ID": 456,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Barbania",
+    "ID": 422,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Snowshear",
+    "ID": 423,
+    "AugPool": 4,
+    "Budget": 14
+  },
+  {
+    "ArmorSeries": "Grand God's Peer",
+    "ID": 366,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Bazelgeuse X",
+    "ID": 373,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Damascus X",
+    "ID": 307,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Kushala X",
+    "ID": 339,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Grand Mizuha",
+    "ID": 340,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Kaiser X",
+    "ID": 341,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Arc",
+    "ID": 390,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Storge",
+    "ID": 391,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Malzeno",
+    "ID": 402,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Professor",
+    "ID": 410,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Charité",
+    "ID": 411,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Scholarly",
+    "ID": 417,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Commission",
+    "ID": 418,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Jelly X",
+    "ID": 325,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Sailor",
+    "ID": 414,
+    "AugPool": 5,
+    "Budget": 12
+  },
+  {
+    "ArmorSeries": "Archfiend Armor",
+    "ID": 405,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Ibushi - Pure",
+    "ID": 334,
+    "AugPool": 13,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Narwa - Pure",
+    "ID": 336,
+    "AugPool": 13,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Crimson Valstrax - Eclipse",
+    "ID": 367,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Grand Divine Ire",
+    "ID": 388,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Sinister Grudge",
+    "ID": 395,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Base Commander",
+    "ID": 419,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Base Commander",
+    "ID": 420,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Soaring Feather",
+    "ID": 459,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Blessed Feather",
+    "ID": 460,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Guild Palace",
+    "ID": 426,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Pride",
+    "ID": 401,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Golden Lune",
+    "ID": 428,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Silver Sol",
+    "ID": 429,
+    "AugPool": 6,
+    "Budget": 10
+  },
+  {
+    "ArmorSeries": "Lucent Narga",
+    "ID": 431,
+    "AugPool": 6,
+    "Budget": 10
+  }
+]
