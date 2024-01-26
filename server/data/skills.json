@@ -1,0 +1,737 @@
+[
+    {
+      "cost": 15,
+      "name": "Critical Eye",
+      "maxLevel": 7
+    },
+    {
+      "cost": 15,
+      "name": "Critical Boost",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Weakness Exploit",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Master's Touch",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Razor Sharp",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Spare Shot",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Normal/Rapid Up",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Pierce Up",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Spread Up",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Ammo Up",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Rapid Fire Up",
+      "maxLevel": 3
+    },
+    {
+      "cost": 15,
+      "name": "Attack Boost",
+      "maxLevel": 7
+    },
+    {
+      "cost": 15,
+      "name": "Guts",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Handicraft",
+      "maxLevel": 5
+    },
+    {
+      "cost": 12,
+      "name": "Agitator",
+      "maxLevel": 5
+    },
+    {
+      "cost": 12,
+      "name": "Peak Performance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Resentment",
+      "maxLevel": 5
+    },
+    {
+      "cost": 12,
+      "name": "Resuscitate",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Coalescence",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Latent Power",
+      "maxLevel": 5
+    },
+    {
+      "cost": 12,
+      "name": "Maximum Might",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Good Luck",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Burst",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Tune-Up",
+      "maxLevel": 2
+    },
+    {
+      "cost": 12,
+      "name": "Rapid Morph",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Artillery",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Sneak Attack",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Blood Rite",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Bloodlust",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Buildup Boost",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Frostcraft",
+      "maxLevel": 3
+    },
+    {
+      "cost": 12,
+      "name": "Dragon Conversion",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Protective Polish",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Mushroomancer",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Mind's Eye",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Critical Element",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Ballistics",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Critical Draw",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Focus",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Power Prolonger",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Offensive Guard",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Earplugs",
+      "maxLevel": 5
+    },
+    {
+      "cost": 9,
+      "name": "Heroics",
+      "maxLevel": 5
+    },
+    {
+      "cost": 9,
+      "name": "Hellfire Cloak",
+      "maxLevel": 4
+    },
+    {
+      "cost": 9,
+      "name": "Wirebug Whisperer",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Charge Master",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Foray",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Grinder (S)",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Bladescale Hone",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Redirection",
+      "maxLevel": 2
+    },
+    {
+      "cost": 9,
+      "name": "Element Exploit",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Adrenaline Rush",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Furious",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Status Trigger",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Dragonheart",
+      "maxLevel": 5
+    },
+    {
+      "cost": 9,
+      "name": "Mail of Hellfire",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Strife",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Powder Mantle",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Wind Mantle",
+      "maxLevel": 3
+    },
+    {
+      "cost": 9,
+      "name": "Frenzied Bloodlust",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Load Shells",
+      "maxLevel": 2
+    },
+    {
+      "cost": 6,
+      "name": "Guard",
+      "maxLevel": 5
+    },
+    {
+      "cost": 6,
+      "name": "Guard Up",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Poison Attack",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Paralysis Attack",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Sleep Attack",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Blast Attack",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Marathon Runner",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Constitution",
+      "maxLevel": 5
+    },
+    {
+      "cost": 6,
+      "name": "Stamina Surge",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Punishing Draw",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Quick Sheathe",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Slugger",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Special Ammo Boost",
+      "maxLevel": 2
+    },
+    {
+      "cost": 6,
+      "name": "Steadiness",
+      "maxLevel": 2
+    },
+    {
+      "cost": 6,
+      "name": "Speed Eating",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Tremor Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Bubbly Dance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Evade Window",
+      "maxLevel": 5
+    },
+    {
+      "cost": 6,
+      "name": "Evade Extender",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Partbreaker",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Wall Runner",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Counterstrike",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Defiance",
+      "maxLevel": 5
+    },
+    {
+      "cost": 6,
+      "name": "Reload Speed",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Recoil Down",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Chameleos Blessing",
+      "maxLevel": 4
+    },
+    {
+      "cost": 6,
+      "name": "Kushala Blessing",
+      "maxLevel": 4
+    },
+    {
+      "cost": 6,
+      "name": "Teostra Blessing",
+      "maxLevel": 4
+    },
+    {
+      "cost": 6,
+      "name": "Embolden",
+      "maxLevel": 3
+    },
+    {
+      "cost": 6,
+      "name": "Intrepid Heart",
+      "maxLevel": 2
+    },
+    {
+      "cost": 3,
+      "name": "Flinch Free",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Stamina Thief",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Fire Attack",
+      "maxLevel": 5
+    },
+    {
+      "cost": 3,
+      "name": "Water Attack",
+      "maxLevel": 5
+    },
+    {
+      "cost": 3,
+      "name": "Ice Attack",
+      "maxLevel": 5
+    },
+    {
+      "cost": 3,
+      "name": "Thunder Attack",
+      "maxLevel": 5
+    },
+    {
+      "cost": 3,
+      "name": "Dragon Attack",
+      "maxLevel": 5
+    },
+    {
+      "cost": 3,
+      "name": "Affinity Sliding",
+      "maxLevel": 1
+    },
+    {
+      "cost": 3,
+      "name": "Horn Maestro",
+      "maxLevel": 1
+    },
+    {
+      "cost": 3,
+      "name": "Defense Boost",
+      "maxLevel": 7
+    },
+    {
+      "cost": 3,
+      "name": "Divine Blessing",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Recovery Up",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Recovery Speed",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Windproof",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Blight Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Poison Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Paralysis Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Sleep Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Stun Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Muck Resistance",
+      "maxLevel": 2
+    },
+    {
+      "cost": 3,
+      "name": "Blast Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Speed Sharpening",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Item Prolonger",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Wide-Range",
+      "maxLevel": 5
+    },
+    {
+      "cost": 3,
+      "name": "Free Meal",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Fortify",
+      "maxLevel": 1
+    },
+    {
+      "cost": 3,
+      "name": "Hunger Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": 3,
+      "name": "Leap of Faith",
+      "maxLevel": 1
+    },
+    {
+      "cost": 3,
+      "name": "Diversion",
+      "maxLevel": 1
+    },
+    {
+      "cost": 3,
+      "name": "Master Mounter",
+      "maxLevel": 1
+    },
+    {
+      "cost": 3,
+      "name": "Spiribird's Call",
+      "maxLevel": 1
+    },
+    {
+      "cost": 3,
+      "name": "Wall Runner (Boost)",
+      "maxLevel": 1
+    },
+    {
+      "cost": -1,
+      "name": "Bludgeoner",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Bow Charge Plus",
+      "maxLevel": 1
+    },
+    {
+      "cost": -1,
+      "name": "Fire Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Water Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Ice Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Thunder Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Dragon Resistance",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Botanist",
+      "maxLevel": 4
+    },
+    {
+      "cost": -1,
+      "name": "Geologist",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Capture Master",
+      "maxLevel": 1
+    },
+    {
+      "cost": -1,
+      "name": "Carving Master",
+      "maxLevel": 1
+    },
+    {
+      "cost": -1,
+      "name": "Bombardier",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Jump Master",
+      "maxLevel": 1
+    },
+    {
+      "cost": -1,
+      "name": "Carving Pro",
+      "maxLevel": 1
+    },
+    {
+      "cost": -1,
+      "name": "Wind Alignment",
+      "maxLevel": 5
+    },
+    {
+      "cost": -1,
+      "name": "Thunder Alignment",
+      "maxLevel": 5
+    },
+    {
+      "cost": -1,
+      "name": "Stormsoul",
+      "maxLevel": 5
+    },
+    {
+      "cost": -1,
+      "name": "Dereliction",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Quick Breath",
+      "maxLevel": 1
+    },
+    {
+      "cost": -1,
+      "name": "Berserk",
+      "maxLevel": 2
+    },
+    {
+      "cost": -1,
+      "name": "Heaven-Sent",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Blood Awakening",
+      "maxLevel": 3
+    },
+    {
+      "cost": -1,
+      "name": "Shock Absorber",
+      "maxLevel": 1
+    },
+    {
+      "cost": -1,
+      "name": "Inspiration",
+      "maxLevel": 1
+    }
+  ]

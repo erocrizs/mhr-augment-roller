@@ -1,0 +1,717 @@
+[
+  {
+    "name": "Kamura Legacy",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Leather X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Chainmail X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Hunter X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Alloy X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Bone X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Gargwa Mask X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Rhenoplos X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Bullfango Mask X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Droth X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Bnahabra X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Hornetaur",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Vespoid",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Jaggi X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Jaggi Mask X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Velociprey",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Izuchi X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Baggi X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Kulu-Ya-Ku X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Wroggi X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Arzuros X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Lagombi X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Volvidon X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Aknosom X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Royal Ludroth X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Barroth X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Hermitaur",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Tetranadon X",
+    "augPool": 1,
+    "budget": 20
+  },
+  {
+    "name": "Ingot X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Skalda X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Spio X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Grand Chaos",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Edel X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Shell-Studded X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Melahoa X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Five Element",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Knight Squire",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Yukumo Sky",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Slagtoth X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Khezu X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Bishaten X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Orangaten",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Pukei-Pukei X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Jyuratodus X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Basarios X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Somnacanth X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Auroracanth",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Rathian X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Tobi-Kadachi X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Anjanath X",
+    "augPool": 2,
+    "budget": 18
+  },
+  {
+    "name": "Skull X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Dober X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Vaik X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Mosgharl X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Mosgharl X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Death Stench X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Makluva X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Aelucanth X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Rhopessa X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Royal Artillery Corps",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Guild Bard",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Scholar",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Guardian",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Brigade X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Barioth X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Sinister Demon",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Nargacuga X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Goss Harag X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Garangolm",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Ceanataur",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Almudron X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Magmadron",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Rakna-Kadaki X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Rakna-Kadaki X",
+    "augPool": 3,
+    "budget": 16
+  },
+  {
+    "name": "Pyre-Kadaki",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Pyre-Kadaki",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Utsushi True (Visible)",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Channeler (Spring)",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Utsushi True (Hidden)",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Medium (Light)",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Chrome Metal X",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Uroktor X",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Remobra X",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Mizutsune X",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Rathalos X",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Zinogre X",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Tigrex X",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Diablos X",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Gore Magala",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Seregios",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Astalos",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Lunagaron",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Espinas",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Heavy Knight",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Hawk",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Lecturer",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Dignified",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Barbania",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Snowshear",
+    "augPool": 4,
+    "budget": 14
+  },
+  {
+    "name": "Grand God's Peer",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Bazelgeuse X",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Damascus X",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Kushala X",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Grand Mizuha",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Kaiser X",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Arc",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Storge",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Malzeno",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Professor",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Charité",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Scholarly",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Commission",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Jelly X",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Sailor",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Archfiend Armor",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Ibushi - Pure",
+    "augPool": 13,
+    "budget": 10
+  },
+  {
+    "name": "Narwa - Pure",
+    "augPool": 13,
+    "budget": 10
+  },
+  {
+    "name": "Crimson Valstrax - Eclipse",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Grand Divine Ire",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Sinister Grudge",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Base Commander",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Base Commander",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Soaring Feather",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Blessed Feather",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Guild Palace",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Pride",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Golden Lune",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Silver Sol",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Lucent Narga",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Onmyo",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Flaming Espinas",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Risen Mizuha",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Chaotic Gore",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Nephilim",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Risen Kushala",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Risen Kaiser",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Rimeguard",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Crimson Valstrax - Epoch",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Tempest",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Virtue",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Prudence",
+    "augPool": 6,
+    "budget": 10
+  },
+  {
+    "name": "Buff Body",
+    "augPool": 5,
+    "budget": 12
+  },
+  {
+    "name": "Primordial",
+    "augPool": 6,
+    "budget": 10
+  }
+]
