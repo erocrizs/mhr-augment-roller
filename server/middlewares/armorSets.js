@@ -1,4 +1,4 @@
-const armor_aug_pool = require('../data/armor_aug_pool.json');
+const armor_aug_pool = require('../data/armorAugPool.json');
 
 function getArmorSets(req, res) {
     const setNames = armor_aug_pool.map(set => set.ArmorSeries);
