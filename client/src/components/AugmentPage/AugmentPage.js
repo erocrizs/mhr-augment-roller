@@ -1,68 +1,66 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useState } from 'react';
 import ArmorPiecePanel from '../ArmorPiecePanel/ArmorPiecePanel';
+import SearchableSelect from '../SearchableSelect/SearchableSelect';
 
 function AugmentPage({ setNames }) {
-    const [armorSetInput, setArmorSetInput] = useState('');
-    const [armorPieceInput, setArmorPieceInput] = useState('');
+    const [loadingSet, setLoadingSet] = useState(false);
     const [setDetails, setSetDetails] = useState(null);
+    const [armorPiece, setArmorPiece] = useState(null);
+    // eslint-disable-next-line
+    const [loadingAugPool, setLoadingAugPool] = useState(false);
     // eslint-disable-next-line
     const [augmentPool, setAugmentPool] = useState([]);
-    const [armorPiece, setArmorPiece] = useState(null);
 
-    useEffect(() => {
-        if (!setNames.includes(armorSetInput) || armorSetInput === setDetails?.name) {
+    const getPieceName = useCallback(piece => piece.name, []);
+
+    async function updateSet(setName) {
+        if (setDetails?.name === setName) {
             return;
         }
 
-        async function fetchSetDetails() {
-            const setDetailsResponse = await fetch(`api/sets/${armorSetInput}`);
-            const setDetails = await setDetailsResponse.json();
-            setSetDetails(setDetails);
-            setArmorPieceInput(setDetails.pieces[0].name);
-        }
+        setArmorPiece(null);
 
-        fetchSetDetails();
-    }, [armorSetInput, setNames, setDetails?.name]);
-
-    useEffect(() => {
-        if (!setDetails?.augPool) {
-            setAugmentPool([]);
+        if (!setName) {
+            setSetDetails(null);
             return;
         }
 
-        async function fetchAugmentPool() {
-            const augmentPoolResponse = await fetch(`api/augments/${setDetails?.augPool}`);
-            const augmentPool = await augmentPoolResponse.json();
-            setAugmentPool(augmentPool);
+        setLoadingSet(true);
+        setSetDetails({name: setName});
+        const setDetailsResponse = await fetch(`api/sets/${setName}`);
+        const newSetDetails = await setDetailsResponse.json();
+        const keepAugPool = setDetails?.augPool === newSetDetails.augPool;
+        setLoadingSet(false);
+        setSetDetails(newSetDetails);
+
+        if (keepAugPool) {
+            return;
         }
 
-        fetchAugmentPool();
-    }, [setDetails?.augPool]);
-
-    useEffect(() => {
-        const armorPiece = setDetails?.pieces.find(piece => piece.name === armorPieceInput);
-        if (armorPiece) {
-            setArmorPiece(armorPiece);
-        }
-    }, [armorPieceInput, setDetails?.pieces]);
+        setLoadingAugPool(true);
+        setAugmentPool([]);
+        const augPoolResponse = await fetch(`api/augments/${newSetDetails?.augPool}`);
+        const newAugPool = await augPoolResponse.json();
+        setLoadingAugPool(false);
+        setAugmentPool(newAugPool);
+    }
 
     return (
         <div className="AugmentPage">
-            <input list="setNameList"
-                value={armorSetInput}
-                onChange={(e) => setArmorSetInput(e.target.value)}
+            <SearchableSelect
+                options={setNames}
+                value={setDetails?.name ?? null}
+                onChange={updateSet}
+                id="SetNameInput"
                 placeholder="Choose an armor set"/>
-            <datalist id="setNameList">
-                {setNames.map(setName => <option value={setName} key={setName}/>)}
-            </datalist>
-            <input list="armorPieceList"
-                value={armorPieceInput}
-                onChange={(e) => setArmorPieceInput(e.target.value)}
-                disabled={setDetails === null}
+            <SearchableSelect
+                options={setDetails?.pieces ?? []}
+                stringMap={getPieceName}
+                value={armorPiece}
+                onChange={setArmorPiece}
+                id="ArmorPieceInput"
+                disabled={loadingSet || !setDetails?.pieces}
                 placeholder="Choose an armor piece"/>
-            <datalist id="armorPieceList">
-                {setDetails?.pieces.map(piece => <option value={piece.name} key={piece.name}/>)}
-            </datalist>
             <ArmorPiecePanel armorPiece={armorPiece}/>
         </div>
     );
