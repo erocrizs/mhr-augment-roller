@@ -1,0 +1,20 @@
+.Header {
+    height: 80px;
+    background: linear-gradient(to bottom, var(--dark-color) 75%, var(--gray-color) 100%);
+    border-bottom: 1px solid var(--light-color);
+    color: var(--highlight-color);
+    padding-left: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.Header h1 {
+    font-size: 1.5em;
+}
+
+.Main {
+    margin-left: 50px;
+    margin-right: 50px;
+}
