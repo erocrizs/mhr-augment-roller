@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ArmorPiecePanel from '../ArmorPiecePanel/ArmorPiecePanel';
 
 function AugmentPage({setNames}) {
     const [armorSet, setArmorSet] = useState({ setDetails: null, augmentPool: [] });
@@ -38,9 +39,7 @@ function AugmentPage({setNames}) {
             <datalist id="armorPieceList">
                 {armorSet.setDetails?.pieces.map(piece => <option value={piece.name}/>)}
             </datalist>
-            <pre>
-                {JSON.stringify(armorPiece, null, 2)}
-            </pre>
+            <ArmorPiecePanel armorPiece={armorPiece}/>
         </div>
     );
 }
