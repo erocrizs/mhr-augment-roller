@@ -11,7 +11,7 @@ export function useResource(path, defaultValue) {
 
     useEffect(() => {
         fetchResource(path).then(setResource);
-    });
+    }, {});
 
     return resource;
 }

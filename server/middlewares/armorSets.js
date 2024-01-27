@@ -2,7 +2,7 @@ const armorAugPool = require('../data/armorAugPool.json');
 const armorPieces = require('../data/armorPieces.json');
 
 function getArmorSets(req, res) {
-    const setNames = armorAugPool.map(set => set.name);
+    const setNames = armorAugPool.map(set => set.name).sort();
     res.json(setNames);
 }
 
@@ -16,7 +16,8 @@ function getArmorSetDetails(req, res) {
         return;
     }
 
-    details.pieces = armorPieces.filter(ap => ap.set === setName);
+    details.pieces = armorPieces.filter(ap => ap.set === setName)
+        .sort((a, b) => (a.name > b.name) ? 1 : (a.name === b.name) ? 0 : -1);
     res.json(details);
 }
 
