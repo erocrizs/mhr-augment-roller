@@ -1,0 +1,24 @@
+.EquipmentRow h2 {
+    margin-bottom: 0.5em;
+}
+
+.EquipmentRow .EquipmentSelectGroup {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+@media (min-width: 600px) {
+    .AugmentPage {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .EquipmentRow .EquipmentSelectGroup {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+}

@@ -3,7 +3,8 @@
     background: linear-gradient(to bottom, var(--dark-color) 75%, var(--gray-color) 100%);
     border-bottom: 1px solid var(--light-color);
     color: var(--highlight-color);
-    padding-left: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -15,6 +16,22 @@
 }
 
 .Main {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+@media (min-width: 600px) {
+    .Header {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .Main {
+        background-color: var(--background-color);
+        border-color: var(--dark-color);
+        border-radius: 10px;
+        padding: 10px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
 }

@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import ArmorPiecePanel from '../ArmorPiecePanel/ArmorPiecePanel';
 import SearchableSelect from '../SearchableSelect/SearchableSelect';
+import styles from './AugmentPage.module.css';
 
 function AugmentPage({ setNames }) {
     const [loadingSet, setLoadingSet] = useState(false);
@@ -46,21 +47,28 @@ function AugmentPage({ setNames }) {
     }
 
     return (
-        <div className="AugmentPage">
-            <SearchableSelect
-                options={setNames}
-                value={setDetails?.name ?? null}
-                onChange={updateSet}
-                id="SetNameInput"
-                placeholder="Choose an armor set"/>
-            <SearchableSelect
-                options={setDetails?.pieces ?? []}
-                stringMap={getPieceName}
-                value={armorPiece}
-                onChange={setArmorPiece}
-                id="ArmorPieceInput"
-                disabled={loadingSet || !setDetails?.pieces}
-                placeholder="Choose an armor piece"/>
+        <div className={styles.AugmentPage}>
+            <div className={styles.EquipmentRow}>
+                <h2>Equipment</h2>
+                <div className={styles.EquipmentSelectGroup}>
+                    <SearchableSelect
+                        options={setNames}
+                        value={setDetails?.name ?? null}
+                        onChange={updateSet}
+                        id="SetNameInput"
+                        className={styles.EquipmentSelect}
+                        placeholder="Choose an armor set"/>
+                    <SearchableSelect
+                        options={setDetails?.pieces ?? []}
+                        stringMap={getPieceName}
+                        value={armorPiece}
+                        onChange={setArmorPiece}
+                        id="ArmorPieceInput"
+                        className={styles.EquipmentSelect}
+                        disabled={loadingSet || !setDetails?.pieces}
+                        placeholder="Choose an armor piece"/>
+                </div>
+            </div>
             <ArmorPiecePanel armorPiece={armorPiece}/>
         </div>
     );
