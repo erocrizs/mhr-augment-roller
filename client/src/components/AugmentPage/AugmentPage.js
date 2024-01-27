@@ -1,43 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ArmorPiecePanel from '../ArmorPiecePanel/ArmorPiecePanel';
 
-function AugmentPage({setNames}) {
-    const [armorSet, setArmorSet] = useState({ setDetails: null, augmentPool: [] });
+function AugmentPage({ setNames }) {
+    const [armorSetInput, setArmorSetInput] = useState('');
+    const [armorPieceInput, setArmorPieceInput] = useState('');
+    const [setDetails, setSetDetails] = useState(null);
+    // eslint-disable-next-line
+    const [augmentPool, setAugmentPool] = useState([]);
     const [armorPiece, setArmorPiece] = useState(null);
 
-    async function fetchSelectedState(setName) {
-        if (!setNames.includes(setName) || setName === armorSet.setDetails?.name) {
+    useEffect(() => {
+        if (!setNames.includes(armorSetInput) || armorSetInput === setDetails?.name) {
             return;
         }
-        
-        const setResponse = await fetch(`api/sets/${setName}`);
-        const setDetails = await setResponse.json();
 
-        let augmentPool = armorSet.augmentPool;
-
-        if (augmentPool.length === 0 || armorSet.setDetails.augPool !== setDetails.augPool) {
-            const augmentResponse = await fetch(`api/augments/${setDetails.augPool}`);
-            augmentPool = await augmentResponse.json();
+        async function fetchSetDetails() {
+            const setDetailsResponse = await fetch(`api/sets/${armorSetInput}`);
+            const setDetails = await setDetailsResponse.json();
+            setSetDetails(setDetails);
+            setArmorPieceInput(setDetails.pieces[0].name);
         }
 
-        setArmorSet({ setDetails, augmentPool });
-        setArmorPiece(null);
-    }
+        fetchSetDetails();
+    }, [armorSetInput, setNames, setDetails?.name]);
 
-    function updateSelectedArmorPiece(pieceName) {
-        const armorPiece = armorSet.setDetails.pieces.find(piece => piece.name === pieceName);
-        setArmorPiece(armorPiece);
-    }
+    useEffect(() => {
+        if (!setDetails?.augPool) {
+            setAugmentPool([]);
+            return;
+        }
+
+        async function fetchAugmentPool() {
+            const augmentPoolResponse = await fetch(`api/augments/${setDetails?.augPool}`);
+            const augmentPool = await augmentPoolResponse.json();
+            setAugmentPool(augmentPool);
+        }
+
+        fetchAugmentPool();
+    }, [setDetails?.augPool]);
+
+    useEffect(() => {
+        const armorPiece = setDetails?.pieces.find(piece => piece.name === armorPieceInput);
+        if (armorPiece) {
+            setArmorPiece(armorPiece);
+        }
+    }, [armorPieceInput, setDetails?.pieces]);
 
     return (
         <div className="AugmentPage">
-            <input list="setNameList" onChange={(e) => fetchSelectedState(e.target.value)} placeholder="Choose an armor set"/>
+            <input list="setNameList"
+                value={armorSetInput}
+                onChange={(e) => setArmorSetInput(e.target.value)}
+                placeholder="Choose an armor set"/>
             <datalist id="setNameList">
-                {setNames.map(setName => <option value={setName}/>)}
+                {setNames.map(setName => <option value={setName} key={setName}/>)}
             </datalist>
-            <input list="armorPieceList" onChange={(e) => updateSelectedArmorPiece(e.target.value)} disabled={armorSet.setDetails === null} placeholder="Choose an armor piece"/>
+            <input list="armorPieceList"
+                value={armorPieceInput}
+                onChange={(e) => setArmorPieceInput(e.target.value)}
+                disabled={setDetails === null}
+                placeholder="Choose an armor piece"/>
             <datalist id="armorPieceList">
-                {armorSet.setDetails?.pieces.map(piece => <option value={piece.name}/>)}
+                {setDetails?.pieces.map(piece => <option value={piece.name} key={piece.name}/>)}
             </datalist>
             <ArmorPiecePanel armorPiece={armorPiece}/>
         </div>
