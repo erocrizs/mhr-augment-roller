@@ -270,11 +270,6 @@
     "budget": 16
   },
   {
-    "name": "Mosgharl X",
-    "augPool": 3,
-    "budget": 16
-  },
-  {
     "name": "Death Stench X",
     "augPool": 3,
     "budget": 16
@@ -363,16 +358,6 @@
     "name": "Rakna-Kadaki X",
     "augPool": 3,
     "budget": 16
-  },
-  {
-    "name": "Rakna-Kadaki X",
-    "augPool": 3,
-    "budget": 16
-  },
-  {
-    "name": "Pyre-Kadaki",
-    "augPool": 4,
-    "budget": 14
   },
   {
     "name": "Pyre-Kadaki",
@@ -596,11 +581,6 @@
   },
   {
     "name": "Sinister Grudge",
-    "augPool": 6,
-    "budget": 10
-  },
-  {
-    "name": "Base Commander",
     "augPool": 6,
     "budget": 10
   },
