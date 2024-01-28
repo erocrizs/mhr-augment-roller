@@ -3,6 +3,18 @@ import ArmorPiecePanel from '../ArmorPiecePanel/ArmorPiecePanel';
 import SearchableSelect from '../SearchableSelect/SearchableSelect';
 import styles from './AugmentPage.module.css';
 
+const defaultResistanceChange = {
+    defense: 'Any',
+    slots: 'Any',
+    fireRes: 'Any',
+    waterRes: 'Any',
+    thunderRes: 'Any',
+    iceRes: 'Any',
+    dragonRes: 'Any'
+};
+
+const defaultSlotChange = 0;
+
 function AugmentPage({ setNames }) {
     const [loadingSet, setLoadingSet] = useState(false);
     const [setDetails, setSetDetails] = useState(null);
@@ -11,16 +23,8 @@ function AugmentPage({ setNames }) {
     const [loadingAugPool, setLoadingAugPool] = useState(false);
     // eslint-disable-next-line
     const [augmentPool, setAugmentPool] = useState([]);
-    const [slotChange, setSlotChange] = useState(0);
-    const [resistanceChanges, setResistanceChanges] = useState({
-        defense: 'Any',
-        slots: 'Any',
-        fireRes: 'Any',
-        waterRes: 'Any',
-        thunderRes: 'Any',
-        iceRes: 'Any',
-        dragonRes: 'Any'
-    });
+    const [slotChange, setSlotChange] = useState(defaultSlotChange);
+    const [resistanceChanges, setResistanceChanges] = useState(defaultResistanceChange);
 
     const getPieceName = useCallback(piece => piece.name, []);
 
@@ -30,6 +34,8 @@ function AugmentPage({ setNames }) {
         }
 
         setArmorPiece(null);
+        setSlotChange(defaultSlotChange);
+        setResistanceChanges(defaultResistanceChange);
 
         if (!setName) {
             setSetDetails(null);
@@ -56,6 +62,12 @@ function AugmentPage({ setNames }) {
         setAugmentPool(newAugPool);
     }
 
+    function updatePiece(newArmorPiece) {
+        setArmorPiece(newArmorPiece);
+        setSlotChange(defaultSlotChange);
+        setResistanceChanges(defaultResistanceChange);
+    }
+
     return (
         <div className={styles.AugmentPage}>
             <div className={styles.EquipmentRow}>
@@ -72,7 +84,7 @@ function AugmentPage({ setNames }) {
                         options={setDetails?.pieces ?? []}
                         stringMap={getPieceName}
                         value={armorPiece}
-                        onChange={setArmorPiece}
+                        onChange={updatePiece}
                         id="ArmorPieceInput"
                         className={styles.EquipmentSelect}
                         disabled={loadingSet || !setDetails?.pieces}
