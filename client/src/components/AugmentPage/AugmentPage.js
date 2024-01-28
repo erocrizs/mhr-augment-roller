@@ -81,7 +81,7 @@ function AugmentPage({ setNames }) {
             </div>
             <ArmorPiecePanel
                 armorPiece={armorPiece}
-                slotChanges={slotChange}
+                slotChange={slotChange}
                 setSlotChange={setSlotChange}
                 resistanceChanges={resistanceChanges}
                 setResistanceChanges={setResistanceChanges}/>

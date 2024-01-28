@@ -8,6 +8,29 @@
 }
 
 .SlotRow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+
+.SlotLabel {
+    flex: 1 0 0px;
+}
+
+.SlotBlock {
+    flex: 0 0 30px;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.ResistanceDial {
+    width: 150px;
+}
+
+.SlotDial {
+    width: 150px;
 }
 
 .ResistanceTable {

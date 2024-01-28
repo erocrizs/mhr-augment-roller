@@ -1,6 +1,8 @@
 import React, { useCallback } from 'react';
 import styles from './ArmorPiecePanel.module.css';
 import OptionDial from '../OptionDial/OptionDial';
+import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
+import NumberDial from '../NumberDial/NumberDial';
 
 const resistanceDialOptions = ['Any', 'Increase', 'Maintain', 'Decrease'];
 
@@ -26,21 +28,26 @@ function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, re
     );
 }
 
-function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges }) {
+function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, slotChange, setSlotChange }) {
+    const decoString = armorPiece?.decos ?? '';
+    const maxSlotChange = Array.from(decoString).reduce((sum, current) => sum + (4 - Number(current)), 0) + ((3 - decoString.length) * 4);
     return (
         <div className={styles.ArmorPiecePanel}>
             <div className={styles.NameRow}>
                 <h3>{armorPiece?.name ?? '???'}</h3>
             </div>
-
-            {/* <div className={styles.SlotRow}>
-                <span style={{display: 'block'}}>Slots</span>
-                <span style={{display: 'block'}}>
-                    <span style={{display: 'inline-block'}}>-</span>
-                    <span style={{display: 'inline-block'}}>-</span>
-                    <span style={{display: 'inline-block'}}>-</span>
-                </span>
-            </div> */}
+            <div className={styles.SlotRow}>
+                <span className={styles.SlotLabel}>Slots</span>
+                <DecoSlotBlock decoString={armorPiece?.decos ?? ''}
+                    slotChange={slotChange}
+                    className={styles.SlotBlock}/>
+                <NumberDial value={slotChange}
+                    onChange={setSlotChange}
+                    min={0}
+                    max={maxSlotChange}
+                    disabled={!armorPiece} 
+                    className={styles.SlotDial}/>
+            </div>
             <div className={styles.ResistanceTable}>
                 <ResistanceRow  resistanceKey="defense"
                     armorPiece={armorPiece}
