@@ -2,9 +2,15 @@
 }
 
 .NameRow {
+    text-align: center;
 }
 
 .SubNameRow {
+}
+
+.SlotRow, .ResistanceCell {
+    height: 36px;
+    margin-bottom: 5px;
 }
 
 .SlotRow {
@@ -13,6 +19,7 @@
     justify-content: flex-end;
     gap: 10px;
     align-items: center;
+    margin-top: 10px;
 }
 
 .SlotLabel {
@@ -30,8 +37,15 @@
 }
 
 .SlotDial {
-    width: 150px;
+    width: 100px;
 }
+
+@media (min-width: 800px) {
+    .SlotDial {
+        width: 150px;
+    }
+}
+
 
 .ResistanceTable {
 }

@@ -20,7 +20,7 @@
     margin-right: 30px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .Header {
         padding-left: 80px;
         padding-right: 80px;

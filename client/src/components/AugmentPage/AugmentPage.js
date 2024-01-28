@@ -71,7 +71,7 @@ function AugmentPage({ setNames }) {
     return (
         <div className={styles.AugmentPage}>
             <div className={styles.EquipmentRow}>
-                <h2>Equipment</h2>
+                <span className={styles.EquipmentLabel}>Equipment</span>
                 <div className={styles.EquipmentSelectGroup}>
                     <SearchableSelect
                         options={setNames}
