@@ -8,7 +8,7 @@ function SearchableSelect({ options, stringMap = identityFunction, value, onChan
 
     useEffect(() => {
         setInputString(value ? stringMap(value) : '');
-    }, [value, stringMap])
+    }, [value, stringMap]);
 
     const [valueMap, validValues] = useMemo(() => {
         const valueMap = {};
@@ -34,7 +34,6 @@ function SearchableSelect({ options, stringMap = identityFunction, value, onChan
         }
 
         if (!validValues.includes(inputString)) {
-            console.log("defocus");
             setInputString(defaultValue);
             return;
         }
@@ -43,7 +42,6 @@ function SearchableSelect({ options, stringMap = identityFunction, value, onChan
     }
 
     async function onInputChange(value) {
-        console.log("update input to " + value);
         setInputString(value);
 
         if (value === '') {
@@ -52,7 +50,6 @@ function SearchableSelect({ options, stringMap = identityFunction, value, onChan
         }
         
         if (validValues.includes(value)) {
-            console.log("detected value " + value);
             await onChange(valueMap[value]);
         }
     }

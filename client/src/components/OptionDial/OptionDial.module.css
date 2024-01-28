@@ -1,0 +1,49 @@
+.OptionDial {
+    display: inline-block;
+    width: 200px;
+}
+
+.FlexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.OptionDial:hover .DialDisplay {
+    color: var(--highlight-color);
+}
+
+.DialButton {
+    flex: 0 0 15px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.LeftTriangle, .RightTriangle {
+    display: block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.DialButton .LeftTriangle {
+    border-right: 15px solid var(--light-color);
+}
+
+.DialButton:hover .LeftTriangle {
+    border-right: 15px solid var(--highlight-color);
+}
+
+.DialButton .RightTriangle {
+    border-left: 15px solid var(--light-color);
+}
+
+.DialButton:hover .RightTriangle {
+    border-left: 15px solid var(--highlight-color);
+}
+
+.DialDisplay {
+    flex: auto auto 0px;
+    text-align: center;
+}
