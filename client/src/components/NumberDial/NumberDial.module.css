@@ -1,0 +1,40 @@
+.OptionDial {
+    display: inline-block;
+}
+
+.FlexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.OptionDial:hover .DialDisplay {
+    color: var(--light-color);
+}
+
+.OptionDial.Disabled:hover .DialDisplay {
+    color: var(--light-color);
+}
+
+.DialButton {
+    flex: 0 0 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.7em;
+    font-weight: 900;
+    color: var(--light-color);
+    padding: 0px;
+}
+
+.DialButton:hover {
+    color: var(--highlight-color);
+}
+
+.DialButton:disabled {
+    color: var(--gray-color);
+}
+
+.DialDisplay {
+    flex: auto auto 0px;
+    text-align: center;
+}
