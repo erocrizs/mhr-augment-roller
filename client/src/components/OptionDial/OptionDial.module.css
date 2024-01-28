@@ -1,6 +1,5 @@
 .OptionDial {
     display: inline-block;
-    width: 200px;
 }
 
 .FlexContainer {
@@ -10,7 +9,11 @@
 }
 
 .OptionDial:hover .DialDisplay {
-    color: var(--highlight-color);
+    color: var(--light-color);
+}
+
+.OptionDial.Disabled:hover .DialDisplay {
+    color: var(--light-color);
 }
 
 .DialButton {
@@ -35,12 +38,20 @@
     border-right: 15px solid var(--highlight-color);
 }
 
+.OptionDial.Disabled .DialButton .LeftTriangle, .OptionDial.Disabled .DialButton:hover .LeftTriangle {
+    border-right: 15px solid var(--gray-color);
+}
+
 .DialButton .RightTriangle {
     border-left: 15px solid var(--light-color);
 }
 
 .DialButton:hover .RightTriangle {
     border-left: 15px solid var(--highlight-color);
+}
+
+.OptionDial.Disabled .DialButton .RightTriangle, .OptionDial.Disabled .DialButton:hover .RightTriangle {
+    border-left: 15px solid var(--gray-color);
 }
 
 .DialDisplay {

@@ -1,55 +1,83 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styles from './ArmorPiecePanel.module.css';
+import OptionDial from '../OptionDial/OptionDial';
 
-function ArmorPiecePanel({ armorPiece }) {
+const resistanceDialOptions = ['Any', 'Increase', 'Maintain', 'Decrease'];
+
+function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, resistanceKey, label }) {
+    const onChangeCallback = useCallback((value) => {
+        setResistanceChanges({
+            ...resistanceChanges,
+            [resistanceKey]: value,
+        });
+    }, [resistanceChanges, setResistanceChanges, resistanceKey]);
+
+    return (
+        <div className={styles.ResistanceCell}>
+            <span className={styles.ResistanceLabel}>{label}</span>
+            <span className={styles.ResistanceValue}>{(armorPiece && armorPiece[resistanceKey]) ?? '?'}</span>
+            <OptionDial
+                options={resistanceDialOptions}
+                value={resistanceChanges[resistanceKey]}
+                onChange={onChangeCallback}
+                className={styles.ResistanceDial}
+                disabled={!armorPiece}/>
+        </div>
+    );
+}
+
+function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges }) {
     return (
         <div className={styles.ArmorPiecePanel}>
             <div className={styles.NameRow}>
-                {armorPiece?.name}
+                <h3>{armorPiece?.name ?? '???'}</h3>
             </div>
-            <div className={styles.SubNameRow}>
-                <span style={{display: 'block'}}>Level 1</span>
-                <span style={{display: 'block'}}>Rarity {armorPiece?.rarity ?? '?'}</span>
-            </div>
-            <div className={styles.SlotRow}>
+
+            {/* <div className={styles.SlotRow}>
                 <span style={{display: 'block'}}>Slots</span>
                 <span style={{display: 'block'}}>
                     <span style={{display: 'inline-block'}}>-</span>
                     <span style={{display: 'inline-block'}}>-</span>
                     <span style={{display: 'inline-block'}}>-</span>
                 </span>
-            </div>
+            </div> */}
             <div className={styles.ResistanceTable}>
-                <div className={styles.ResistanceCell}>
-                    <span style={{display: 'block'}}>Defense</span>
-                    <span style={{display: 'block'}}>{armorPiece?.defense ?? 0}</span>
-                </div>
-                <div className={styles.ResistanceCell}>
-                    <span style={{display: 'block'}}>Fire Resistance</span>
-                    <span style={{display: 'block'}}>{armorPiece?.fireRes ?? 0}</span>
-                </div>
-                <div className={styles.ResistanceCell}>
-                    <span style={{display: 'block'}}>Water Resistance</span>
-                    <span style={{display: 'block'}}>{armorPiece?.waterRes ?? 0}</span>
-                </div>
-                <div className={styles.ResistanceCell}>
-                    <span style={{display: 'block'}}>Thunder Resistance</span>
-                    <span style={{display: 'block'}}>{armorPiece?.thunderRes ?? 0}</span>
-                </div>
-                <div className={styles.ResistanceCell}>
-                    <span style={{display: 'block'}}>Ice Resistance</span>
-                    <span style={{display: 'block'}}>{armorPiece?.iceRes ?? 0}</span>
-                </div>
-                <div className={styles.ResistanceCell}>
-                    <span style={{display: 'block'}}>Dragon Resistance</span>
-                    <span style={{display: 'block'}}>{armorPiece?.dragonRes ?? 0}</span>
-                </div>
+                <ResistanceRow  resistanceKey="defense"
+                    armorPiece={armorPiece}
+                    resistanceChanges={resistanceChanges}
+                    setResistanceChanges={setResistanceChanges}
+                    label="Defense"/>
+                <ResistanceRow resistanceKey="fireRes"
+                    armorPiece={armorPiece}
+                    resistanceChanges={resistanceChanges}
+                    setResistanceChanges={setResistanceChanges}
+                    label="Fire Resist"/>
+                <ResistanceRow resistanceKey="waterRes"
+                    armorPiece={armorPiece}
+                    resistanceChanges={resistanceChanges}
+                    setResistanceChanges={setResistanceChanges}
+                    label="Water Resist"/>
+                <ResistanceRow resistanceKey="thunderRes"
+                    armorPiece={armorPiece}
+                    resistanceChanges={resistanceChanges}
+                    setResistanceChanges={setResistanceChanges}
+                    label="Thunder Resist"/>
+                <ResistanceRow resistanceKey="iceRes"
+                    armorPiece={armorPiece}
+                    resistanceChanges={resistanceChanges}
+                    setResistanceChanges={setResistanceChanges}
+                    label="Ice Resist"/>
+                <ResistanceRow resistanceKey="dragonRes"
+                    armorPiece={armorPiece}
+                    resistanceChanges={resistanceChanges}
+                    setResistanceChanges={setResistanceChanges}
+                    label="Dragon Resist"/>
             </div>
             <div className={styles.SkillsRow}>
                 Skills
             </div>
             <div className={styles.SkillList}>
-                {(armorPiece?.skills ?? []).map(skill => <div>{skill.name} x{skill.level}</div>)}
+                {(armorPiece?.skills ?? []).map(skill => <div key={skill.name}>{skill.name} x{skill.level}</div>)}
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import styles from './OptionDial.module.css';
 
 const identityFunction = (i => i);
 
-function OptionDial({ options, stringMap = identityFunction, value, onChange, className, id, style }) {
+function OptionDial({ options, stringMap = identityFunction, value, onChange, className, id, style, disabled }) {
     const [indexDict] = useMemo(() => {
         const indexDict = {};
 
@@ -24,11 +24,15 @@ function OptionDial({ options, stringMap = identityFunction, value, onChange, cl
     }
 
     return (
-        <div id={id} className={`${styles.OptionDial} ${className}`} style={style}>
+        <div id={id} className={`${className} ${styles.OptionDial} ${disabled ? styles.Disabled : ''}`} style={style}>
             <div className={styles.FlexContainer}>
-                <button className={styles.DialButton} onClick={() => moveIndex(-1)}><span className={styles.LeftTriangle}/></button>
+                <button className={styles.DialButton} onClick={() => moveIndex(-1)} disabled={disabled}>
+                    <span className={styles.LeftTriangle}/>
+                </button>
                 <span className={styles.DialDisplay}>{displayString}</span>
-                <button className={styles.DialButton} onClick={() => moveIndex(1)}><span className={styles.RightTriangle}/></button>
+                <button className={styles.DialButton} onClick={() => moveIndex(1)} disabled={disabled}>
+                    <span className={styles.RightTriangle}/>
+                </button>
             </div>
         </div>
     )

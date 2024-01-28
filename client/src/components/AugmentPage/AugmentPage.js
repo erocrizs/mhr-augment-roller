@@ -11,6 +11,16 @@ function AugmentPage({ setNames }) {
     const [loadingAugPool, setLoadingAugPool] = useState(false);
     // eslint-disable-next-line
     const [augmentPool, setAugmentPool] = useState([]);
+    const [slotChange, setSlotChange] = useState(0);
+    const [resistanceChanges, setResistanceChanges] = useState({
+        defense: 'Any',
+        slots: 'Any',
+        fireRes: 'Any',
+        waterRes: 'Any',
+        thunderRes: 'Any',
+        iceRes: 'Any',
+        dragonRes: 'Any'
+    });
 
     const getPieceName = useCallback(piece => piece.name, []);
 
@@ -69,7 +79,12 @@ function AugmentPage({ setNames }) {
                         placeholder="Choose an armor piece"/>
                 </div>
             </div>
-            <ArmorPiecePanel armorPiece={armorPiece}/>
+            <ArmorPiecePanel
+                armorPiece={armorPiece}
+                slotChanges={slotChange}
+                setSlotChange={setSlotChange}
+                resistanceChanges={resistanceChanges}
+                setResistanceChanges={setResistanceChanges}/>
         </div>
     );
 }
