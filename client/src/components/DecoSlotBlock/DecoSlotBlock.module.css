@@ -1,0 +1,16 @@
+.DecoSlotBlock {
+    display: inline-block;
+}
+
+.FlexContainer {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.SlotImage {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5em;
+    text-align: center;
+}

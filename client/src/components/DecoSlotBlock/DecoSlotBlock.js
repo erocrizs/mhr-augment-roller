@@ -75,7 +75,7 @@ function getSlotChanges(baseSlotLevels, slotChange) {
     return slotChanges;
 }
 
-function DecoSlotBlock({ decoString, slotChange = 0 }) {
+function DecoSlotBlock({ decoString, slotChange = 0, className }) {
     const baseSlotLevels = decoString.split('').map(Number);
 
     while (baseSlotLevels.length < 3) {
@@ -85,12 +85,14 @@ function DecoSlotBlock({ decoString, slotChange = 0 }) {
     const slotChanges = getSlotChanges(baseSlotLevels, slotChange);
 
     return (
-        <span className={styles.DecoSlotBlock}>
-            {
-                baseSlotLevels.map(
-                    (slotLevel, idx) => <DecoSlot slotLevel={slotLevel} slotChange={slotChanges[idx]} key={idx}/>
-                )
-            }
+        <span className={`${styles.DecoSlotBlock} ${className}`}>
+            <span className={styles.FlexContainer}>
+                {
+                    baseSlotLevels.map(
+                        (slotLevel, idx) => <DecoSlot slotLevel={slotLevel} slotChange={slotChanges[idx]} key={idx}/>
+                    )
+                }
+            </span>
         </span>
     )
 }
