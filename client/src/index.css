@@ -34,7 +34,7 @@ input:disabled {
     background-color: var(--gray-color);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     body {
         background-image: linear-gradient(
         to bottom, transparent, #222222

@@ -19,7 +19,6 @@
     justify-content: flex-end;
     gap: 10px;
     align-items: center;
-    margin-top: 10px;
 }
 
 .SlotLabel {
@@ -40,14 +39,10 @@
     width: 100px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     .SlotDial {
         width: 150px;
     }
-}
-
-
-.ResistanceTable {
 }
 
 .ResistanceCell {
@@ -70,6 +65,29 @@
 
 .ResistanceDial {
     width: 150px;
+}
+
+.ArmorStats, .ArmorSkills {
+    margin-bottom: 30px;
+}
+
+.ArmorStats h3, .ArmorSkills h3 {
+    color: var(--highlight-color);
+}
+
+@media (min-width: 900px) {
+    .Panel {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: stretch;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .ArmorStats, .ArmorSkills {
+        flex: 0 0 50%;
+        margin-bottom: 30px;
+    }
 }
 
 .SkillsRow {

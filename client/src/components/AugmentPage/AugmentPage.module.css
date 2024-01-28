@@ -15,17 +15,10 @@
     align-items: stretch;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     .AugmentPage {
         padding-left: 40px;
         padding-right: 40px;
-    }
-
-    .EquipmentRow {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .EquipmentRow .EquipmentSelectGroup {
@@ -33,5 +26,14 @@
         flex-flow: row nowrap;
         justify-content: flex-start;
         align-items: stretch;
+    }
+}
+
+@media (min-width: 900px) {
+    .EquipmentRow {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
     }
 }
