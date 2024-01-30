@@ -1,8 +1,9 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useContext } from 'react';
 import styles from './ArmorPiecePanel.module.css';
 import OptionDial from '../OptionDial/OptionDial';
 import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
 import NumberDial from '../NumberDial/NumberDial';
+import SkillsContext from '../../contexts/SkillsContext';
 
 const resistanceDialOptions = ['Any', 'Increase', 'Maintain', 'Decrease'];
 
@@ -29,6 +30,7 @@ function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, re
 }
 
 function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, slotChange, setSlotChange }) {
+    const skills = useContext(SkillsContext);
     const decoString = armorPiece?.decos ?? '';
     const maxSlotChange = Array.from(decoString).reduce((sum, current) => sum + (4 - Number(current)), 0) + ((3 - decoString.length) * 4);
     return (
