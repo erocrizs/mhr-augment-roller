@@ -8,15 +8,15 @@ function SkillBar({ skill, level, acceptRange, onAcceptRangeChange, onDelete }) 
     const { min, max } = acceptRange;
 
     function updateMin(newMin) {
-        const min = Math.min(skills.maxLevel, Math.max(0, newMin));
-        const max = Math.min(skills.maxLevel, Math.max(min, max));
-        onAcceptRangeChange({ min, max });
+        newMin = Math.min(skill.maxLevel, Math.max(0, newMin));
+        const newMax = Math.min(skill.maxLevel, Math.max(newMin, max));
+        onAcceptRangeChange({ min: newMin, max: newMax });
     }
 
     function updateMax(newMax) {
-        const max = Math.min(skills.maxLevel, Math.max(0, newMax));
-        const min = Math.min(max, Math.max(0, min));
-        onAcceptRangeChange({ min, max });
+        newMax = Math.min(skill.maxLevel, Math.max(0, newMax));
+        const newMin = Math.min(newMax, Math.max(0, min));
+        onAcceptRangeChange({ min: newMin, max: newMax });
     }
 
     function deleteSkill() {

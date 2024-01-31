@@ -3,6 +3,7 @@ import styles from './ArmorPiecePanel.module.css';
 import OptionDial from '../OptionDial/OptionDial';
 import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
 import NumberDial from '../NumberDial/NumberDial';
+import SkillBar from '../SkillBar/SkillBar';
 
 const resistanceDialOptions = ['Any', 'Increase', 'Maintain', 'Decrease'];
 
@@ -31,7 +32,32 @@ function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, re
 function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, slotChange, setSlotChange, skillChanges, setSkillChanges, skills }) {
     const decoString = armorPiece?.decos ?? '';
     const maxSlotChange = Array.from(decoString).reduce((sum, current) => sum + (4 - Number(current)), 0) + ((3 - decoString.length) * 4);
-    // TODO const skillBars = ;
+    const deleteSkillChange = (index) => setSkillChanges(
+        skillChanges.filter((_, ind) => ind !== index)
+    );
+    const skillBars = skillChanges.map(
+        ({ name, range }, index) => <SkillBar key={`skill-${name}`}
+            skill={skills.find(s => s.name === name)}
+            level={armorPiece?.skills?.find(s => s.name === name)?.level ?? 0}
+            acceptRange={range}
+            onAcceptRangeChange={
+                newRange => setSkillChanges(
+                    skillChanges.map(s => s.name === name ? { name, range: newRange } : s)
+                )
+            }
+            onDelete={
+                armorPiece?.skills?.find(s => s.name === name) ? null : () => deleteSkillChange(index)
+            }/>
+    );
+
+    if (skillBars.length < 5) {
+        skillBars.push(<div key={`add-skill`}>Add Skill</div>)
+    }
+
+    while (skillBars.length < 5) {
+        skillBars.push(<div key={skillBars.length}>Filler</div>)
+    }
+
     return (
         <div className={styles.ArmorPiecePanel}>
             <h2 className={styles.NameRow}>{armorPiece?.name ?? '???'}</h2>
@@ -86,6 +112,7 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
                     <div className={styles.SkillList}>
                         {(armorPiece?.skills ?? []).map(skill => <div key={skill.name}>{skill.name} x{skill.level}</div>)}
                     </div>
+                    {skillBars}
                 </section>
             </div>
         </div>
