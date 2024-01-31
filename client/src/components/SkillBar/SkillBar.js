@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './SkillBar.module.css';
 
-function SkillBar({ skill, level, acceptRange, onAcceptRangeChange }) {
+function SkillBar({ skill, level, acceptRange, onAcceptRangeChange, onDelete }) {
     const editable = !!acceptRange;
+    const deletable = editable && !!onDelete;
     let barClassNames = [];
     const { min, max } = acceptRange;
 
@@ -16,6 +17,12 @@ function SkillBar({ skill, level, acceptRange, onAcceptRangeChange }) {
         const max = Math.min(skills.maxLevel, Math.max(0, newMax));
         const min = Math.min(max, Math.max(0, min));
         onAcceptRangeChange({ min, max });
+    }
+
+    function deleteSkill() {
+        if (onDelete) {
+            onDelete();
+        }
     }
 
     for (let currentLevel = 1; currentLevel <= skill.maxLevel; currentLevel++) {
@@ -49,8 +56,18 @@ function SkillBar({ skill, level, acceptRange, onAcceptRangeChange }) {
         barClassNames.push(classNames.filter(x => !!x).join(' '));
     }
 
+    const classNames = [styles.SkillBar];
+
+    if (editable) {
+        classNames.push(styles.Editable);
+    }
+
+    if (deletable) {
+        classNames.push(styles.Deletable);
+    }
+
     return (
-        <div className={styles.SkillBar}>
+        <div className={classNames.join(' ')}>
             <div className={styles.Details}>
                 <span className={styles.Name}>
                     {skill.name}
@@ -58,8 +75,11 @@ function SkillBar({ skill, level, acceptRange, onAcceptRangeChange }) {
                 <span className={styles.Level}>
                     Level {level}
                 </span>
+                <button className={styles.Delete} disabled={!deletable} onClick={deleteSkill}>
+                    X
+                </button>
             </div>
-            <div className={styles.BarSecion}>
+            <div className={styles.BarSection}>
                 <input type="range"
                     value={min}
                     onChange={e => updateMin(e.target.value)}

@@ -15,7 +15,7 @@ const defaultResistanceChange = {
 
 const defaultSlotChange = 0;
 
-function AugmentPage({ setNames }) {
+function AugmentPage({ setNames, skills }) {
     const [loadingSet, setLoadingSet] = useState(false);
     const [setDetails, setSetDetails] = useState(null);
     const [armorPiece, setArmorPiece] = useState(null);
@@ -25,6 +25,7 @@ function AugmentPage({ setNames }) {
     const [augmentPool, setAugmentPool] = useState([]);
     const [slotChange, setSlotChange] = useState(defaultSlotChange);
     const [resistanceChanges, setResistanceChanges] = useState(defaultResistanceChange);
+    const [skillChanges, setSkillChanges] = useState([]);
 
     const getPieceName = useCallback(piece => piece.name, []);
 
@@ -36,6 +37,7 @@ function AugmentPage({ setNames }) {
         setArmorPiece(null);
         setSlotChange(defaultSlotChange);
         setResistanceChanges(defaultResistanceChange);
+        setSkillChanges([]);
 
         if (!setName) {
             setSetDetails(null);
@@ -66,6 +68,13 @@ function AugmentPage({ setNames }) {
         setArmorPiece(newArmorPiece);
         setSlotChange(defaultSlotChange);
         setResistanceChanges(defaultResistanceChange);
+        setSkillChanges(newArmorPiece.map(skill => ({
+            name: skill.name,
+            range: {
+                min: 0,
+                max: skills.find(s => s.name === skill.name).maxValue
+            }
+        })));
     }
 
     return (
@@ -96,7 +105,10 @@ function AugmentPage({ setNames }) {
                 slotChange={slotChange}
                 setSlotChange={setSlotChange}
                 resistanceChanges={resistanceChanges}
-                setResistanceChanges={setResistanceChanges}/>
+                setResistanceChanges={setResistanceChanges}
+                skills={skills}
+                skillChanges={skillChanges}
+                setSkillChanges={setSkillChanges}/>
         </div>
     );
 }
