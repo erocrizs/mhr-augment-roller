@@ -72,7 +72,7 @@ function AugmentPage({ setNames, skills }) {
             name: skill.name,
             range: {
                 min: 0,
-                max: skills.find(s => s.name === skill.name).maxValue
+                max: skills.find(s => s.name === skill.name).maxLevel
             }
         })));
     }

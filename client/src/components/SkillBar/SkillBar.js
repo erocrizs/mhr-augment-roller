@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SkillBar.module.css';
 
-function SkillBar({ skill, level, acceptRange, onAcceptRangeChange, onDelete }) {
+function SkillBar({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete }) {
     const editable = !!acceptRange;
     const deletable = editable && !!onDelete;
     let barClassNames = [];
@@ -81,13 +81,13 @@ function SkillBar({ skill, level, acceptRange, onAcceptRangeChange, onDelete }) 
             </div>
             <div className={styles.BarSection}>
                 <input type="range"
-                    value={min}
-                    onChange={e => updateMin(e.target.value)}
+                    value={max ?? 0}
+                    onChange={e => updateMax(e.target.value)}
                     min={0}
                     max={skill.maxLevel}
                     step={1}
                     disabled={!editable}
-                    className={`${styles.Range} ${styles.MinRange}`}/>
+                    className={`${styles.Range} ${styles.MaxRange}`}/>
                 <div className={styles.Bar}>
                     {
                         barClassNames.map((className, i) => 
@@ -98,13 +98,13 @@ function SkillBar({ skill, level, acceptRange, onAcceptRangeChange, onDelete }) 
                     }
                 </div>
                 <input type="range"
-                    value={max}
-                    onChange={e => updateMax(e.target.value)}
+                    value={min ?? 0}
+                    onChange={e => updateMin(e.target.value)}
                     min={0}
                     max={skill.maxLevel}
                     step={1}
                     disabled={!editable}
-                    className={`${styles.Range} ${styles.MaxRange}`}/>
+                    className={`${styles.Range} ${styles.MinRange}`}/>
             </div>
         </div>
     );
