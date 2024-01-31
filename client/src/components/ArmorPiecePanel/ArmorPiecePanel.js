@@ -1,9 +1,10 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import styles from './ArmorPiecePanel.module.css';
 import OptionDial from '../OptionDial/OptionDial';
 import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
 import NumberDial from '../NumberDial/NumberDial';
 import SkillBar from '../SkillBar/SkillBar';
+import SearchableSelect from '../SearchableSelect/SearchableSelect';
 
 const resistanceDialOptions = ['Any', 'Increase', 'Maintain', 'Decrease'];
 
@@ -30,6 +31,10 @@ function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, re
 }
 
 function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, slotChange, setSlotChange, skillChanges, setSkillChanges, skills }) {
+    const skillNames = useMemo(
+        () => skills.filter(s => s.cost !== -1 && !armorPiece?.skills?.find(aS => aS.name === s.name)).map(s => s.name),
+        [skills, armorPiece?.skills]
+    );
     const decoString = armorPiece?.decos ?? '';
     const maxSlotChange = Array.from(decoString).reduce((sum, current) => sum + (4 - Number(current)), 0) + ((3 - decoString.length) * 4);
     const deleteSkillChange = (index) => setSkillChanges(
@@ -51,12 +56,35 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
             className={styles.SkillRow}/>
     );
 
-    if (skillBars.length < 5) {
-        skillBars.push(<div key={`add-skill`} className={styles.SkillRow}>Add Skill</div>)
+    function addSkill(newSkillName) {
+        if (newSkillName === null) {
+            return;
+        }
+
+        const skillToAdd = skills.find(s => s.name === newSkillName);
+
+        if (skillToAdd === null) {
+            return;
+        }
+
+        setSkillChanges([
+            ...skillChanges,
+            {
+                name: skillToAdd.name,
+                range: {
+                    min: 0,
+                    max: skillToAdd.maxLevel
+                },
+            }
+        ]);
     }
 
-    while (skillBars.length < 5) {
-        skillBars.push(<div key={skillBars.length} className={styles.SkillRow}>Filler</div>)
+    if (skillBars.length < 5) {
+        skillBars.push(
+            <div key={`add-skill-${skillBars.length}`}>
+                Add Skill <SearchableSelect options={skillNames} onChange={addSkill} disabled={!armorPiece}/>
+            </div>
+        );
     }
 
     return (
