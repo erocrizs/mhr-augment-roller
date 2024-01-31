@@ -32,8 +32,8 @@ function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, re
 
 function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, slotChange, setSlotChange, skillChanges, setSkillChanges, skills }) {
     const skillNames = useMemo(
-        () => skills.filter(s => s.cost !== -1 && !armorPiece?.skills?.find(aS => aS.name === s.name)).map(s => s.name),
-        [skills, armorPiece?.skills]
+        () => skills.filter(s => s.cost !== -1 && !skillChanges?.find(aS => aS.name === s.name)).map(s => s.name),
+        [skills, skillChanges]
     );
     const decoString = armorPiece?.decos ?? '';
     const maxSlotChange = Array.from(decoString).reduce((sum, current) => sum + (4 - Number(current)), 0) + ((3 - decoString.length) * 4);
