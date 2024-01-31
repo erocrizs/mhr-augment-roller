@@ -1,0 +1,139 @@
+.SkillBar {
+    --add-color: green;
+    --subtract-color: red;
+
+    height: 110px;
+    padding-top: 15px;
+}
+
+.SkillAddText {
+    color: var(--add-color);
+}
+
+.SkillSubtractText {
+    color: var(--subtract-color);
+}
+
+.Details {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.Delete {
+    background: none;
+    border: none;
+    font-weight: bolder;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.Delete:disabled {
+    visibility: hidden;
+}
+
+.BarSection {
+    margin-top: 5px;
+    margin-left: 25px;
+    transform: skew(-10deg, 0deg);
+}
+
+.Bar {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 30px;
+    gap: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.LevelBarContainer {
+    box-sizing: border-box;
+    border: 1px solid var(--gray-color);
+}
+
+.LevelBar {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: var(--gray-color);
+    border: 0px;
+}
+
+.LevelBar.ReachBar {
+    background-color: var(--light-color);
+}
+
+.LevelBar.MinMinusBar {
+    border-bottom: 5px inset var(--subtract-color);
+}
+
+.LevelBar.MaxMinusBar {
+    border: 0px;
+    background-color: var(--subtract-color);
+}
+
+.LevelBar.MaxPlusBar {
+    border-top: 5px solid var(--add-color);
+}
+
+.LevelBar.MinPlusBar {
+    border: 0px;
+    background-color: var(--add-color);
+}
+
+.Range {
+    --thumb-size: 15px;
+
+    width: calc(100% + calc(var(--thumb-size)));
+    padding: 0px;
+    margin: 0px calc(var(--thumb-size) / -2);
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    border: none;
+    transform: skew(10deg, 0deg);
+}
+
+.Range::-webkit-slider-thumb{
+    box-sizing: content-box;
+    height: 0px;
+    aspect-ratio: 1;
+    border-radius: 0px;
+    border: calc(var(--thumb-size) / 2) solid transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    border-top: none;
+    border-bottom: var(--thumb-size) solid var(--highlight-color);
+}
+
+.Range.MaxRange::-webkit-slider-thumb{
+    border-bottom: none;
+    border-top: var(--thumb-size) solid var(--highlight-color);
+}
+
+.Range.MinRange::-webkit-slider-thumb{
+    border-top: none;
+    border-bottom: var(--thumb-size) solid var(--highlight-color);
+}
+
+  /* Firefox */
+.Range::-moz-range-thumb {
+    box-sizing: content-box;
+    height: 0px;
+    width: 0px;
+    background: none;
+    border: calc(var(--thumb-size) / 2) solid transparent;
+    border-radius: 0px;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.Range.MaxRange::-moz-range-thumb{
+    border-bottom: none;
+    border-top: var(--thumb-size) solid var(--highlight-color);
+}
+
+.Range.MinRange::-moz-range-thumb{
+    border-top: none;
+    border-bottom: var(--thumb-size) solid var(--highlight-color);
+}

@@ -47,15 +47,16 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
             }
             onDelete={
                 armorPiece?.skills?.find(s => s.name === name) ? null : () => deleteSkillChange(index)
-            }/>
+            }
+            className={styles.SkillRow}/>
     );
 
     if (skillBars.length < 5) {
-        skillBars.push(<div key={`add-skill`}>Add Skill</div>)
+        skillBars.push(<div key={`add-skill`} className={styles.SkillRow}>Add Skill</div>)
     }
 
     while (skillBars.length < 5) {
-        skillBars.push(<div key={skillBars.length}>Filler</div>)
+        skillBars.push(<div key={skillBars.length} className={styles.SkillRow}>Filler</div>)
     }
 
     return (
@@ -110,9 +111,8 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
                 <section className={styles.ArmorSkills}>
                     <h3>Skills</h3>
                     <div className={styles.SkillList}>
-                        {(armorPiece?.skills ?? []).map(skill => <div key={skill.name}>{skill.name} x{skill.level}</div>)}
+                        {skillBars}
                     </div>
-                    {skillBars}
                 </section>
             </div>
         </div>

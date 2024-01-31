@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './SkillBar.module.css';
 
-function SkillBar({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete }) {
+const barPxSize = 25;
+
+function SkillBar({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete, className }) {
     const editable = !!acceptRange;
     const deletable = editable && !!onDelete;
     let barClassNames = [];
@@ -56,7 +58,7 @@ function SkillBar({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete 
         barClassNames.push(classNames.filter(x => !!x).join(' '));
     }
 
-    const classNames = [styles.SkillBar];
+    const classNames = [styles.SkillBar, className];
 
     if (editable) {
         classNames.push(styles.Editable);
@@ -66,20 +68,46 @@ function SkillBar({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete 
         classNames.push(styles.Deletable);
     }
 
+    let levelChangeLabel = null
+    
+    if (editable) {
+        let rangeEnd = '';
+        if (acceptRange.min !== acceptRange.max) {
+            let maxClassName = '';
+
+            if (acceptRange.max > level) {
+                maxClassName = styles.SkillAddText;
+            }
+            else if (acceptRange.max < level) {
+                maxClassName = styles.SkillSubtractText;
+            }
+
+            rangeEnd = <> - <span className={maxClassName}>{acceptRange.max}</span></>;
+        }
+
+        let minClassName = '';
+
+        if (acceptRange.min > level) {
+            minClassName = styles.SkillAddText;
+        }
+        else if (acceptRange.min < level) {
+            minClassName = styles.SkillSubtractText;
+        }
+
+        levelChangeLabel = <> → <span className={minClassName}>{acceptRange.min}</span>{rangeEnd}</>
+    }
+
     return (
         <div className={classNames.join(' ')}>
             <div className={styles.Details}>
                 <span className={styles.Name}>
-                    {skill.name}
-                </span>
-                <span className={styles.Level}>
-                    Level {level}
+                    <b>{skill.name}</b> x{level}{levelChangeLabel}
                 </span>
                 <button className={styles.Delete} disabled={!deletable} onClick={deleteSkill}>
                     X
                 </button>
             </div>
-            <div className={styles.BarSection}>
+            <div className={styles.BarSection} style={{ width: `${barPxSize * skill.maxLevel}px` }}>
                 <input type="range"
                     value={max ?? 0}
                     onChange={e => updateMax(e.target.value)}
@@ -88,7 +116,7 @@ function SkillBar({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete 
                     step={1}
                     disabled={!editable}
                     className={`${styles.Range} ${styles.MaxRange}`}/>
-                <div className={styles.Bar}>
+                <div className={styles.Bar} style={{ gridTemplateColumns: `repeat(${skill.maxLevel}, auto)`}}>
                     {
                         barClassNames.map((className, i) => 
                             <div className={styles.LevelBarContainer} key={i}>

@@ -68,13 +68,13 @@ function AugmentPage({ setNames, skills }) {
         setArmorPiece(newArmorPiece);
         setSlotChange(defaultSlotChange);
         setResistanceChanges(defaultResistanceChange);
-        setSkillChanges(newArmorPiece.skills.map(skill => ({
+        setSkillChanges(newArmorPiece?.skills.map(skill => ({
             name: skill.name,
             range: {
                 min: 0,
                 max: skills.find(s => s.name === skill.name).maxLevel
             }
-        })));
+        })) ?? []);
     }
 
     return (
