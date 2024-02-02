@@ -1,0 +1,26 @@
+.AugmentButton {
+    margin: 30px 20px;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.Message {
+    text-align: center;
+}
+
+.Error.Message {
+    color: #dd3434;
+}
+
+.Button:hover {
+    background-color: var(--highlight-color);
+    cursor: pointer;
+}
+
+.Button:disabled {
+    background-color: var(--gray-color);
+    color: var(--light-color);
+}

@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import ArmorPiecePanel from '../ArmorPiecePanel/ArmorPiecePanel';
 import SearchableSelect from '../SearchableSelect/SearchableSelect';
 import styles from './AugmentPage.module.css';
+import AugmentButton from '../AugmentButton/AugmentButton';
 
 const defaultResistanceChange = {
     defense: 'Any',
@@ -128,10 +129,7 @@ function AugmentPage({ setNames, skills }) {
                 skills={skills}
                 skillChanges={skillChanges}
                 setSkillChanges={setSkillChanges}/>
-            <div className={styles.AugmentButtonContainer}>
-                <input type="button" value={`Simulate ${augmentMode} Augments`}onClick={() => alert("stub")} className={styles.AugmentButton}/>
-                <span className={styles.AugmentMessage}>{augmentMessage}</span>
-            </div>
+            <AugmentButton mode={augmentMode} message={augmentMessage}/>
         </div>
     );
 }

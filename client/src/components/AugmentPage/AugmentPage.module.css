@@ -40,6 +40,10 @@
     align-items: center;
 }
 
+.AugmentModeButton label {
+    cursor: pointer;
+}
+
 .AugmentModeRow label {
     width: 55px;
 }
@@ -47,19 +51,6 @@
 .AugmentModeRow label.SelectedMode {
     color: var(--highlight-color);
     font-weight: bold;
-}
-
-.AugmentButtonContainer {
-    margin: 30px 20px;
-    
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
-.AugmentMessage {
-    text-align: center;
 }
 
 @media (min-width: 700px) {
