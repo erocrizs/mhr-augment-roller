@@ -1,11 +1,17 @@
+.AugmentPage {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
 .EquipmentRow {
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.EquipmentRow .EquipmentLabel {
+.EquipmentRow .EquipmentLabel, .AugmentModeRow .AugmentModeLabel {
     display: block;
-    margin-bottom: 0.5em;
 }
 
 .EquipmentRow .EquipmentSelectGroup {
@@ -13,6 +19,47 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: stretch;
+}
+
+.AugmentModeRow {
+    margin-bottom: 30px;
+}
+
+.AugmentModeButtons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+}
+
+.AugmentModeButton {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.AugmentModeRow label {
+    width: 55px;
+}
+
+.AugmentModeRow label.SelectedMode {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+.AugmentButtonContainer {
+    margin: 30px 20px;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.AugmentMessage {
+    text-align: center;
 }
 
 @media (min-width: 700px) {
@@ -35,5 +82,17 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .AugmentModeRow {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .AugmentModeButtons {
+        justify-content: flex-end;
+        gap: 15px;
     }
 }

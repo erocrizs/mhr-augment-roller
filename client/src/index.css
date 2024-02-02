@@ -21,7 +21,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-input {
+input, select {
     color: var(--dark-color);
     background-color: var(--light-color);
     padding: 10px;
@@ -32,6 +32,26 @@ input {
 
 input:disabled {
     background-color: var(--gray-color);
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px;
+    width: 0px;
+    height: 0px;
+    appearance: none;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid var(--light-color);
+    transition: all 0.2s ease-out;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    border-color: var(--light-color);
+    background-color: var(--highlight-color);
 }
 
 #root {

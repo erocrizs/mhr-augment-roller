@@ -13,6 +13,8 @@ const defaultResistanceChange = {
     dragonRes: 'Any'
 };
 
+const augmentModes = [ 'Default', 'Defense', 'Skill+', 'Slot+' ];
+
 const defaultSlotChange = 0;
 
 function AugmentPage({ setNames, skills }) {
@@ -26,6 +28,7 @@ function AugmentPage({ setNames, skills }) {
     const [slotChange, setSlotChange] = useState(defaultSlotChange);
     const [resistanceChanges, setResistanceChanges] = useState(defaultResistanceChange);
     const [skillChanges, setSkillChanges] = useState([]);
+    const [augmentMode, setAugmentMode] = useState(augmentModes[0]);
 
     const getPieceName = useCallback(piece => piece.name, []);
 
@@ -77,6 +80,8 @@ function AugmentPage({ setNames, skills }) {
         })) ?? []);
     }
 
+    const augmentMessage = "1.25% Chance (125 out of 10,000)";
+
     return (
         <div className={styles.AugmentPage}>
             <div className={styles.EquipmentRow}>
@@ -100,6 +105,20 @@ function AugmentPage({ setNames, skills }) {
                         placeholder="Choose an armor piece"/>
                 </div>
             </div>
+            <div className={styles.AugmentModeRow}>
+                <span className={styles.AugmentModeLabel}>Augment Mode</span>
+                <div className={styles.AugmentModeButtons}>
+                    {augmentModes.map(
+                        mode => <span key={mode} onClick={() => setAugmentMode(mode)} className={styles.AugmentModeButton}>
+                            <input type="radio"
+                                checked={mode === augmentMode}
+                                value={mode}
+                                onChange={() => setAugmentMode(mode)}/>
+                            <label className={mode === augmentMode ? styles.SelectedMode : ''}>{mode}</label>
+                        </span>
+                    )}
+                </div>
+            </div>
             <ArmorPiecePanel
                 armorPiece={armorPiece}
                 slotChange={slotChange}
@@ -109,6 +128,10 @@ function AugmentPage({ setNames, skills }) {
                 skills={skills}
                 skillChanges={skillChanges}
                 setSkillChanges={setSkillChanges}/>
+            <div className={styles.AugmentButtonContainer}>
+                <input type="button" value={`Simulate ${augmentMode} Augments`}onClick={() => alert("stub")} className={styles.AugmentButton}/>
+                <span className={styles.AugmentMessage}>{augmentMessage}</span>
+            </div>
         </div>
     );
 }
