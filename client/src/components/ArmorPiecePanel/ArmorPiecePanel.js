@@ -35,8 +35,8 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
         () => skills.filter(s => s.cost !== -1 && !skillChanges?.find(aS => aS.name === s.name)).map(s => s.name),
         [skills, skillChanges]
     );
-    const decoString = armorPiece?.decos ?? '';
-    const maxSlotChange = Array.from(decoString).reduce((sum, current) => sum + (4 - Number(current)), 0) + ((3 - decoString.length) * 4);
+    const decoList = armorPiece?.decos ?? [0, 0, 0];
+    const maxSlotChange = decoList.reduce((sum, current) => sum + (4 - current), 0);
     const deleteSkillChange = (index) => setSkillChanges(
         skillChanges.filter((_, ind) => ind !== index)
     );
@@ -95,7 +95,7 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
                     <h3>Skills</h3>
                     <div className={styles.SlotRow}>
                         <span className={styles.SlotLabel}>Slots</span>
-                        <DecoSlotBlock decoString={armorPiece?.decos ?? ''}
+                        <DecoSlotBlock decoList={armorPiece?.decos ?? [0, 0, 0]}
                             slotChange={slotChange}
                             className={styles.SlotBlock}/>
                         <NumberDial value={slotChange}

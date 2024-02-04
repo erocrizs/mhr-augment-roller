@@ -37,8 +37,6 @@ function SearchableSelect({ options, stringMap = identityFunction, value, onChan
             setInputString(defaultValue);
             return;
         }
-
-        await onChange(valueMap[inputString]);
     }
 
     async function onInputChange(value) {

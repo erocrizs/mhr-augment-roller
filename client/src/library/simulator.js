@@ -1,3 +1,4 @@
+import { levelUpgradeToList } from "./decoSlot.js";
 import { WeightedListRandom, getRandomFromList } from "./random.js";
 
 export const augmentModes = {
@@ -121,18 +122,6 @@ export function simulateAugment(armorPiece, augmentPool, budget, skills, augment
     };
 }
 
-function parseDecoString(decoString) {
-    const parsedDecos = decoString.split('').map(Number);
-    while (parsedDecos.length < 3) {
-        parsedDecos.push(0);
-    }
-    return parsedDecos;
-}
-
-function serializeDecoList(decoList) {
-    return decoList.filter(s => s > 0).join('');
-}
-
 // throws when not valid
 function applyAugment({ augmentedArmorPiece, augment, skills }) {
     const { type, value, cost } = augment;
@@ -150,39 +139,10 @@ function applyAugment({ augmentedArmorPiece, augment, skills }) {
     }
 
     if (type === 'Slot+') {
-        const adjustments = [0, 0, 0];
-        const adjustedSlots = parseDecoString(augmentedArmorPiece.decos);
-
-        let remainingValue = value;
-        while (remainingValue > 0) {
-            if (adjustedSlots[2] === 4) {
-                break;
-            }
-
-            if (adjustedSlots[2] === 0) {
-                for (let i = 0; i < 3; i++) {
-                    if (adjustedSlots[i] === 0) {
-                        adjustedSlots[i] = 1;
-                        adjustments[i] += 1;
-                        break;
-                    }
-                }
-                remainingValue -= 1;
-                continue;;
-            }
-
-            for (let i = 0; i < 3; i++) {
-                if (adjustedSlots[i] < 4) {
-                    const toBeAdded = Math.min(remainingValue, 4 - adjustedSlots[i]);
-                    adjustedSlots[i] += toBeAdded;
-                    adjustments[i] += toBeAdded;
-                    remainingValue -= toBeAdded;
-                    break;
-                }
-            }
+        const adjustments = levelUpgradeToList(augmentedArmorPiece.decos, value);
+        for (let i = 0; i < 3; i++) {
+            augmentedArmorPiece.decos[i] += adjustments[i];
         }
-
-        augmentedArmorPiece.decos = serializeDecoList(adjustedSlots);
         return { augment, data: { adjustments } };
     }
 
@@ -240,13 +200,9 @@ function undoAugment({ augmentedArmorPiece, appliedAugment }) {
 
     if (type === 'Slot+') {
         const { adjustments } = data;
-        const adjustedSlots = parseDecoString(augmentedArmorPiece.decos);
-
         for (let i = 0; i < 3; i++) {
-            adjustedSlots[i] -= adjustments[i];
+            augmentedArmorPiece.decos[i] -= adjustments[i];
         }
-
-        augmentedArmorPiece.decos = serializeDecoList(adjustedSlots);
         return;
     }
 

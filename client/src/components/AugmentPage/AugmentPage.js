@@ -3,6 +3,7 @@ import ArmorPiecePanel from '../ArmorPiecePanel/ArmorPiecePanel';
 import SearchableSelect from '../SearchableSelect/SearchableSelect';
 import styles from './AugmentPage.module.css';
 import AugmentButton from '../AugmentButton/AugmentButton';
+import DecoSlot from '../../library/decoSlot';
 
 const defaultResistanceChange = {
     defense: 'Any',
@@ -52,6 +53,11 @@ function AugmentPage({ setNames, skills }) {
         setSetDetails({name: setName});
         const setDetailsResponse = await fetch(`api/sets/${setName}`);
         const newSetDetails = await setDetailsResponse.json();
+
+        for (let piece of newSetDetails.pieces) {
+            piece.decos = DecoSlot.parse(piece.decos);
+        }
+
         const keepAugPool = setDetails?.augPool === newSetDetails.augPool;
         setLoadingSet(false);
         setSetDetails(newSetDetails);

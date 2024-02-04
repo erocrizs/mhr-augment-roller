@@ -15,6 +15,7 @@ import deco41 from '../../assets/decos/deco4-1.png';
 import deco42 from '../../assets/decos/deco4-2.png';
 import deco43 from '../../assets/decos/deco4-3.png';
 import deco44 from '../../assets/decos/deco4-4.png';
+import { levelUpgradeToList } from '../../library/decoSlot';
 
 const sourceMap = {
     '1': [deco10, deco11],
@@ -37,58 +38,13 @@ function DecoSlot({ slotLevel, slotChange }) {
     );
 }
 
-function getSlotChanges(baseSlotLevels, slotChange) {
-    const slotLevels = Array.from(baseSlotLevels);
-    const slotChanges = [0, 0, 0];
-
-    for (let i = 0; i < slotChange; i++) {
-        if (slotLevels[2] === 4) {
-            break;
-        }
-
-        if (slotLevels[2] === 0) {
-            let updated = false;
-
-            for (let slotIdx = 0; slotIdx < 3; slotIdx++) {
-                if (slotLevels[slotIdx] === 0) {
-                    slotLevels[slotIdx] += 1;
-                    slotChanges[slotIdx] += 1;
-                    updated = true;
-                    break;
-                }
-            }
-
-            if (updated) {
-                continue;
-            }
-        }
-
-        for (let slotIdx = 0; slotIdx < 3; slotIdx++) {
-            if (slotLevels[slotIdx] < 4) {
-                slotLevels[slotIdx] += 1;
-                slotChanges[slotIdx] += 1;
-                break;
-            }
-        }
-    }
-
-    return slotChanges;
-}
-
-function DecoSlotBlock({ decoString, slotChange = 0, className }) {
-    const baseSlotLevels = decoString.split('').map(Number);
-
-    while (baseSlotLevels.length < 3) {
-        baseSlotLevels.push(0);
-    }
-
-    const slotChanges = getSlotChanges(baseSlotLevels, slotChange);
-
+function DecoSlotBlock({ decoList, slotChange = 0, className }) {
+    const slotChanges = levelUpgradeToList(decoList, slotChange);
     return (
         <span className={`${styles.DecoSlotBlock} ${className}`}>
             <span className={styles.FlexContainer}>
                 {
-                    baseSlotLevels.map(
+                    decoList.map(
                         (slotLevel, idx) => <DecoSlot slotLevel={slotLevel} slotChange={slotChanges[idx]} key={idx}/>
                     )
                 }
