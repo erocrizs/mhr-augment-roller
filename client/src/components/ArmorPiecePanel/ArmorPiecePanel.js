@@ -79,13 +79,11 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
         ]);
     }
 
-    if (skillBars.length < 5) {
-        skillBars.push(
-            <div key={`add-skill-${skillBars.length}`}>
-                Add Skill <SearchableSelect options={skillNames} onChange={addSkill} disabled={!armorPiece}/>
-            </div>
-        );
-    }
+    skillBars.push(
+        <div key={`add-skill-${skillBars.length}`}>
+            Add Skill <SearchableSelect options={skillNames} onChange={addSkill} disabled={!armorPiece}/>
+        </div>
+    );
 
     return (
         <div className={styles.ArmorPiecePanel}>

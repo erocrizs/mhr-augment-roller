@@ -17,6 +17,104 @@ const defaultResistanceChange = {
 
 const defaultSlotChange = 0;
 
+const modeSpecificVerifier = {
+    [augmentModes.DEFAULT]: () => ({ valid: true }), // No specific restrictions
+    [augmentModes.DEFENSE]: verifyDefenseAugmentCriteria,
+    [augmentModes.SKILL]: () => ({ valid: true }), // No specific restrictions
+    [augmentModes.SLOT]: () => ({ valid: true }), // No specific restrictions
+};
+
+const maxAugments = 7;
+const maxSkills = 5;
+
+function verifyAugmentCriteria(armorPiece, changes, mode) {
+    if (!armorPiece) {
+        return {
+            valid: false,
+            message: 'Choose an armor piece to augment',
+        };
+    }
+
+    // Restrictions:
+    // 1. Total number of changes should be at 7 max
+    // 2. Total number of required skills should be at 5
+    let skillCount = 0;
+    let requiredSkillAugmentCount = 0;
+    for (let skillChange of changes.skillChanges) {
+        const baseSkill = armorPiece.skills.find(s => s.name === skillChange.name);
+
+        if (baseSkill || skillChange.range.min > 0) {
+            skillCount += 1;
+        }
+
+        const defaultLevel = baseSkill?.level ?? 0;
+        if (defaultLevel < skillChange.range.min) {
+            requiredSkillAugmentCount += (skillChange.range.min - defaultLevel);
+        }
+        else if (defaultLevel > skillChange.range.max) {
+            requiredSkillAugmentCount += (defaultLevel - skillChange.range.max);
+        }
+    }
+
+    const verifyModeCriteria = modeSpecificVerifier[mode];
+    let result = verifyModeCriteria(
+        armorPiece,
+        changes,
+        {requiredSkillAugmentCount}
+    );
+
+    if (!result.valid) {
+        return result;
+    }
+
+    let requiredSlotAugmentCount = 0;
+    while (requiredSlotAugmentCount * 3 < changes.slotChange) {
+        requiredSlotAugmentCount += 1;
+    }
+    
+    if ((requiredSlotAugmentCount + requiredSkillAugmentCount) > maxAugments) {
+        return {
+            valid: false,
+            message: '0% - Too many required changes (slots & skill increases)',
+        };
+    }
+
+    if (skillCount > maxSkills) {
+        return {
+            valid: false,
+            message: `0% - Too many required new skills for this armor (${skillCount - armorPiece.skills.length} / ${(maxSkills - armorPiece.skills.length)})`
+        };
+    }
+
+    return {
+        valid: true,
+        message: 'Good to go!'
+    };
+}
+
+function verifyDefenseAugmentCriteria(armorPiece, changes, {requiredSkillAugmentCount}) {
+    // Restrictions:
+    // 1: No negative defense or resistance
+    // 2: No changes in skills
+
+    const decrease = Object.values(changes.resistanceChanges).find(change => change === 'Decrease');
+    if (decrease) {
+        return {
+            valid: false,
+            message: `0% - Defense and resistances will not decrease with Defense+ augments`
+        };
+    }
+
+    if (requiredSkillAugmentCount > 0) {
+        return {
+            valid: false,
+            message: '0% - Armor skills will never change with Defense+ augments'
+        };
+    }
+    
+    return { valid: true };
+}
+
 function AugmentPage({ setNames, skills }) {
     const [loadingSet, setLoadingSet] = useState(false);
     const [setDetails, setSetDetails] = useState(null);
@@ -85,7 +183,15 @@ function AugmentPage({ setNames, skills }) {
         })) ?? []);
     }
 
-    const augmentMessage = "1.25% Chance (125 out of 10,000)";
+    const { valid, message } = verifyAugmentCriteria(
+        armorPiece,
+        {
+            slotChange,
+            skillChanges,
+            resistanceChanges,
+        },
+        augmentMode,
+    );
 
     return (
         <div className={styles.AugmentPage}>
@@ -135,7 +241,7 @@ function AugmentPage({ setNames, skills }) {
                 skills={skills}
                 skillChanges={skillChanges}
                 setSkillChanges={setSkillChanges}/>
-            <AugmentButton mode={augmentMode} message={augmentMessage} disabled={!armorPiece}/>
+            <AugmentButton mode={augmentMode} message={message} disabled={!(armorPiece && valid)}/>
         </div>
     );
 }
