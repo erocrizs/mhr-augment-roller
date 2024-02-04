@@ -157,7 +157,7 @@ function applyAugment({ augmentedArmorPiece, augment, skills }) {
 
         if (!skillMap[addedSkill.name]) {
             if (augmentedArmorPiece.skills.length === 5) {
-                throw 'Maximum limit of 5 skills reached';
+                throw new Error('Maximum limit of 5 skills reached');
             }
 
             skillMap[addedSkill.name] = {
@@ -174,7 +174,7 @@ function applyAugment({ augmentedArmorPiece, augment, skills }) {
     if (type === 'Skill-') {
         const skillPool = augmentedArmorPiece.skills.filter(s => s.level > 0);
         if (skillPool.length === 0) {
-            throw 'No skills left to reduce';
+            throw new Error('No skills left to reduce');
         }
         const [reducedSkill] = getRandomFromList(skillPool);
         reducedSkill.level -= 1;
@@ -314,7 +314,7 @@ class DefenseAugmentModePool extends DefaultAugmentModePool {
             };
         }
 
-        if (augment.type.match(/^Defense\-$/) || augment.type.match(/^\w+ res\-$/)) {
+        if (augment.type.match(/^Defense-$/) || augment.type.match(/^\w+ res-$/)) {
             return {
                 augment: this.resistanceAugments.getRandom()[0],
                 rolls: 2
@@ -333,10 +333,6 @@ class DefenseAugmentModePool extends DefaultAugmentModePool {
 }
 
 class SkillAugmentModePool extends DefaultAugmentModePool {
-    constructor(augmentPool) {
-        super(augmentPool);
-    }
-
     *getFirstAugments() {
         yield {
             augment: this.augmentPool.find(aug => aug.type === 'Skill-') ?? null,
@@ -360,10 +356,6 @@ class SkillAugmentModePool extends DefaultAugmentModePool {
 }
 
 class SlotAugmentModePool extends DefaultAugmentModePool {
-    constructor(augmentPool) {
-        super(augmentPool);
-    }
-
     *getFirstAugments() {
         yield {
             augment: this.augmentPool.find(aug => aug.class === 'slot+First'),
