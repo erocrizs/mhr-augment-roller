@@ -4,18 +4,16 @@ import SearchableSelect from '../SearchableSelect/SearchableSelect';
 import styles from './AugmentPage.module.css';
 import AugmentButton from '../AugmentButton/AugmentButton';
 import DecoSlot from '../../library/decoSlot';
+import { augmentModes } from '../../library/simulator';
 
 const defaultResistanceChange = {
     defense: 'Any',
-    slots: 'Any',
     fireRes: 'Any',
     waterRes: 'Any',
     thunderRes: 'Any',
     iceRes: 'Any',
     dragonRes: 'Any'
 };
-
-const augmentModes = [ 'Default', 'Defense', 'Skill+', 'Slot+' ];
 
 const defaultSlotChange = 0;
 
@@ -30,7 +28,7 @@ function AugmentPage({ setNames, skills }) {
     const [slotChange, setSlotChange] = useState(defaultSlotChange);
     const [resistanceChanges, setResistanceChanges] = useState(defaultResistanceChange);
     const [skillChanges, setSkillChanges] = useState([]);
-    const [augmentMode, setAugmentMode] = useState(augmentModes[0]);
+    const [augmentMode, setAugmentMode] = useState(augmentModes.DEFAULT);
 
     const getPieceName = useCallback(piece => piece.name, []);
 
@@ -115,13 +113,15 @@ function AugmentPage({ setNames, skills }) {
             <div className={styles.AugmentModeRow}>
                 <span className={styles.AugmentModeLabel}>Augment Mode</span>
                 <div className={styles.AugmentModeButtons}>
-                    {augmentModes.map(
+                    {Object.values(augmentModes).map(
                         mode => <span key={mode} onClick={() => setAugmentMode(mode)} className={styles.AugmentModeButton}>
                             <input type="radio"
                                 checked={mode === augmentMode}
                                 value={mode}
                                 onChange={() => setAugmentMode(mode)}/>
-                            <label className={mode === augmentMode ? styles.SelectedMode : ''}>{mode}</label>
+                            <label className={mode === augmentMode ? styles.SelectedMode : ''}>
+                                {mode[0].toUpperCase() + mode.substring(1)}
+                            </label>
                         </span>
                     )}
                 </div>
