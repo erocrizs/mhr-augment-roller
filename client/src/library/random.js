@@ -54,7 +54,7 @@ export class ObjectRandom {
 
     getRandom() {
         if (!this.#kl) {
-            this.#kl = new ListRandom(Object.keys(object));
+            this.#kl = new ListRandom(Object.keys(this.object));
         }
 
         const [key] = this.#kl.getRandom();
