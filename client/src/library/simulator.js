@@ -7,15 +7,23 @@ export const augmentModes = {
     SKILL: 'skill+',
 };
 
+const elementToResistanceMap = {
+    'Fire': 'fireRes',
+    'Water': 'waterRes',
+    'Thunder': 'thunderRes',
+    'Ice': 'iceRes',
+    'Dragon': 'dragonRes',
+};
+
 /**
  * Assumptions about augment algorithm:
  * 1) There is a limit of seven maximum total augment
  * 2) The initial preset rolls per augmenting mode (see getFirstAugments) are counted towards the 50 maximum rolls allowed
  * 3) Skill+ and Skill- augments that happen to cancels each other's effect will not be removed from the seven slots
- * 4) Skill+ augments can roll for skills that are already maxed out (since it can be cancelled out by a Skill- as per 3)
- * 5) Skill- augments can roll for skills that are already 0 (since it can be cancelled out by a Skill+ as per 3)
+ * 4) Skill+ augments will not roll for skills that are already maxed out at the time of rolling
+ * 5) Skill- augments will not roll for skills that are already 0 at the time of rolling
  * 6) "Limit of 5 total skills" means the total skill points can go over 5 as long as the number of skill types is at most 5
- * 7) If the last defense augment rolled to fill the quota causes all the defenses to net 0, then all defense augments are still deleted and rolling for augments will still continue after
+ * 7) The "fill quota defense" happens after all 50 rolls, hence not affecting by clearing augments with net 0 defense
  * 8) Rolls to change [-def, -ele] to [+def, +ele] and [+-skill] to [+def] while using Defense Mode augmenting counts toward the 50 maximum rolls allowed
  */
 export function simulateAugment(armorPiece, augmentPool, budget, skills, augmentMode) {
@@ -40,18 +48,13 @@ export function simulateAugment(armorPiece, augmentPool, budget, skills, augment
                 continue;
             }
 
-            ({ augment, rolls }) = firstRollResult;
-        }
-        else if (appliedAugments.length === 6) {
-            // If one quota left and there's still budget remaining, roll for a defense augment
-            ({ augment, rolls }) = augmentModePool.getFillCostAugment(remainingBudget);
-
-            if (augment === null) {
-                break;
-            }
+            augment = firstRollResult.augment;
+            rolls = firstRollResult.rolls;
         }
         else {
-            ({ augment, rolls }) = augmentModePool.getRandomAugment();
+            const randomResult = augmentModePool.getRandomAugment();
+            augment = randomResult.augment;
+            rolls = randomResult.rolls;
         }
 
         rollsLeft -= rolls;
@@ -75,7 +78,11 @@ export function simulateAugment(armorPiece, augmentPool, budget, skills, augment
                 const appliedDefAugment = appliedAugments[i];
                 if (appliedDefAugment.augment.match(/^Defense[+-]$/)) {
                     appliedAugments.splice(i, 1);
-                    undoAugment(augmentedArmorPiece, appliedDefAugment);
+                    undoAugment({
+                        augmentedArmorPiece, 
+                        appliedAugment: appliedDefAugment
+                    });
+                    remainingBudget += appliedDefAugment.augment.cost;
                 }
             }
 
@@ -84,7 +91,8 @@ export function simulateAugment(armorPiece, augmentPool, budget, skills, augment
         }
 
         try {
-            applyAugment(augmentedArmorPiece, augment, appliedAugments, armorPiece);
+            const appliedAugment = applyAugment({ augmentedArmorPiece, augment, skills });
+            appliedAugments.push(appliedAugment);
             remainingBudget -= augment.cost;
             if (isDefenseType) {            
                 netDefenseChange += augment.value;
@@ -95,23 +103,167 @@ export function simulateAugment(armorPiece, augmentPool, budget, skills, augment
         }
     }
 
+    if (remainingBudget > 0 && appliedAugments.length < 7) {
+        const fillResult = augmentModePool.getFillCostAugment(remainingBudget);
+        const { augment } = fillResult;
+
+        if (augment) {
+            const appliedAugment = applyAugment({ augmentedArmorPiece, augment, skills });
+            appliedAugments.push(appliedAugment);
+        }
+    }
+
     return {
         augmentedArmorPiece,
-        augmentsApplied: appliedAugments
+        augmentsApplied: appliedAugments,
+        remainingBudget,
+        rollsLeft
     };
 }
 
+function parseDecoString(decoString) {
+    const parsedDecos = decoString.split('').map(Number);
+    while (parsedDecos.length < 3) {
+        parsedDecos.push(0);
+    }
+    return parsedDecos;
+}
+
+function serializeDecoList(decoList) {
+    return decoList.filter(s => s > 0).join('');
+}
+
 // throws when not valid
-function applyAugment(augmentedArmorPiece, augment, appliedAugments, baseArmorPiece) {
-    // todo
+function applyAugment({ augmentedArmorPiece, augment, skills }) {
+    const { type, value, cost } = augment;
+
+    if (type.match(/^Defense[+-]$/)) {
+        augmentedArmorPiece.defense += value;
+        return { augment, data: null };
+    }
+
+    if (type.match(/^\w+ res[+-]$/)) {
+        const element = type.match(/^(\w+) res[+-]$/)[1];
+        const res = elementToResistanceMap[element];
+        augmentedArmorPiece[res] += value;
+        return { augment, data: null };
+    }
+
+    if (type === 'Slot+') {
+        const adjustments = [0, 0, 0];
+        const adjustedSlots = parseDecoString(augmentedArmorPiece.decos);
+
+        let remainingValue = value;
+        while (remainingValue > 0) {
+            if (adjustedSlots[2] === 4) {
+                break;
+            }
+
+            if (adjustedSlots[2] === 0) {
+                for (let i = 0; i < 3; i++) {
+                    if (adjustedSlots[i] === 0) {
+                        adjustedSlots[i] = 1;
+                        adjustments[i] += 1;
+                        break;
+                    }
+                }
+                remainingValue -= 1;
+                continue;;
+            }
+
+            for (let i = 0; i < 3; i++) {
+                if (adjustedSlots[i] < 4) {
+                    const toBeAdded = Math.min(remainingValue, 4 - adjustedSlots[i]);
+                    adjustedSlots[i] += toBeAdded;
+                    adjustments[i] += toBeAdded;
+                    remainingValue -= toBeAdded;
+                    break;
+                }
+            }
+        }
+
+        augmentedArmorPiece.decos = serializeDecoList(adjustedSlots);
+        return { augment, data: { adjustments } };
+    }
+
+    const skillMap = {};
+    for(let skill of augmentedArmorPiece.skills) {
+        skillMap[skill.name] = skill;
+    }
+
+    if (type === 'Skill+') {
+        const skillPool = skills.filter(s => (s.cost === cost) && (skillMap[s.name]?.level !== s.maxLevel));
+        const [addedSkill] = getRandomFromList(skillPool);
+
+        if (!skillMap[addedSkill.name]) {
+            if (augmentedArmorPiece.skills.length === 5) {
+                throw 'Maximum limit of 5 skills reached';
+            }
+
+            skillMap[addedSkill.name] = {
+                name: addedSkill.name,
+                level: 0
+            };
+            augmentedArmorPiece.skills.push(skillMap[addedSkill.name]);
+        }
+
+        skillMap[addedSkill.name].level += 1;
+        return { augment, data: { skillName: addedSkill.name } };
+    }
+
+    if (type === 'Skill-') {
+        const skillPool = augmentedArmorPiece.skills.filter(s => s.level > 0);
+        if (skillPool.length === 0) {
+            throw 'No skills left to reduce';
+        }
+        const [reducedSkill] = getRandomFromList(skillPool);
+        reducedSkill.level -= 1;
+        return { augment, data: { skillName: reducedSkill.name } };
+    }
 }
 
-function undoAugment(armorPiece, appliedAugment) {
-    // todo
+function undoAugment({ augmentedArmorPiece, appliedAugment }) {
+    const { augment, data} = appliedAugment;
+    const { type, value } = augment;
+
+    if (type.match(/^Defense[+-]$/)) {
+        augmentedArmorPiece.defense -= value;
+        return;
+    }
+
+    if (type.match(/^\w+ res[+-]$/)) {
+        const element = type.match(/^(\w+) res[+-]$/)[1];
+        const res = elementToResistanceMap[element];
+        augmentedArmorPiece[res] -= value;
+        return;
+    }
+
+    if (type === 'Slot+') {
+        const { adjustments } = data;
+        const adjustedSlots = parseDecoString(augmentedArmorPiece.decos);
+
+        for (let i = 0; i < 3; i++) {
+            adjustedSlots[i] -= adjustments[i];
+        }
+
+        augmentedArmorPiece.decos = serializeDecoList(adjustedSlots);
+        return;
+    }
+
+    const { skillName } = data;
+    const affectedSkill = augmentedArmorPiece.skills.find(s => s.name === skillName);
+    if (type === 'Skill+') {
+        affectedSkill.level -= 1;
+        return;
+    }
+    if (type === 'Skill-') {
+        affectedSkill.level += 1;
+        return;
+    }
 }
 
-function getCost (aug) {
-    return aug.cost;
+function getProbabilityWeight (aug) {
+    return aug.probabilityWeight;
 }
 
 function createAugmentModePool(augmentPool, augmentMode) {
@@ -135,7 +287,7 @@ class DefaultAugmentModePool {
         this.augmentPool = augmentPool;
         this.defaultAugments = new WeightedListRandom(
             augmentPool.filter(aug => aug.class === 'default'),
-            getCost,
+            getProbabilityWeight,
         );
     }
 
@@ -149,7 +301,7 @@ class DefaultAugmentModePool {
     *getFirstAugments() {
         const defenseAugPool = new WeightedListRandom(
             this.defaultAugments.list.filter(aug => aug.type.match(/^Defense[+-]$/)),
-            getCost,
+            getProbabilityWeight,
         );
         yield {
             augment: defenseAugPool.getRandom()[0],
@@ -158,7 +310,7 @@ class DefaultAugmentModePool {
 
         const skillAugPool = new WeightedListRandom(
             this.defaultAugments.list.filter(aug => aug.type.match(/^Skill[+-]$/)),
-            getCost,
+            getProbabilityWeight,
         );
         yield {
             augment: skillAugPool.getRandom()[0],
@@ -188,11 +340,11 @@ class DefenseAugmentModePool extends DefaultAugmentModePool {
         super(augmentPool);
         this.resistanceAugments = new WeightedListRandom(
             this.defaultAugments.list.filter(aug => aug.type.match(/^Defense\+$/) || aug.type.match(/^\w+ res\+$/)),
-            getCost,
+            getProbabilityWeight,
         );
         this.defenseAugments = new WeightedListRandom(
             this.resistanceAugments.list.filter(aug => aug.type.match(/^Defense\+$/)),
-            getCost,
+            getProbabilityWeight,
         );
     }
 
@@ -236,13 +388,13 @@ class SkillAugmentModePool extends DefaultAugmentModePool {
         };
 
         yield {
-            augment: getRandomFromList(this.augmentPool.filter(aug => aug.class === 'skill+First')),
+            augment: getRandomFromList(this.augmentPool.filter(aug => aug.class === 'skill+First'))[0],
             rolls: 1
         };
 
         const skillAugPool = new WeightedListRandom(
             this.defaultAugments.list.filter(aug => aug.type === 'Skill+'),
-            getCost,
+            getProbabilityWeight,
         );
         yield {
             augment: skillAugPool.getRandom()[0],
@@ -264,7 +416,7 @@ class SlotAugmentModePool extends DefaultAugmentModePool {
 
         const slotAugPool = new WeightedListRandom(
             this.defaultAugments.list.filter(aug => aug.type === 'Slot+'),
-            getCost,
+            getProbabilityWeight,
         );
         yield {
             augment: slotAugPool.getRandom()[0],

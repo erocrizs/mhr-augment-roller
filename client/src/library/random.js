@@ -1,6 +1,16 @@
+// 0 <= return < float
+export function getRandomFloatLessThan(float) {
+    return Math.random() * float;
+}
+
 // 0 <= return < int
 export function getRandomIntLessThan(int) {
-    return Math.floor(Math.random() * int);
+    return Math.floor(getRandomFloatLessThan(int));
+}
+
+// min <= return < max
+export function getRandomFloatBetween(min, max) {
+    return min + getRandomFloatLessThan(max - min);
 }
 
 // min <= return < max
@@ -58,9 +68,7 @@ export class ObjectRandom {
 // qualifier(v) - returns + when v is too big, - when v is too small, 0 when exact
 function binarySearch(sortedList, qualifier) {
     function search(min, max) {
-        console.log(`searching between ${min} and ${max}`);
         if (max < min) {
-            console.log(`cant find`);
             return [null, -1];
         }
 
@@ -121,10 +129,10 @@ export class WeightedListRandom {
         }
 
         const lastEntry = this.#weightedList[this.#weightedList.length - 1];
-        const ptr = getRandomIntLessThan(lastEntry.max);
+        const ptr = getRandomFloatLessThan(lastEntry.max);
         const [{ item }, index] = binarySearch(
             this.#weightedList,
-            ({min, max}) => (min > ptr) ? 1 : ((max < ptr) ? -1 : 0)
+            ({min, max}) => (min > ptr) ? 1 : ((max <= ptr) ? -1 : 0)
         );
 
         return [ item, index ];
