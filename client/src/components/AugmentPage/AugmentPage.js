@@ -135,7 +135,7 @@ function AugmentPage({ setNames, skills }) {
                 skills={skills}
                 skillChanges={skillChanges}
                 setSkillChanges={setSkillChanges}/>
-            <AugmentButton mode={augmentMode} message={augmentMessage}/>
+            <AugmentButton mode={augmentMode} message={augmentMessage} disabled={!armorPiece}/>
         </div>
     );
 }
