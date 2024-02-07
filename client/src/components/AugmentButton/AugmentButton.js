@@ -43,6 +43,9 @@ function AugmentButton({ mode, message, disabled, armorPiece, armorSet, augmentP
     if (disabled) {
         messageClassName.push(styles.Error);
     }
+    if (simulating) {
+        messageClassName.push(styles.Simulating);
+    }
 
     function startSimulating() {
         setSimulating(true);
@@ -56,10 +59,10 @@ function AugmentButton({ mode, message, disabled, armorPiece, armorSet, augmentP
     return <div className={styles.AugmentButton}>
         {
             simulating
-            ? <input type="button" value={`Cancel Simulation ${attempts} / ${maxAttempt}`} className={styles.Button} disabled={disabled} onClick={endSimulating}/>
+            ? <input type="button" value={`Cancel Simulation`} className={styles.Button} disabled={disabled} onClick={endSimulating}/>
             : <input type="button" value={`Simulate ${mode} Augments`} className={styles.Button} disabled={disabled} onClick={startSimulating}/>
         }
-        <span className={messageClassName.filter(x => !!x).join(' ')}>{message}</span>
+        <span className={messageClassName.filter(x => !!x).join(' ')} style={{backgroundSize: `${(100 * attempts)/maxAttempt}%`}}>{simulating ? `${attempts} / ${maxAttempt}` : message}</span>
     </div>;
 }
 
