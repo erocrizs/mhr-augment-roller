@@ -77,7 +77,7 @@ export function simulateAugment(armorPiece, augmentPool, budget, skills, augment
 
             for(let i = appliedAugments.length - 1; i >= 0; i--) {
                 const appliedDefAugment = appliedAugments[i];
-                if (appliedDefAugment.augment.match(/^Defense[+-]$/)) {
+                if (appliedDefAugment.augment.type.match(/^Defense[+-]$/)) {
                     appliedAugments.splice(i, 1);
                     undoAugment({
                         augmentedArmorPiece, 

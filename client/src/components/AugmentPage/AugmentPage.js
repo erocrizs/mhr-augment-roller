@@ -121,12 +121,14 @@ function AugmentPage({ setNames, skills }) {
     const [armorPiece, setArmorPiece] = useState(null);
     // eslint-disable-next-line
     const [loadingAugPool, setLoadingAugPool] = useState(false);
-    // eslint-disable-next-line
     const [augmentPool, setAugmentPool] = useState([]);
     const [slotChange, setSlotChange] = useState(defaultSlotChange);
     const [resistanceChanges, setResistanceChanges] = useState(defaultResistanceChange);
     const [skillChanges, setSkillChanges] = useState([]);
     const [augmentMode, setAugmentMode] = useState(augmentModes.DEFAULT);
+    // eslint-disable-next-line
+    const [validAugments, setValidAugments] = useState([]);
+    const [simulating, setSimulating] = useState(false);
 
     const getPieceName = useCallback(piece => piece.name, []);
 
@@ -193,6 +195,28 @@ function AugmentPage({ setNames, skills }) {
         augmentMode,
     );
 
+    const onValidAugment = useCallback((augment) => {
+        setValidAugments(v => {
+            if (v.length < 10) {
+                return [...v, augment];
+            }
+
+            return v;
+        });
+    }, [setValidAugments])
+
+    const onSimulateButtonClick = useCallback((newSimulating) => {
+        if (newSimulating !== simulating) {
+            if (simulating) {
+                console.log(validAugments);
+            }
+            else {
+                setValidAugments([]);
+            }
+            setSimulating(newSimulating);
+        }
+    }, [simulating, validAugments])
+
     return (
         <div className={styles.AugmentPage}>
             <div className={styles.EquipmentRow}>
@@ -241,7 +265,16 @@ function AugmentPage({ setNames, skills }) {
                 skills={skills}
                 skillChanges={skillChanges}
                 setSkillChanges={setSkillChanges}/>
-            <AugmentButton mode={augmentMode} message={message} disabled={!(armorPiece && valid)}/>
+            <AugmentButton mode={augmentMode}
+                message={message}
+                armorPiece={armorPiece}
+                armorSet={setDetails}
+                augmentPool={augmentPool}
+                skills={skills}
+                onValidAugment={onValidAugment}
+                simulating={simulating}
+                setSimulating={onSimulateButtonClick}
+                disabled={!(armorPiece && valid)}/>
         </div>
     );
 }
