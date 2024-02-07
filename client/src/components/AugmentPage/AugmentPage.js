@@ -228,6 +228,7 @@ function AugmentPage({ setNames, skills }) {
                         onChange={updateSet}
                         id="SetNameInput"
                         className={styles.EquipmentSelect}
+                        disabled={simulating}
                         placeholder="Choose an armor set"/>
                     <SearchableSelect
                         options={setDetails?.pieces ?? []}
@@ -236,7 +237,7 @@ function AugmentPage({ setNames, skills }) {
                         onChange={updatePiece}
                         id="ArmorPieceInput"
                         className={styles.EquipmentSelect}
-                        disabled={loadingSet || !setDetails?.pieces}
+                        disabled={loadingSet || !setDetails?.pieces || simulating}
                         placeholder="Choose an armor piece"/>
                 </div>
             </div>
@@ -244,10 +245,11 @@ function AugmentPage({ setNames, skills }) {
                 <span className={styles.AugmentModeLabel}>Augment Mode</span>
                 <div className={styles.AugmentModeButtons}>
                     {Object.values(augmentModes).map(
-                        mode => <span key={mode} onClick={() => setAugmentMode(mode)} className={styles.AugmentModeButton}>
+                        mode => <span key={mode} onClick={() => simulating || setAugmentMode(mode)} className={styles.AugmentModeButton}>
                             <input type="radio"
                                 checked={mode === augmentMode}
                                 value={mode}
+                                disabled={simulating}
                                 onChange={() => setAugmentMode(mode)}/>
                             <label className={mode === augmentMode ? styles.SelectedMode : ''}>
                                 {mode[0].toUpperCase() + mode.substring(1)}
@@ -264,6 +266,7 @@ function AugmentPage({ setNames, skills }) {
                 setResistanceChanges={setResistanceChanges}
                 skills={skills}
                 skillChanges={skillChanges}
+                disabled={simulating}
                 setSkillChanges={setSkillChanges}/>
             <AugmentButton mode={augmentMode}
                 message={message}

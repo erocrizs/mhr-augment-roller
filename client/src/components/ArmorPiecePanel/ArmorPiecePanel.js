@@ -8,7 +8,7 @@ import SearchableSelect from '../SearchableSelect/SearchableSelect';
 
 const resistanceDialOptions = ['Any', 'Increase', 'Maintain', 'Decrease'];
 
-function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, resistanceKey, label }) {
+function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, resistanceKey, label, disabled }) {
     const onChangeCallback = useCallback((value) => {
         setResistanceChanges({
             ...resistanceChanges,
@@ -25,12 +25,12 @@ function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, re
                 value={resistanceChanges[resistanceKey]}
                 onChange={onChangeCallback}
                 className={styles.ResistanceDial}
-                disabled={!armorPiece}/>
+                disabled={!armorPiece || disabled}/>
         </div>
     );
 }
 
-function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, slotChange, setSlotChange, skillChanges, setSkillChanges, skills }) {
+function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, slotChange, setSlotChange, skillChanges, setSkillChanges, skills, disabled }) {
     const skillNames = useMemo(
         () => skills.filter(s => s.cost !== -1 && !skillChanges?.find(aS => aS.name === s.name)).map(s => s.name),
         [skills, skillChanges]
@@ -81,7 +81,7 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
 
     skillBars.push(
         <div key={`add-skill-${skillBars.length}`}>
-            Add Skill <SearchableSelect options={skillNames} onChange={addSkill} disabled={!armorPiece}/>
+            Add Skill <SearchableSelect options={skillNames} onChange={addSkill} disabled={!armorPiece || disabled}/>
         </div>
     );
 
@@ -100,38 +100,44 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
                             onChange={setSlotChange}
                             min={0}
                             max={maxSlotChange}
-                            disabled={!armorPiece} 
+                            disabled={!armorPiece || disabled} 
                             className={styles.SlotDial}/>
                     </div>
                     <ResistanceRow  resistanceKey="defense"
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
+                        disabled={disabled}
                         label="Defense"/>
                     <ResistanceRow resistanceKey="fireRes"
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
+                        disabled={disabled}
                         label="Fire Resist"/>
                     <ResistanceRow resistanceKey="waterRes"
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
+                        disabled={disabled}
                         label="Water Resist"/>
                     <ResistanceRow resistanceKey="thunderRes"
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
+                        disabled={disabled}
                         label="Thunder Resist"/>
                     <ResistanceRow resistanceKey="iceRes"
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
+                        disabled={disabled}
                         label="Ice Resist"/>
                     <ResistanceRow resistanceKey="dragonRes"
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
+                        disabled={disabled}
                         label="Dragon Resist"/>
                 </section>
                 <section className={styles.ArmorSkills}>
