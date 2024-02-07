@@ -115,6 +115,44 @@ function verifyDefenseAugmentCriteria(armorPiece, changes, {requiredSkillAugment
     return { valid: true };
 }
 
+function checkAugmentVsCriteria(baseArmorPiece, augmentedArmorPiece, changes) {
+    // check slot changes
+    const targetTotalSlotLevel = changes.slotChange + baseArmorPiece.decos.reduce((s, l) => s + l, 0);
+    const currentTotalSlotLevel = augmentedArmorPiece.decos.reduce((s, l) => s + l, 0);
+    if (currentTotalSlotLevel < targetTotalSlotLevel) {
+        return false;
+    }
+
+    // check resistance changes
+    for (let resKey of Object.keys(changes.resistanceChanges)) {
+        if (changes.resistanceChanges[resKey] === 'Any') {
+            continue;
+        }
+
+        if (changes.resistanceChanges[resKey] === 'Maintain' && augmentedArmorPiece[resKey] !== baseArmorPiece[resKey]) {
+            return false;
+        }
+
+        if (changes.resistanceChanges[resKey] === 'Increase' && augmentedArmorPiece[resKey] < baseArmorPiece[resKey]) {
+            return false;
+        }
+
+        if (changes.resistanceChanges[resKey] === 'Decrease' && augmentedArmorPiece[resKey] > baseArmorPiece[resKey]) {
+            return false;
+        }
+    }
+
+    // check skill changes
+    for (let {name, range} of changes.skillChanges) {
+        const skillLevel = augmentedArmorPiece.skills.find(s => s.name === name)?.level ?? 0;
+        if (skillLevel < range.min || skillLevel > range.max) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 function AugmentPage({ setNames, skills }) {
     const [loadingSet, setLoadingSet] = useState(false);
     const [setDetails, setSetDetails] = useState(null);
@@ -127,6 +165,8 @@ function AugmentPage({ setNames, skills }) {
     const [augmentMode, setAugmentMode] = useState(augmentModes.DEFAULT);
     const [validAugments, setValidAugments] = useState([]);
     const [simulating, setSimulating] = useState(false);
+    // eslint-disable-next-line
+    const [validAugmentCount, setValidAugmentCount] = useState(0);
 
     const getPieceName = useCallback(piece => piece.name, []);
 
@@ -193,7 +233,22 @@ function AugmentPage({ setNames, skills }) {
         augmentMode,
     );
 
-    const onValidAugment = useCallback((augment) => {
+    const onValidAugment = useCallback(augment => {
+        const fitsCriteria = checkAugmentVsCriteria(
+            armorPiece,
+            augment.augmentedArmorPiece,
+            {
+                slotChange,
+                resistanceChanges,
+                skillChanges
+            }
+        );
+
+        if (!fitsCriteria) {
+            return;
+        }
+
+        setValidAugmentCount(c => c + 1);
         setValidAugments(v => {
             if (v.length < 10) {
                 return [...v, augment];
@@ -201,7 +256,7 @@ function AugmentPage({ setNames, skills }) {
 
             return v;
         });
-    }, [setValidAugments])
+    }, [armorPiece, resistanceChanges, skillChanges, slotChange]);
 
     const onSimulateButtonClick = useCallback((newSimulating) => {
         if (newSimulating !== simulating) {
@@ -209,6 +264,7 @@ function AugmentPage({ setNames, skills }) {
                 console.log(validAugments);
             }
             else {
+                setValidAugmentCount(0);
                 setValidAugments([]);
             }
             setSimulating(newSimulating);
