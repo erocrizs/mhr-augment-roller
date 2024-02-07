@@ -16,7 +16,7 @@ function AugmentButton({ mode, message, disabled, armorPiece, armorSet, augmentP
         }
 
         simulationInterval.current = setInterval(() => {
-            setAttempts(a => a + 10);
+            setAttempts(a => a + 100);
             for (let i = 0; i < 100; i++) {
                 onValidAugment(
                     simulateAugment(armorPiece, augmentPool, armorSet.budget, skills, mode)

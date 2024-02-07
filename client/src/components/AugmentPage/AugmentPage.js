@@ -26,7 +26,7 @@ const modeSpecificVerifier = {
 
 const maxAugments = 7;
 const maxSkills = 5;
-const maxAttempt = 10_000;
+const maxAttempt = 100_000;
 
 function verifyAugmentCriteria(armorPiece, changes, mode) {
     if (!armorPiece) {
@@ -240,10 +240,12 @@ function AugmentPage({ setNames, skills }) {
     const resultMessage = !simulated ? null : (
         <>
             <p>{validAugmentCount} passed out of {maxAttempt} attempts</p>
-            <p>Success Rate: {(successRate * 100).toLocaleString({ minimumFractionDigits: 2 })} %</p>
-            <p>Roll {Math.ceil(Math.log(1 - 0.50) / Math.log(1 - successRate))}x for 50% success</p>
-            <p>Roll {Math.ceil(Math.log(1 - 0.75) / Math.log(1 - successRate))}x for 75% success</p>
-            <p>Roll {Math.ceil(Math.log(1 - 0.95) / Math.log(1 - successRate))}x for 95% success</p>
+            <p>Success Rate: {(successRate * 100).toLocaleString()} %</p>
+            <p>
+                Roll {Math.max(1, Math.ceil(Math.log(1 - 0.50) / Math.log(1 - successRate)))}x for 50% success,{' '}
+                {Math.max(1, Math.ceil(Math.log(1 - 0.75) / Math.log(1 - successRate)))}x for 75% success,
+                and {Math.max(1, Math.ceil(Math.log(1 - 0.95) / Math.log(1 - successRate)))}x for 95% success.
+            </p>
         </>
     );
 
@@ -314,12 +316,20 @@ function AugmentPage({ setNames, skills }) {
                 <span className={styles.AugmentModeLabel}>Augment Mode</span>
                 <div className={styles.AugmentModeButtons}>
                     {Object.values(augmentModes).map(
-                        mode => <span key={mode} onClick={() => simulating || setAugmentMode(mode)} className={styles.AugmentModeButton}>
+                        mode => <span key={mode} onClick={() => {
+                            if (!simulating) {
+                                setSimulated(false);
+                                setAugmentMode(mode);
+                            }
+                        }} className={styles.AugmentModeButton}>
                             <input type="radio"
                                 checked={mode === augmentMode}
                                 value={mode}
                                 disabled={simulating}
-                                onChange={() => setAugmentMode(mode)}/>
+                                onChange={() => {
+                                    setSimulated(false);
+                                    setAugmentMode(mode);
+                                }}/>
                             <label className={mode === augmentMode ? styles.SelectedMode : ''}>
                                 {mode[0].toUpperCase() + mode.substring(1)}
                             </label>
@@ -330,13 +340,22 @@ function AugmentPage({ setNames, skills }) {
             <ArmorPiecePanel
                 armorPiece={armorPiece}
                 slotChange={slotChange}
-                setSlotChange={setSlotChange}
+                setSlotChange={v => {
+                    setSimulated(false);
+                    setSlotChange(v);
+                }}
                 resistanceChanges={resistanceChanges}
-                setResistanceChanges={setResistanceChanges}
+                setResistanceChanges={v => {
+                    setSimulated(false);
+                    setResistanceChanges(v);
+                }}
                 skills={skills}
                 skillChanges={skillChanges}
                 disabled={simulating}
-                setSkillChanges={setSkillChanges}/>
+                setSkillChanges={v => {
+                    setSimulated(false);
+                    setSkillChanges(v);
+                }}/>
             <AugmentButton mode={augmentMode}
                 message={resultMessage ?? validationMessage}
                 armorPiece={armorPiece}
