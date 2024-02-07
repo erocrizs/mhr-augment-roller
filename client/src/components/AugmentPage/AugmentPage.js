@@ -275,7 +275,7 @@ function AugmentPage({ setNames, skills }) {
                 onValidAugment={onValidAugment}
                 simulating={simulating}
                 setSimulating={onSimulateButtonClick}
-                disabled={!(armorPiece && valid && loadingAugPool)}/>
+                disabled={!(armorPiece && valid) || loadingAugPool}/>
         </div>
     );
 }
