@@ -119,14 +119,12 @@ function AugmentPage({ setNames, skills }) {
     const [loadingSet, setLoadingSet] = useState(false);
     const [setDetails, setSetDetails] = useState(null);
     const [armorPiece, setArmorPiece] = useState(null);
-    // eslint-disable-next-line
     const [loadingAugPool, setLoadingAugPool] = useState(false);
     const [augmentPool, setAugmentPool] = useState([]);
     const [slotChange, setSlotChange] = useState(defaultSlotChange);
     const [resistanceChanges, setResistanceChanges] = useState(defaultResistanceChange);
     const [skillChanges, setSkillChanges] = useState([]);
     const [augmentMode, setAugmentMode] = useState(augmentModes.DEFAULT);
-    // eslint-disable-next-line
     const [validAugments, setValidAugments] = useState([]);
     const [simulating, setSimulating] = useState(false);
 
@@ -277,7 +275,7 @@ function AugmentPage({ setNames, skills }) {
                 onValidAugment={onValidAugment}
                 simulating={simulating}
                 setSimulating={onSimulateButtonClick}
-                disabled={!(armorPiece && valid)}/>
+                disabled={!(armorPiece && valid && loadingAugPool)}/>
         </div>
     );
 }
