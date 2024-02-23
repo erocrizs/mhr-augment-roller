@@ -5,6 +5,7 @@ import styles from './AugmentPage.module.css';
 import AugmentButton from '../AugmentButton/AugmentButton';
 import DecoSlot from '../../library/decoSlot';
 import { augmentModes } from '../../library/simulator';
+import AugmentDisplayPanel from '../AugmentDisplayPanel/AugmentDisplayPanel';
 
 const defaultResistanceChange = {
     defense: 'Any',
@@ -277,7 +278,6 @@ function AugmentPage({ setNames, skills }) {
     const onSimulateButtonClick = useCallback((newSimulating) => {
         if (newSimulating !== simulating) {
             if (simulating) {
-                console.log(validAugments);
                 setSimulated(true);
             }
             else {
@@ -286,7 +286,7 @@ function AugmentPage({ setNames, skills }) {
             }
             setSimulating(newSimulating);
         }
-    }, [simulating, validAugments]);
+    }, [simulating]);
 
     return (
         <div className={styles.AugmentPage}>
@@ -367,6 +367,7 @@ function AugmentPage({ setNames, skills }) {
                 setSimulating={onSimulateButtonClick}
                 maxAttempt={maxAttempt}
                 disabled={!(armorPiece && valid) || loadingAugPool}/>
+            { simulated && validAugments.length > 0 && <AugmentDisplayPanel augments={validAugments} baseArmorPiece={armorPiece}/> }
         </div>
     );
 }

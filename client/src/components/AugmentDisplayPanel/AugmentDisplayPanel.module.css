@@ -1,0 +1,73 @@
+.AugmentDisplayPanel {
+
+}
+
+.TitleRow {
+    text-align: center;
+}
+
+.IndexDial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DialButton {
+    flex: 0 0 15px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.LeftTriangle, .RightTriangle {
+    display: block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.DialButton .LeftTriangle {
+    border-right: 15px solid var(--light-color);
+}
+
+.DialButton:hover .LeftTriangle {
+    border-right: 15px solid var(--highlight-color);
+}
+
+.DialButton:disabled .LeftTriangle {
+    border-right: 15px solid var(--gray-color);
+}
+
+.DialButton .RightTriangle {
+    border-left: 15px solid var(--light-color);
+}
+
+.DialButton:hover .RightTriangle {
+    border-left: 15px solid var(--highlight-color);
+}
+
+.DialButton:disabled .RightTriangle {
+    border-left: 15px solid var(--gray-color);
+}
+
+.Indicators {
+    flex: auto auto 0px;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Indicator {
+    display: inline-block;
+    background-color: var(--light-color);
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+}
+
+.Indicator.Selected {
+    background-color: var(--highlight-color);
+}
