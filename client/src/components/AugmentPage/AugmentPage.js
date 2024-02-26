@@ -169,6 +169,7 @@ function AugmentPage({ setNames, skills }) {
     const [simulating, setSimulating] = useState(false);
     const [simulated, setSimulated] = useState(false);
     const [validAugmentCount, setValidAugmentCount] = useState(0);
+    const hasAugmentsToShow = simulated && validAugments.length > 0;
 
     const getPieceName = useCallback(piece => piece.name, []);
 
@@ -242,11 +243,15 @@ function AugmentPage({ setNames, skills }) {
         <>
             <p>{validAugmentCount} passed out of {maxAttempt} attempts</p>
             <p>Success Rate: {(successRate * 100).toLocaleString()} %</p>
-            <p>
-                Roll {Math.max(1, Math.ceil(Math.log(1 - 0.50) / Math.log(1 - successRate)))}x for 50% success,{' '}
-                {Math.max(1, Math.ceil(Math.log(1 - 0.75) / Math.log(1 - successRate)))}x for 75% success,
-                and {Math.max(1, Math.ceil(Math.log(1 - 0.95) / Math.log(1 - successRate)))}x for 95% success.
-            </p>
+            {
+                successRate > 0 && (
+                    <p>
+                        Roll {Math.max(1, Math.ceil(Math.log(1 - 0.50) / Math.log(1 - successRate)))}x for 50% success,{' '}
+                        {Math.max(1, Math.ceil(Math.log(1 - 0.75) / Math.log(1 - successRate)))}x for 75% success,
+                        and {Math.max(1, Math.ceil(Math.log(1 - 0.95) / Math.log(1 - successRate)))}x for 95% success.
+                    </p>
+                )
+            }
         </>
     );
 
@@ -367,7 +372,12 @@ function AugmentPage({ setNames, skills }) {
                 setSimulating={onSimulateButtonClick}
                 maxAttempt={maxAttempt}
                 disabled={!(armorPiece && valid) || loadingAugPool}/>
-            { simulated && validAugments.length > 0 && <AugmentDisplayPanel augments={validAugments} baseArmorPiece={armorPiece}/> }
+            { hasAugmentsToShow && (
+                <> 
+                    <p>Check out these randomized augments that fit your criteria:</p>
+                    <AugmentDisplayPanel augments={validAugments} baseArmorPiece={armorPiece}/> 
+                </>
+            )}
         </div>
     );
 }
