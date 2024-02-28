@@ -375,7 +375,7 @@ function AugmentPage({ setNames, skills }) {
             { hasAugmentsToShow && (
                 <> 
                     <p>Check out these randomized augments that fit your criteria:</p>
-                    <AugmentDisplayPanel augments={validAugments} baseArmorPiece={armorPiece}/> 
+                    <AugmentDisplayPanel augments={validAugments} baseArmorPiece={armorPiece} skills={skills}/> 
                 </>
             )}
         </div>

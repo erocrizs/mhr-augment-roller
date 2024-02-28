@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import styles from './AugmentDisplayPanel.module.css';
 import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
-import SkillRange from '../SkillRange/SkillRange';
+import SkillBar from '../SkillBar/SkillBar';
 
 function generateAugmentTitle(skillsDiff, decosDiff) {
     const messages = skillsDiff.filter(({fromLevel, toLevel}) => fromLevel !== toLevel)
@@ -39,7 +39,7 @@ function ChangeArrow({augmentedValue, baseValue}) {
     );
 }
 
-function AugmentDisplayPanel({ augments, baseArmorPiece }) {
+function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
     const [index, setIndex] = useState(0);
     const moveIndex = useCallback(
         change => setIndex(i => Math.max(0, Math.min(i + change, augments.length))),
@@ -50,6 +50,7 @@ function AugmentDisplayPanel({ augments, baseArmorPiece }) {
     const skillsDiff = baseArmorPiece.skills.map(
         ({name, level}) => ({
             name,
+            maxLevel: skills.find(s => s.name === name).maxLevel,
             fromLevel: level,
             toLevel: augmentedArmorPiece.skills.find(({name: n}) => (n === name)).level
         })
@@ -61,6 +62,7 @@ function AugmentDisplayPanel({ augments, baseArmorPiece }) {
 
         skillsDiff.push({
             name: skill.name,
+            maxLevel: skills.find(s => s.name === skill.name).maxLevel,
             fromLevel: 0,
             toLevel: skill.level
         });
@@ -117,12 +119,13 @@ function AugmentDisplayPanel({ augments, baseArmorPiece }) {
             <div className={styles.ArmorSkills}>
                 <h3 className={styles.SectionHeader}>Armor Skills</h3>
                 {
-                    skillsDiff.map(({name, fromLevel, toLevel}) => (
+                    skillsDiff.map(({name, maxLevel, fromLevel, toLevel}) => (
                         <div className={styles.SkillRow}>
                             <div className={styles.SkillData}>
                                 <span className={styles.Label}>{name}</span>
                                 <ChangeArrow augmentedValue={toLevel} baseValue={fromLevel}/>
                             </div>
+                            <SkillBar maxLevel={maxLevel} level={fromLevel} range={{min: toLevel, max: toLevel}} barPxWidth={15} barPxHeight={15} skewDeg={0}/>
                         </div>
                     ))
                 }
