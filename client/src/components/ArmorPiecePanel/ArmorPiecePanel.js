@@ -3,7 +3,7 @@ import styles from './ArmorPiecePanel.module.css';
 import OptionDial from '../OptionDial/OptionDial';
 import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
 import NumberDial from '../NumberDial/NumberDial';
-import SkillBar from '../SkillBar/SkillBar';
+import SkillRange from '../SkillRange/SkillRange';
 import SearchableSelect from '../SearchableSelect/SearchableSelect';
 
 const resistanceDialOptions = ['Any', 'Increase', 'Maintain', 'Decrease'];
@@ -41,7 +41,7 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
         skillChanges.filter((_, ind) => ind !== index)
     );
     const skillBars = skillChanges.map(
-        ({ name, range }, index) => <SkillBar key={`skill-${name}`}
+        ({ name, range }, index) => <SkillRange key={`skill-${name}`}
             skill={skills.find(s => s.name === name)}
             level={armorPiece?.skills?.find(s => s.name === name)?.level ?? 0}
             acceptRange={range}

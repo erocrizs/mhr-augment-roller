@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './SkillBar.module.css';
+import styles from './SkillRange.module.css';
 
 const barPxSize = 25;
 
-function SkillBar({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete, className }) {
+function SkillRange({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete, className }) {
     const editable = !!acceptRange;
     const deletable = editable && !!onDelete;
     let barClassNames = [];
@@ -138,4 +138,4 @@ function SkillBar({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete,
     );
 }
 
-export default SkillBar;
+export default SkillRange;

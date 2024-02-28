@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import styles from './AugmentDisplayPanel.module.css';
 import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
-import SkillBar from '../SkillBar/SkillBar';
+import SkillRange from '../SkillRange/SkillRange';
 
 function generateAugmentTitle(skillsDiff, decosDiff) {
     const messages = skillsDiff.filter(({fromLevel, toLevel}) => fromLevel !== toLevel)
