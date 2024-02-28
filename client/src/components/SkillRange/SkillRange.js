@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './SkillRange.module.css';
+import SkillBar from '../SkillBar/SkillBar';
 
 const barPxSize = 25;
 
 function SkillRange({ skill, level, acceptRange={}, onAcceptRangeChange, onDelete, className }) {
     const editable = !!acceptRange;
     const deletable = editable && !!onDelete;
-    let barClassNames = [];
     const { min, max } = acceptRange;
 
     function updateMin(newMin) {
@@ -25,37 +25,6 @@ function SkillRange({ skill, level, acceptRange={}, onAcceptRangeChange, onDelet
         if (onDelete) {
             onDelete();
         }
-    }
-
-    for (let currentLevel = 1; currentLevel <= skill.maxLevel; currentLevel++) {
-        const levelReached = currentLevel <= level;
-        const minReached = currentLevel <= min;
-        const maxReached = currentLevel <= max;
-
-        const classNames = [styles.LevelBar];
-
-        if (levelReached) {
-            classNames.push(styles.ReachBar);
-
-            if (!minReached) {
-                classNames.push(styles.MinMinusBar)
-            }
-
-            if(!maxReached) {
-                classNames.push(styles.MaxMinusBar);
-            }
-        }
-        else {
-            if (minReached) {
-                classNames.push(styles.MinPlusBar);
-            }
-
-            if (maxReached) {
-                classNames.push(styles.MaxPlusBar);
-            }
-        }
-
-        barClassNames.push(classNames.filter(x => !!x).join(' '));
     }
 
     const classNames = [styles.SkillBar, className];
@@ -116,15 +85,7 @@ function SkillRange({ skill, level, acceptRange={}, onAcceptRangeChange, onDelet
                     step={1}
                     disabled={!editable}
                     className={`${styles.Range} ${styles.MaxRange}`}/>
-                <div className={styles.Bar} style={{ gridTemplateColumns: `repeat(${skill.maxLevel}, auto)`}}>
-                    {
-                        barClassNames.map((className, i) => 
-                            <div className={styles.LevelBarContainer} key={i}>
-                                <div className={className}/>
-                            </div>
-                        )
-                    }
-                </div>
+                <SkillBar maxLevel={skill.maxLevel} level={level} range={acceptRange}/>
                 <input type="range"
                     value={min ?? 0}
                     onChange={e => updateMin(e.target.value)}
