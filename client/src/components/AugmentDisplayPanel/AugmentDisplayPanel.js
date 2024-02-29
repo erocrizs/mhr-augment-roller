@@ -12,6 +12,10 @@ function generateAugmentTitle(skillsDiff, decosDiff) {
         messages.push(`Deco Slots +${decosDiff}`);
     }
 
+    if (messages.length === 0) {
+        return 'Resistance Increase';
+    }
+
     return messages.join(', ');
 }
 
