@@ -280,6 +280,12 @@ function AugmentPage({ setNames, skills }) {
         });
     }, [armorPiece, resistanceChanges, skillChanges, slotChange]);
 
+    const onCancelAugment = useCallback(() => {
+        setSimulated(false);
+        setValidAugmentCount(0);
+        setValidAugments([]);
+    }, []);
+
     const onSimulateButtonClick = useCallback((newSimulating) => {
         if (newSimulating !== simulating) {
             if (simulating) {
@@ -368,6 +374,7 @@ function AugmentPage({ setNames, skills }) {
                 augmentPool={augmentPool}
                 skills={skills}
                 onValidAugment={onValidAugment}
+                onCancel={onCancelAugment}
                 simulating={simulating}
                 setSimulating={onSimulateButtonClick}
                 maxAttempt={maxAttempt}

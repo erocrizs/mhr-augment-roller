@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from './AugmentButton.module.css';
 import { simulateAugment } from "../../library/simulator";
 
-function AugmentButton({ mode, message, disabled, armorPiece, armorSet, augmentPool, skills, onValidAugment, simulating, setSimulating, maxAttempt }) {
+function AugmentButton({ mode, message, disabled, armorPiece, armorSet, augmentPool, skills, onValidAugment, onCancel, simulating, setSimulating, maxAttempt }) {
     const [attempts, setAttempts] = useState(0);
     const simulationInterval = useRef();
 
@@ -52,6 +52,7 @@ function AugmentButton({ mode, message, disabled, armorPiece, armorSet, augmentP
 
     function endSimulating() {
         setSimulating(false);
+        onCancel();
     }
 
     return <div className={styles.AugmentButton}>
