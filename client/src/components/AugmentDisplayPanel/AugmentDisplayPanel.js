@@ -80,7 +80,7 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
         })
     );
     for (let skill of augmentedArmorPiece.skills) {
-        if (skillsDiff.find(({name}) => (name === skill.name))) {
+        if (skill.level === 0 || skillsDiff.find(({name}) => (name === skill.name))) {
             continue;
         }
 
@@ -171,7 +171,7 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
                     <ul>
                     {
                         augmentsApplied.map((a, i) => (
-                                <li className={styles.AugmentRow} key={i}><AugmentMessage {...a}/></li>
+                            <li className={styles.AugmentRow} key={i}><AugmentMessage {...a}/></li>
                         ))
                     }
                     </ul>

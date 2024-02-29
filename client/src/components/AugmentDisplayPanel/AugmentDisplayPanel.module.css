@@ -86,6 +86,10 @@
     background-color: var(--highlight-color);
 }
 
+.SectionHeader {
+    color: var(--highlight-color);
+}
+
 .StatRow {
     height: 36px;
     display: flex;
