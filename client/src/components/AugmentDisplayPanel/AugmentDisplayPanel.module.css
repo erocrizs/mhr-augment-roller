@@ -1,0 +1,159 @@
+.AugmentDisplayPanel {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Positive {
+    color: var(--add-color);
+    font-weight: bold;
+}
+
+.Negative {
+    color: var(--subtract-color);
+    font-weight: bold;
+}
+
+.TitleRow {
+    text-align: center;
+}
+
+.IndexDial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.DialButton {
+    flex: 0 0 15px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.LeftTriangle, .RightTriangle {
+    display: block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.DialButton .LeftTriangle {
+    border-right: 15px solid var(--light-color);
+}
+
+.DialButton:hover .LeftTriangle {
+    border-right: 15px solid var(--highlight-color);
+}
+
+.DialButton:disabled .LeftTriangle {
+    border-right: 15px solid var(--gray-color);
+}
+
+.DialButton .RightTriangle {
+    border-left: 15px solid var(--light-color);
+}
+
+.DialButton:hover .RightTriangle {
+    border-left: 15px solid var(--highlight-color);
+}
+
+.DialButton:disabled .RightTriangle {
+    border-left: 15px solid var(--gray-color);
+}
+
+.Indicators {
+    flex: auto auto 0px;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Indicator {
+    display: inline-block;
+    background-color: var(--light-color);
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+}
+
+.Indicator.Selected {
+    background-color: var(--highlight-color);
+}
+
+.SectionHeader {
+    color: var(--highlight-color);
+}
+
+.StatRow {
+    height: 36px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: stretch;
+    gap: 20px;
+}
+
+.StatRow, .SkillRow {
+    margin-left: 10px;
+}
+
+.SkillData {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: stretch;
+    gap: 20px;
+}
+
+.StatRow .Label, .SkillData .Label {
+    display: block;
+    flex: 1 1 auto;
+}
+
+.StatRow .Value, .SkillData .Value {
+    display: block;
+    flex: 1 1 auto;
+    text-align: right;
+}
+
+.StatRow .Change, .SkillData .Change {
+    display: block;
+    flex: 0 0 40px;
+}
+
+.SkillRow {
+    margin-bottom: 20px;
+}
+
+.SkillBar {
+    margin-left: 20px;
+}
+
+.AugmentRow {
+    margin-bottom: 10px;
+}
+
+.AugmentBody {
+    display: grid;
+    grid-template-columns: repeat(1, 280px);
+    column-gap: 40px;
+    row-gap: 10px;
+}
+
+@media (min-width: 900px) {
+    .AugmentBody {
+        grid-template-columns: repeat(2, 280px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .AugmentBody {
+        grid-template-columns: repeat(3, 280px);
+    }
+}

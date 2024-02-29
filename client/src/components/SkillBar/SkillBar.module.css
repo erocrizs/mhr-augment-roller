@@ -1,0 +1,41 @@
+.SkillBar {
+    display: grid;
+    width: 100%;
+    gap: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.LevelBarContainer {
+    box-sizing: border-box;
+    border: 1px solid var(--gray-color);
+}
+
+.LevelBar {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: var(--gray-color);
+    border: 0px;
+}
+
+.LevelBar.ReachBar {
+    background-color: var(--light-color);
+}
+
+.LevelBar.MinMinusBar {
+    border-bottom: 5px inset var(--subtract-color);
+}
+
+.LevelBar.MaxMinusBar {
+    border: 0px;
+    background-color: var(--subtract-color);
+}
+
+.LevelBar.MaxPlusBar {
+    border-top: 5px solid var(--add-color);
+}
+
+.LevelBar.MinPlusBar {
+    border: 0px;
+    background-color: var(--add-color);
+}

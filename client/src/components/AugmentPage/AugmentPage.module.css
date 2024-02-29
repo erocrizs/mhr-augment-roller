@@ -1,0 +1,72 @@
+.AugmentPage {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    
+    margin-bottom: 150px;
+}
+
+.EquipmentRow {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.EquipmentRow .EquipmentLabel, .AugmentModeRow .AugmentModeLabel {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.EquipmentRow .EquipmentSelectGroup {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.AugmentModeRow {
+    margin-bottom: 30px;
+}
+
+.AugmentModeButtons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.AugmentModeButton {
+    flex: 0 1 120px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.AugmentModeButton label {
+    cursor: pointer;
+}
+
+.AugmentModeRow label {
+    width: 55px;
+}
+
+.AugmentModeRow label.SelectedMode {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+@media (min-width: 700px) {
+    .AugmentPage {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .EquipmentRow .EquipmentSelectGroup {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+}
+

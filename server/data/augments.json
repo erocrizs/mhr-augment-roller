@@ -1,2809 +1,3202 @@
 [
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 3,
-      "probabilityWeight": 80
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 9,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 10,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 11,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 18,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 19,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 20,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 27,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 29,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 31,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 36,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 38,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense+",
-      "value": 40,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense-",
-      "value": -6,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Defense-",
-      "value": -12,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Water res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Water res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Water res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Water res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Water res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 60
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 36
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 28
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Skill-",
-      "value": -1,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Slot+",
-      "value": 1,
-      "probabilityWeight": 70
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Slot+",
-      "value": 2,
-      "probabilityWeight": 25
-    },
-    {
-      "pool": 1,
-      "class": "default",
-      "type": "Slot+",
-      "value": 3,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 80
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 7,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 8,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 14,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 15,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 16,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 20,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 22,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 24,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 28,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 30,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense+",
-      "value": 32,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense-",
-      "value": -6,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Defense-",
-      "value": -12,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Water res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Water res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Water res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Water res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Water res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 60
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 36
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 28
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Skill-",
-      "value": -1,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Slot+",
-      "value": 1,
-      "probabilityWeight": 70
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Slot+",
-      "value": 2,
-      "probabilityWeight": 25
-    },
-    {
-      "pool": 2,
-      "class": "default",
-      "type": "Slot+",
-      "value": 3,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 80
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 7,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 8,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 9,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 11,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 12,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 13,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 18,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 19,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 20,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 22,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 24,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense+",
-      "value": 26,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense-",
-      "value": -6,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Defense-",
-      "value": -12,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Water res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Water res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Water res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Water res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Water res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 60
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 36
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 28
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Skill-",
-      "value": -1,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Slot+",
-      "value": 1,
-      "probabilityWeight": 70
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Slot+",
-      "value": 2,
-      "probabilityWeight": 25
-    },
-    {
-      "pool": 3,
-      "class": "default",
-      "type": "Slot+",
-      "value": 3,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 1,
-      "probabilityWeight": 80
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 5,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 7,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 8,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 9,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 10,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 12,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 13,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 14,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 16,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 18,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense+",
-      "value": 20,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense-",
-      "value": -6,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Defense-",
-      "value": -12,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Water res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Water res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Water res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Water res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Water res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 60
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 36
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 28
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Skill-",
-      "value": -1,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Slot+",
-      "value": 1,
-      "probabilityWeight": 70
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Slot+",
-      "value": 2,
-      "probabilityWeight": 25
-    },
-    {
-      "pool": 4,
-      "class": "default",
-      "type": "Slot+",
-      "value": 3,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 1,
-      "probabilityWeight": 80
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 5,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 7,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 8,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 10,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 11,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 12,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 12,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 14,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense+",
-      "value": 16,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense-",
-      "value": -6,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Defense-",
-      "value": -12,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Water res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Water res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Water res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Water res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Water res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 60
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 36
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 28
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Skill-",
-      "value": -1,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Slot+",
-      "value": 1,
-      "probabilityWeight": 70
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Slot+",
-      "value": 2,
-      "probabilityWeight": 25
-    },
-    {
-      "pool": 5,
-      "class": "default",
-      "type": "Slot+",
-      "value": 3,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 1,
-      "probabilityWeight": 80
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 3,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 5,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 7,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 8,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 8,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 10,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense+",
-      "value": 12,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense-",
-      "value": -6,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Defense-",
-      "value": -12,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Water res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Water res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Water res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Water res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Water res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 1,
-      "probabilityWeight": 6
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 2,
-      "probabilityWeight": 24
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -1,
-      "probabilityWeight": 4
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -2,
-      "probabilityWeight": 14
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -3,
-      "probabilityWeight": 12
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 60
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 40
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 36
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 28
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Skill+",
-      "value": 1,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Skill-",
-      "value": -1,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Slot+",
-      "value": 1,
-      "probabilityWeight": 70
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Slot+",
-      "value": 2,
-      "probabilityWeight": 25
-    },
-    {
-      "pool": 6,
-      "class": "default",
-      "type": "Slot+",
-      "value": 3,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 1,
-      "probabilityWeight": 98
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 29
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 3,
-      "probabilityWeight": 49
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 29
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 5,
-      "probabilityWeight": 49
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 20
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 15
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 7,
-      "probabilityWeight": 25
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 8,
-      "probabilityWeight": 10
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 8,
-      "probabilityWeight": 15
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 10,
-      "probabilityWeight": 25
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense+",
-      "value": 12,
-      "probabilityWeight": 10
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense-",
-      "value": -6,
-      "probabilityWeight": 49
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Defense-",
-      "value": -12,
-      "probabilityWeight": 49
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 1,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Fire res+",
-      "value": 2,
-      "probabilityWeight": 31
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -1,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -2,
-      "probabilityWeight": 19
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Fire res-",
-      "value": -3,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Water res+",
-      "value": 1,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Water res+",
-      "value": 2,
-      "probabilityWeight": 31
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Water res-",
-      "value": -1,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Water res-",
-      "value": -2,
-      "probabilityWeight": 19
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Water res-",
-      "value": -3,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 1,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Thunder res+",
-      "value": 2,
-      "probabilityWeight": 31
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -1,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -2,
-      "probabilityWeight": 19
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Thunder res-",
-      "value": -3,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 1,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Ice res+",
-      "value": 2,
-      "probabilityWeight": 31
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -1,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -2,
-      "probabilityWeight": 19
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Ice res-",
-      "value": -3,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 1,
-      "probabilityWeight": 8
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Dragon res+",
-      "value": 2,
-      "probabilityWeight": 31
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -1,
-      "probabilityWeight": 5
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -2,
-      "probabilityWeight": 19
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Dragon res-",
-      "value": -3,
-      "probabilityWeight": 16
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Slot+",
-      "value": 1,
-      "probabilityWeight": 60
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Slot+",
-      "value": 2,
-      "probabilityWeight": 42
-    },
-    {
-      "pool": 13,
-      "class": "default",
-      "type": "Slot+",
-      "value": 3,
-      "probabilityWeight": 18
-    },
-    {
-      "pool": 1,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 1,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 1,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 3,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 3,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 6,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 3,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 5,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 3,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 4,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 1,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 1,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "lastFiller",
-      "type": "Defense+",
-      "value": 2,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 1,
-      "class": "skill+First",
-      "type": "Fire res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 1,
-      "class": "skill+First",
-      "type": "Water res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 1,
-      "class": "skill+First",
-      "type": "Thunder res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 1,
-      "class": "skill+First",
-      "type": "Ice res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 1,
-      "class": "skill+First",
-      "type": "Dragon res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "skill+First",
-      "type": "Fire res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "skill+First",
-      "type": "Water res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "skill+First",
-      "type": "Thunder res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "skill+First",
-      "type": "Ice res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "skill+First",
-      "type": "Dragon res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "skill+First",
-      "type": "Fire res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "skill+First",
-      "type": "Water res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "skill+First",
-      "type": "Thunder res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "skill+First",
-      "type": "Ice res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "skill+First",
-      "type": "Dragon res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "skill+First",
-      "type": "Fire res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "skill+First",
-      "type": "Water res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "skill+First",
-      "type": "Thunder res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "skill+First",
-      "type": "Ice res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "skill+First",
-      "type": "Dragon res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "skill+First",
-      "type": "Fire res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "skill+First",
-      "type": "Water res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "skill+First",
-      "type": "Thunder res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "skill+First",
-      "type": "Ice res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "skill+First",
-      "type": "Dragon res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "skill+First",
-      "type": "Fire res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "skill+First",
-      "type": "Water res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "skill+First",
-      "type": "Thunder res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "skill+First",
-      "type": "Ice res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "skill+First",
-      "type": "Dragon res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "skill+First",
-      "type": 91,
-      "value": "Fire res-",
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "skill+First",
-      "type": 91,
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "skill+First",
-      "type": "Water res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "skill+First",
-      "type": "Thunder res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "skill+First",
-      "type": "Ice res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "skill+First",
-      "type": "Dragon res-",
-      "value": -7,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 1,
-      "class": "slot+First",
-      "type": "Defense-",
-      "value": -25,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 2,
-      "class": "slot+First",
-      "type": "Defense-",
-      "value": -25,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 3,
-      "class": "slot+First",
-      "type": "Defense-",
-      "value": -25,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 4,
-      "class": "slot+First",
-      "type": "Defense-",
-      "value": -25,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 5,
-      "class": "slot+First",
-      "type": "Defense-",
-      "value": -25,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 6,
-      "class": "slot+First",
-      "type": "Defense-",
-      "value": -25,
-      "probabilityWeight": 0
-    },
-    {
-      "pool": 13,
-      "class": "slot+First",
-      "type": "Defense-",
-      "value": -25,
-      "probabilityWeight": 0
-    }
-  ]
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 3,
+    "probabilityWeight": 8000,
+    "cost": 1
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 9,
+    "probabilityWeight": 2400,
+    "cost": 5
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 10,
+    "probabilityWeight": 4000,
+    "cost": 5
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 11,
+    "probabilityWeight": 1600,
+    "cost": 5
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 18,
+    "probabilityWeight": 2400,
+    "cost": 10
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 19,
+    "probabilityWeight": 4000,
+    "cost": 10
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 20,
+    "probabilityWeight": 1600,
+    "cost": 10
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 27,
+    "probabilityWeight": 1200,
+    "cost": 15
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 29,
+    "probabilityWeight": 2000,
+    "cost": 15
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 31,
+    "probabilityWeight": 800,
+    "cost": 15
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 36,
+    "probabilityWeight": 1200,
+    "cost": 20
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 38,
+    "probabilityWeight": 2000,
+    "cost": 20
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense+",
+    "value": 40,
+    "probabilityWeight": 800,
+    "cost": 20
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense-",
+    "value": -6,
+    "probabilityWeight": 4000,
+    "cost": -3
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Defense-",
+    "value": -12,
+    "probabilityWeight": 4000,
+    "cost": -5
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 6000,
+    "cost": 3
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 4000,
+    "cost": 6
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 3600,
+    "cost": 9
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 2800,
+    "cost": 12
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 1600,
+    "cost": 15
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Skill-",
+    "value": -1,
+    "probabilityWeight": 2000,
+    "cost": -10
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Slot+",
+    "value": 1,
+    "probabilityWeight": 7000,
+    "cost": 6
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Slot+",
+    "value": 2,
+    "probabilityWeight": 2500,
+    "cost": 12
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Slot+",
+    "value": 3,
+    "probabilityWeight": 500,
+    "cost": 18
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Water res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Water res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Water res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Water res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 1,
+    "class": "default",
+    "type": "Water res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 1,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 0,
+    "cost": 2
+  },
+  {
+    "pool": 1,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 0,
+    "cost": 3
+  },
+  {
+    "pool": 1,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 7,
+    "probabilityWeight": 0,
+    "cost": 4
+  },
+  {
+    "pool": 1,
+    "class": "skill+First",
+    "type": "Dragon res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 1,
+    "class": "skill+First",
+    "type": "Fire res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 1,
+    "class": "skill+First",
+    "type": "Ice res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 1,
+    "class": "skill+First",
+    "type": "Thunder res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 1,
+    "class": "skill+First",
+    "type": "Water res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 1,
+    "class": "slot+First",
+    "type": "Defense-",
+    "value": -25,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 8000,
+    "cost": 1
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 2400,
+    "cost": 5
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 7,
+    "probabilityWeight": 4000,
+    "cost": 5
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 8,
+    "probabilityWeight": 1600,
+    "cost": 5
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 14,
+    "probabilityWeight": 2400,
+    "cost": 10
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 15,
+    "probabilityWeight": 4000,
+    "cost": 10
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 16,
+    "probabilityWeight": 1600,
+    "cost": 10
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 20,
+    "probabilityWeight": 1200,
+    "cost": 14
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 22,
+    "probabilityWeight": 2000,
+    "cost": 14
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 24,
+    "probabilityWeight": 800,
+    "cost": 14
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 28,
+    "probabilityWeight": 1200,
+    "cost": 18
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 30,
+    "probabilityWeight": 2000,
+    "cost": 18
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense+",
+    "value": 32,
+    "probabilityWeight": 800,
+    "cost": 18
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense-",
+    "value": -6,
+    "probabilityWeight": 4000,
+    "cost": -3
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Defense-",
+    "value": -12,
+    "probabilityWeight": 4000,
+    "cost": -5
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 6000,
+    "cost": 3
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 4000,
+    "cost": 6
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 3600,
+    "cost": 9
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 2800,
+    "cost": 12
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 1600,
+    "cost": 15
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Skill-",
+    "value": -1,
+    "probabilityWeight": 2000,
+    "cost": -10
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Slot+",
+    "value": 1,
+    "probabilityWeight": 7000,
+    "cost": 6
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Slot+",
+    "value": 2,
+    "probabilityWeight": 2500,
+    "cost": 12
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Slot+",
+    "value": 3,
+    "probabilityWeight": 500,
+    "cost": 18
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Water res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Water res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Water res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Water res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 2,
+    "class": "default",
+    "type": "Water res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 2,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 3,
+    "probabilityWeight": 0,
+    "cost": 2
+  },
+  {
+    "pool": 2,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 0,
+    "cost": 3
+  },
+  {
+    "pool": 2,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 0,
+    "cost": 4
+  },
+  {
+    "pool": 2,
+    "class": "skill+First",
+    "type": "Dragon res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 2,
+    "class": "skill+First",
+    "type": "Fire res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 2,
+    "class": "skill+First",
+    "type": "Ice res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 2,
+    "class": "skill+First",
+    "type": "Thunder res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 2,
+    "class": "skill+First",
+    "type": "Water res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 2,
+    "class": "slot+First",
+    "type": "Defense-",
+    "value": -25,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 8000,
+    "cost": 1
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 7,
+    "probabilityWeight": 2400,
+    "cost": 5
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 8,
+    "probabilityWeight": 4000,
+    "cost": 5
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 9,
+    "probabilityWeight": 1600,
+    "cost": 5
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 11,
+    "probabilityWeight": 2400,
+    "cost": 8
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 12,
+    "probabilityWeight": 4000,
+    "cost": 8
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 13,
+    "probabilityWeight": 1600,
+    "cost": 8
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 18,
+    "probabilityWeight": 1200,
+    "cost": 12
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 19,
+    "probabilityWeight": 2000,
+    "cost": 12
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 20,
+    "probabilityWeight": 800,
+    "cost": 12
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 22,
+    "probabilityWeight": 1200,
+    "cost": 16
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 24,
+    "probabilityWeight": 2000,
+    "cost": 16
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense+",
+    "value": 26,
+    "probabilityWeight": 800,
+    "cost": 16
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense-",
+    "value": -6,
+    "probabilityWeight": 4000,
+    "cost": -3
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Defense-",
+    "value": -12,
+    "probabilityWeight": 4000,
+    "cost": -5
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 6000,
+    "cost": 3
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 4000,
+    "cost": 6
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 3600,
+    "cost": 9
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 2800,
+    "cost": 12
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 1600,
+    "cost": 15
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Skill-",
+    "value": -1,
+    "probabilityWeight": 2000,
+    "cost": -10
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Slot+",
+    "value": 1,
+    "probabilityWeight": 7000,
+    "cost": 6
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Slot+",
+    "value": 2,
+    "probabilityWeight": 2500,
+    "cost": 12
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Slot+",
+    "value": 3,
+    "probabilityWeight": 500,
+    "cost": 18
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Water res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Water res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Water res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Water res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 3,
+    "class": "default",
+    "type": "Water res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 3,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 3,
+    "probabilityWeight": 0,
+    "cost": 2
+  },
+  {
+    "pool": 3,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 0,
+    "cost": 3
+  },
+  {
+    "pool": 3,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 0,
+    "cost": 4
+  },
+  {
+    "pool": 3,
+    "class": "skill+First",
+    "type": "Dragon res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 3,
+    "class": "skill+First",
+    "type": "Fire res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 3,
+    "class": "skill+First",
+    "type": "Ice res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 3,
+    "class": "skill+First",
+    "type": "Thunder res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 3,
+    "class": "skill+First",
+    "type": "Water res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 3,
+    "class": "slot+First",
+    "type": "Defense-",
+    "value": -25,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 1,
+    "probabilityWeight": 8000,
+    "cost": 1
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 5,
+    "probabilityWeight": 2400,
+    "cost": 5
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 4000,
+    "cost": 5
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 7,
+    "probabilityWeight": 1600,
+    "cost": 5
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 8,
+    "probabilityWeight": 2400,
+    "cost": 7
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 9,
+    "probabilityWeight": 4000,
+    "cost": 7
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 10,
+    "probabilityWeight": 1600,
+    "cost": 7
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 12,
+    "probabilityWeight": 1200,
+    "cost": 10
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 13,
+    "probabilityWeight": 2000,
+    "cost": 10
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 14,
+    "probabilityWeight": 800,
+    "cost": 10
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 16,
+    "probabilityWeight": 1200,
+    "cost": 14
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 18,
+    "probabilityWeight": 2000,
+    "cost": 14
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense+",
+    "value": 20,
+    "probabilityWeight": 800,
+    "cost": 14
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense-",
+    "value": -6,
+    "probabilityWeight": 4000,
+    "cost": -3
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Defense-",
+    "value": -12,
+    "probabilityWeight": 4000,
+    "cost": -5
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 6000,
+    "cost": 3
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 4000,
+    "cost": 6
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 3600,
+    "cost": 9
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 2800,
+    "cost": 12
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 1600,
+    "cost": 15
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Skill-",
+    "value": -1,
+    "probabilityWeight": 2000,
+    "cost": -10
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Slot+",
+    "value": 1,
+    "probabilityWeight": 7000,
+    "cost": 6
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Slot+",
+    "value": 2,
+    "probabilityWeight": 2500,
+    "cost": 12
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Slot+",
+    "value": 3,
+    "probabilityWeight": 500,
+    "cost": 18
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Water res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Water res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Water res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Water res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 4,
+    "class": "default",
+    "type": "Water res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 4,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 3,
+    "probabilityWeight": 0,
+    "cost": 2
+  },
+  {
+    "pool": 4,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 0,
+    "cost": 3
+  },
+  {
+    "pool": 4,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 5,
+    "probabilityWeight": 0,
+    "cost": 4
+  },
+  {
+    "pool": 4,
+    "class": "skill+First",
+    "type": "Dragon res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 4,
+    "class": "skill+First",
+    "type": "Fire res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 4,
+    "class": "skill+First",
+    "type": "Ice res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 4,
+    "class": "skill+First",
+    "type": "Thunder res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 4,
+    "class": "skill+First",
+    "type": "Water res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 4,
+    "class": "slot+First",
+    "type": "Defense-",
+    "value": -25,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 1,
+    "probabilityWeight": 8000,
+    "cost": 1
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 2400,
+    "cost": 5
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 5,
+    "probabilityWeight": 4000,
+    "cost": 5
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 1600,
+    "cost": 5
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 2400,
+    "cost": 6
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 7,
+    "probabilityWeight": 4000,
+    "cost": 6
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 8,
+    "probabilityWeight": 1600,
+    "cost": 6
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 10,
+    "probabilityWeight": 1200,
+    "cost": 9
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 11,
+    "probabilityWeight": 2000,
+    "cost": 9
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 12,
+    "probabilityWeight": 800,
+    "cost": 9
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 12,
+    "probabilityWeight": 1200,
+    "cost": 12
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 14,
+    "probabilityWeight": 2000,
+    "cost": 12
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense+",
+    "value": 16,
+    "probabilityWeight": 800,
+    "cost": 12
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense-",
+    "value": -6,
+    "probabilityWeight": 4000,
+    "cost": -3
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Defense-",
+    "value": -12,
+    "probabilityWeight": 4000,
+    "cost": -5
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 6000,
+    "cost": 3
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 4000,
+    "cost": 6
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 3600,
+    "cost": 9
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 2800,
+    "cost": 12
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 1600,
+    "cost": 15
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Skill-",
+    "value": -1,
+    "probabilityWeight": 2000,
+    "cost": -10
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Slot+",
+    "value": 1,
+    "probabilityWeight": 7000,
+    "cost": 6
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Slot+",
+    "value": 2,
+    "probabilityWeight": 2500,
+    "cost": 12
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Slot+",
+    "value": 3,
+    "probabilityWeight": 500,
+    "cost": 18
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Water res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Water res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Water res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Water res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 5,
+    "class": "default",
+    "type": "Water res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 5,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 0,
+    "cost": 2
+  },
+  {
+    "pool": 5,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 3,
+    "probabilityWeight": 0,
+    "cost": 3
+  },
+  {
+    "pool": 5,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 0,
+    "cost": 4
+  },
+  {
+    "pool": 5,
+    "class": "skill+First",
+    "type": "Dragon res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 5,
+    "class": "skill+First",
+    "type": "Fire res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 5,
+    "class": "skill+First",
+    "type": "Ice res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 5,
+    "class": "skill+First",
+    "type": "Thunder res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 5,
+    "class": "skill+First",
+    "type": "Water res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 5,
+    "class": "slot+First",
+    "type": "Defense-",
+    "value": -25,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 1,
+    "probabilityWeight": 8000,
+    "cost": 1
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 3,
+    "probabilityWeight": 4000,
+    "cost": 3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 1600,
+    "cost": 3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 2400,
+    "cost": 5
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 5,
+    "probabilityWeight": 4000,
+    "cost": 5
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 1600,
+    "cost": 5
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 1200,
+    "cost": 7
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 7,
+    "probabilityWeight": 2000,
+    "cost": 7
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 8,
+    "probabilityWeight": 800,
+    "cost": 7
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 8,
+    "probabilityWeight": 1200,
+    "cost": 10
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 10,
+    "probabilityWeight": 2000,
+    "cost": 10
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense+",
+    "value": 12,
+    "probabilityWeight": 800,
+    "cost": 10
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense-",
+    "value": -6,
+    "probabilityWeight": 4000,
+    "cost": -3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Defense-",
+    "value": -12,
+    "probabilityWeight": 4000,
+    "cost": -5
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 6000,
+    "cost": 3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 4000,
+    "cost": 6
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 3600,
+    "cost": 9
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 2800,
+    "cost": 12
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Skill+",
+    "value": 1,
+    "probabilityWeight": 1600,
+    "cost": 15
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Skill-",
+    "value": -1,
+    "probabilityWeight": 2000,
+    "cost": -10
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Slot+",
+    "value": 1,
+    "probabilityWeight": 7000,
+    "cost": 6
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Slot+",
+    "value": 2,
+    "probabilityWeight": 2500,
+    "cost": 12
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Slot+",
+    "value": 3,
+    "probabilityWeight": 500,
+    "cost": 18
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Water res+",
+    "value": 1,
+    "probabilityWeight": 600,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Water res+",
+    "value": 2,
+    "probabilityWeight": 2400,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Water res-",
+    "value": -1,
+    "probabilityWeight": 400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Water res-",
+    "value": -2,
+    "probabilityWeight": 1400,
+    "cost": -2
+  },
+  {
+    "pool": 6,
+    "class": "default",
+    "type": "Water res-",
+    "value": -3,
+    "probabilityWeight": 1200,
+    "cost": -3
+  },
+  {
+    "pool": 6,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 1,
+    "probabilityWeight": 0,
+    "cost": 2
+  },
+  {
+    "pool": 6,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 0,
+    "cost": 3
+  },
+  {
+    "pool": 6,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 0,
+    "cost": 4
+  },
+  {
+    "pool": 6,
+    "class": "skill+First",
+    "type": "Dragon res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 6,
+    "class": "skill+First",
+    "type": "Fire res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 6,
+    "class": "skill+First",
+    "type": "Ice res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 6,
+    "class": "skill+First",
+    "type": "Thunder res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 6,
+    "class": "skill+First",
+    "type": "Water res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 6,
+    "class": "slot+First",
+    "type": "Defense-",
+    "value": -25,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 1,
+    "probabilityWeight": 9800,
+    "cost": 1
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 2940,
+    "cost": 3
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 3,
+    "probabilityWeight": 4900,
+    "cost": 3
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 1960,
+    "cost": 3
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 4,
+    "probabilityWeight": 2940,
+    "cost": 5
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 5,
+    "probabilityWeight": 4900,
+    "cost": 5
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 1960,
+    "cost": 5
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 6,
+    "probabilityWeight": 1470,
+    "cost": 7
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 7,
+    "probabilityWeight": 2450,
+    "cost": 7
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 8,
+    "probabilityWeight": 980,
+    "cost": 7
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 8,
+    "probabilityWeight": 1470,
+    "cost": 10
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 10,
+    "probabilityWeight": 2450,
+    "cost": 10
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense+",
+    "value": 12,
+    "probabilityWeight": 980,
+    "cost": 10
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense-",
+    "value": -6,
+    "probabilityWeight": 4900,
+    "cost": -3
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Defense-",
+    "value": -12,
+    "probabilityWeight": 4900,
+    "cost": -5
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 1,
+    "probabilityWeight": 780,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Dragon res+",
+    "value": 2,
+    "probabilityWeight": 3120,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -1,
+    "probabilityWeight": 468,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -2,
+    "probabilityWeight": 1872,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Dragon res-",
+    "value": -3,
+    "probabilityWeight": 1560,
+    "cost": -3
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 1,
+    "probabilityWeight": 780,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Fire res+",
+    "value": 2,
+    "probabilityWeight": 3120,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -1,
+    "probabilityWeight": 468,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -2,
+    "probabilityWeight": 1872,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Fire res-",
+    "value": -3,
+    "probabilityWeight": 1560,
+    "cost": -3
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 1,
+    "probabilityWeight": 780,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Ice res+",
+    "value": 2,
+    "probabilityWeight": 3120,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -1,
+    "probabilityWeight": 468,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -2,
+    "probabilityWeight": 1872,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Ice res-",
+    "value": -3,
+    "probabilityWeight": 1560,
+    "cost": -3
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Slot+",
+    "value": 1,
+    "probabilityWeight": 6000,
+    "cost": 6
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Slot+",
+    "value": 2,
+    "probabilityWeight": 4200,
+    "cost": 12
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Slot+",
+    "value": 3,
+    "probabilityWeight": 1800,
+    "cost": 18
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 1,
+    "probabilityWeight": 780,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Thunder res+",
+    "value": 2,
+    "probabilityWeight": 3120,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -1,
+    "probabilityWeight": 468,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -2,
+    "probabilityWeight": 1872,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Thunder res-",
+    "value": -3,
+    "probabilityWeight": 1560,
+    "cost": -3
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Water res+",
+    "value": 1,
+    "probabilityWeight": 780,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Water res+",
+    "value": 2,
+    "probabilityWeight": 3120,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Water res-",
+    "value": -1,
+    "probabilityWeight": 468,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Water res-",
+    "value": -2,
+    "probabilityWeight": 1872,
+    "cost": -2
+  },
+  {
+    "pool": 13,
+    "class": "default",
+    "type": "Water res-",
+    "value": -3,
+    "probabilityWeight": 1560,
+    "cost": -3
+  },
+  {
+    "pool": 13,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 1,
+    "probabilityWeight": 0,
+    "cost": 2
+  },
+  {
+    "pool": 13,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 0,
+    "cost": 3
+  },
+  {
+    "pool": 13,
+    "class": "lastFiller",
+    "type": "Defense+",
+    "value": 2,
+    "probabilityWeight": 0,
+    "cost": 4
+  },
+  {
+    "pool": 13,
+    "class": "skill+First",
+    "type": "Fire res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 13,
+    "class": "skill+First",
+    "type": "Dragon res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 13,
+    "class": "skill+First",
+    "type": "Ice res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 13,
+    "class": "skill+First",
+    "type": "Thunder res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 13,
+    "class": "skill+First",
+    "type": "Water res-",
+    "value": -7,
+    "probabilityWeight": 0,
+    "cost": 0
+  },
+  {
+    "pool": 13,
+    "class": "slot+First",
+    "type": "Defense-",
+    "value": -25,
+    "probabilityWeight": 0,
+    "cost": 0
+  }
+]
