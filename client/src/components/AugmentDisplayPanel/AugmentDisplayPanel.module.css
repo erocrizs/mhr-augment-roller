@@ -131,6 +131,10 @@
     margin-left: 20px;
 }
 
+.AugmentRow {
+    margin-bottom: 10px;
+}
+
 .AugmentBody {
     display: grid;
     grid-template-columns: repeat(1, 280px);

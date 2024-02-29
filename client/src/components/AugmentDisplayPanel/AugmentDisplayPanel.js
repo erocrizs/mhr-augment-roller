@@ -25,7 +25,7 @@ function ChangeArrow({augmentedValue, baseValue}) {
         <>
             <span className={styles.Value}>
                 {
-                    change !== 0 ? <>
+                    change === 0 ? <>
                         <b>{baseValue}</b>
                     </> : <>
                         {baseValue} → <b>{augmentedValue}</b>
@@ -148,7 +148,7 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
                     <h3 className={styles.SectionHeader}>Armor Skills</h3>
                     {
                         skillsDiff.map(({name, maxLevel, fromLevel, toLevel}) => (
-                            <div className={styles.SkillRow}>
+                            <div className={styles.SkillRow} key={name}>
                                 <div className={styles.SkillData}>
                                     <span className={styles.Label}>{name}</span>
                                     <ChangeArrow augmentedValue={toLevel} baseValue={fromLevel}/>
@@ -168,13 +168,13 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
                 </div>
                 <div className={styles.ArmorAugments}>
                     <h3 className={styles.SectionHeader}>Augments</h3>
+                    <ul>
                     {
-                        augmentsApplied.map((a) => (
-                            <ul className={styles.AugmentRow}>
-                                <li><AugmentMessage {...a}/></li>
-                            </ul>
+                        augmentsApplied.map((a, i) => (
+                                <li className={styles.AugmentRow} key={i}><AugmentMessage {...a}/></li>
                         ))
                     }
+                    </ul>
                 </div>
             </div>
         </div>
