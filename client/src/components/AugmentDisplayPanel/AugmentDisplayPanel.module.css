@@ -1,5 +1,18 @@
 .AugmentDisplayPanel {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.Positive {
+    color: var(--add-color);
+    font-weight: bold;
+}
+
+.Negative {
+    color: var(--subtract-color);
+    font-weight: bold;
 }
 
 .TitleRow {
@@ -10,6 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .DialButton {
@@ -70,4 +84,68 @@
 
 .Indicator.Selected {
     background-color: var(--highlight-color);
+}
+
+.StatRow {
+    height: 36px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: stretch;
+    gap: 20px;
+}
+
+.StatRow, .SkillRow {
+    margin-left: 10px;
+}
+
+.SkillData {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: stretch;
+    gap: 20px;
+}
+
+.StatRow .Label, .SkillData .Label {
+    display: block;
+    flex: 1 1 auto;
+}
+
+.StatRow .Value, .SkillData .Value {
+    display: block;
+    flex: 1 1 auto;
+    text-align: right;
+}
+
+.StatRow .Change, .SkillData .Change {
+    display: block;
+    flex: 0 0 40px;
+}
+
+.SkillRow {
+    margin-bottom: 20px;
+}
+
+.SkillBar {
+    margin-left: 20px;
+}
+
+.AugmentBody {
+    display: grid;
+    grid-template-columns: repeat(1, 280px);
+    column-gap: 40px;
+    row-gap: 10px;
+}
+
+@media (min-width: 900px) {
+    .AugmentBody {
+        grid-template-columns: repeat(2, 280px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .AugmentBody {
+        grid-template-columns: repeat(3, 280px);
+    }
 }

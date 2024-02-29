@@ -19,22 +19,22 @@ function ChangeArrow({augmentedValue, baseValue}) {
     const change = augmentedValue - baseValue;
     const signChange = change < 0 ? '-' : '+';
     const absChange = Math.abs(change);
-    const changeClassName = [styles.Change];
-    if (change > 0) {
-        changeClassName.push(styles.Positive);
-    }
-    else if (change < 0) {
-        changeClassName.push(styles.Negative);
-    }
+    const changeClassName = change < 0 ? styles.Negative : styles.Positive;
 
     return (
         <>
             <span className={styles.Value}>
-                {baseValue}{change !== 0 ? ` → ${augmentedValue}` : ''}
+                {
+                    change !== 0 ? <>
+                        <b>{baseValue}</b>
+                    </> : <>
+                        {baseValue} → <b>{augmentedValue}</b>
+                    </>
+                }
             </span>
-            <span className={changeClassName.join(' ')}>
-                {change !== 0 ? `${signChange}${absChange}` : ''}
-            </span>
+            <span className={styles.Change}>{
+                change !== 0 && <>(<span className={changeClassName}>{signChange}{absChange}</span>)</>
+            }</span>
         </>
     );
 }
@@ -94,7 +94,6 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
 
     return (
         <div className={styles.AugmentDisplayPanel}>
-            <h2 className={styles.TitleRow}>{generateAugmentTitle(skillsDiff, decosDiff)}</h2>
             <div className={styles.IndexDial}>
                 <button className={styles.DialButton} onClick={() => moveIndex(-1)} disabled={index <= 0}>
                     <span className={styles.LeftTriangle}/>
@@ -108,61 +107,75 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
                     <span className={styles.RightTriangle}/>
                 </button>
             </div>
-            <div className={styles.ArmorStats}>
-                <h3 className={styles.SectionHeader}>Armor Stats</h3>
-                <div className={styles.StatRow}>
-                    <span className={styles.Label}>Slots</span>
-                    <DecoSlotBlock decoList={baseArmorPiece.decos}
-                        slotChange={decosDiff}/>
+            <h2 className={styles.TitleRow}>{generateAugmentTitle(skillsDiff, decosDiff)}</h2>
+            <div className={styles.AugmentBody}>
+                <div className={styles.ArmorStats}>
+                    <h3 className={styles.SectionHeader}>Armor Stats</h3>
+                    <div className={styles.StatRow}>
+                        <span className={styles.Label}>Slots</span>
+                        <DecoSlotBlock decoList={baseArmorPiece.decos}
+                            slotChange={decosDiff}/>
+                        <span className={styles.Change}>{
+                            decosDiff !== 0 && <>(<span className={styles.Positive}>+{decosDiff}</span>)</>
+                        }</span>
+                    </div>
+                    <div className={styles.StatRow}>
+                        <span className={styles.Label}>Defense</span>
+                        <ChangeArrow augmentedValue={augmentedArmorPiece.defense} baseValue={baseArmorPiece.defense}/>
+                    </div>
+                    <div className={styles.StatRow}>
+                        <span className={styles.Label}>Fire Resist</span>
+                        <ChangeArrow augmentedValue={augmentedArmorPiece.fireRes} baseValue={baseArmorPiece.fireRes}/>
+                    </div>
+                    <div className={styles.StatRow}>
+                        <span className={styles.Label}>Water Resist</span>
+                        <ChangeArrow augmentedValue={augmentedArmorPiece.waterRes} baseValue={baseArmorPiece.waterRes}/>
+                    </div>
+                    <div className={styles.StatRow}>
+                        <span className={styles.Label}>Thunder Resist</span>
+                        <ChangeArrow augmentedValue={augmentedArmorPiece.thunderRes} baseValue={baseArmorPiece.thunderRes}/>
+                    </div>
+                    <div className={styles.StatRow}>
+                        <span className={styles.Label}>Ice Resist</span>
+                        <ChangeArrow augmentedValue={augmentedArmorPiece.iceRes} baseValue={baseArmorPiece.iceRes}/>
+                    </div>
+                    <div className={styles.StatRow}>
+                        <span className={styles.Label}>Dragon Resist</span>
+                        <ChangeArrow augmentedValue={augmentedArmorPiece.dragonRes} baseValue={baseArmorPiece.dragonRes}/>
+                    </div>
                 </div>
-                <div className={styles.StatRow}>
-                    <span className={styles.Label}>Defense</span>
-                    <ChangeArrow augmentedValue={augmentedArmorPiece.defense} baseValue={baseArmorPiece.defense}/>
-                </div>
-                <div className={styles.StatRow}>
-                    <span className={styles.Label}>Fire Resist</span>
-                    <ChangeArrow augmentedValue={augmentedArmorPiece.fireRes} baseValue={baseArmorPiece.fireRes}/>
-                </div>
-                <div className={styles.StatRow}>
-                    <span className={styles.Label}>Water Resist</span>
-                    <ChangeArrow augmentedValue={augmentedArmorPiece.waterRes} baseValue={baseArmorPiece.waterRes}/>
-                </div>
-                <div className={styles.StatRow}>
-                    <span className={styles.Label}>Thunder Resist</span>
-                    <ChangeArrow augmentedValue={augmentedArmorPiece.thunderRes} baseValue={baseArmorPiece.thunderRes}/>
-                </div>
-                <div className={styles.StatRow}>
-                    <span className={styles.Label}>Ice Resist</span>
-                    <ChangeArrow augmentedValue={augmentedArmorPiece.iceRes} baseValue={baseArmorPiece.iceRes}/>
-                </div>
-                <div className={styles.StatRow}>
-                    <span className={styles.Label}>Dragon Resist</span>
-                    <ChangeArrow augmentedValue={augmentedArmorPiece.dragonRes} baseValue={baseArmorPiece.dragonRes}/>
-                </div>
-            </div>
-            <div className={styles.ArmorSkills}>
-                <h3 className={styles.SectionHeader}>Armor Skills</h3>
-                {
-                    skillsDiff.map(({name, maxLevel, fromLevel, toLevel}) => (
-                        <div className={styles.SkillRow}>
-                            <div className={styles.SkillData}>
-                                <span className={styles.Label}>{name}</span>
-                                <ChangeArrow augmentedValue={toLevel} baseValue={fromLevel}/>
+                <div className={styles.ArmorSkills}>
+                    <h3 className={styles.SectionHeader}>Armor Skills</h3>
+                    {
+                        skillsDiff.map(({name, maxLevel, fromLevel, toLevel}) => (
+                            <div className={styles.SkillRow}>
+                                <div className={styles.SkillData}>
+                                    <span className={styles.Label}>{name}</span>
+                                    <ChangeArrow augmentedValue={toLevel} baseValue={fromLevel}/>
+                                </div>
+                                <div className={styles.SkillBar}>
+                                    <SkillBar 
+                                        maxLevel={maxLevel}
+                                        level={fromLevel}
+                                        range={{min: toLevel, max: toLevel}}
+                                        barPxWidth={15}
+                                        barPxHeight={15}
+                                        skewDeg={0}/>
+                                </div>
                             </div>
-                            <SkillBar maxLevel={maxLevel} level={fromLevel} range={{min: toLevel, max: toLevel}} barPxWidth={15} barPxHeight={15} skewDeg={0}/>
-                        </div>
-                    ))
-                }
-            </div>
-            <div className={styles.ArmorAugments}>
-                <h3 className={styles.SectionHeader}>Augments</h3>
-                {
-                    augmentsApplied.map((a) => (
-                        <ul className={styles.AugmentRow}>
-                            <li><AugmentMessage {...a}/></li>
-                        </ul>
-                    ))
-                }
+                        ))
+                    }
+                </div>
+                <div className={styles.ArmorAugments}>
+                    <h3 className={styles.SectionHeader}>Augments</h3>
+                    {
+                        augmentsApplied.map((a) => (
+                            <ul className={styles.AugmentRow}>
+                                <li><AugmentMessage {...a}/></li>
+                            </ul>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     );
