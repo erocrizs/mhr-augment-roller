@@ -381,7 +381,7 @@ function AugmentPage({ setNames, skills }) {
                 disabled={!(armorPiece && valid) || loadingAugPool}/>
             { hasAugmentsToShow && (
                 <> 
-                    <p>Check out these randomized augments that fit your criteria:</p>
+                    <p>Check out these possible {augmentMode} augments that fit your criteria:</p>
                     <AugmentDisplayPanel augments={validAugments} baseArmorPiece={armorPiece} skills={skills}/> 
                 </>
             )}

@@ -39,6 +39,30 @@ function ChangeArrow({augmentedValue, baseValue}) {
     );
 }
 
+function AugmentMessage({ augment, data }) {
+    const { type, value } = augment;
+    const signValue = value < 0 ? '-' : '+';
+    const absValue = Math.abs(value);
+    const spanClassName = value < 0 ? styles.Negative : styles.Positive;
+
+    if (type.match(/^Defense[+-]$/)) {
+        return <><span className={spanClassName}>{signValue}{absValue}</span> defense</>;
+    }
+
+    if (type.match(/^\w+ res[+-]$/)) {
+        const element = type.match(/^(\w+) res[+-]$/)[1].toLowerCase();
+        return <><span className={spanClassName}>{signValue}{absValue}</span> {element} resistance</>;
+    }
+
+    if (type.match(/^Skill[+-]$/)) {
+        return <><span className={spanClassName}>{signValue}{absValue}</span> <b>{data.skillName}</b> skill point</>;
+    }
+
+    if (type === 'Slot+') {
+        return <><span className={spanClassName}>{signValue}{absValue}</span> decoration slot</>;
+    }
+}
+
 function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
     const [index, setIndex] = useState(0);
     const moveIndex = useCallback(
@@ -134,9 +158,9 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
                 <h3 className={styles.SectionHeader}>Augments</h3>
                 {
                     augmentsApplied.map((a) => (
-                        <div className={styles.AugmentRow}>
-                            {JSON.stringify(a)}
-                        </div>
+                        <ul className={styles.AugmentRow}>
+                            <li><AugmentMessage {...a}/></li>
+                        </ul>
                     ))
                 }
             </div>
