@@ -30,9 +30,9 @@ function ChangeArrow({augmentedValue, baseValue}) {
             <span className={styles.Value}>
                 {
                     change === 0 ? <>
-                        <b>{baseValue}</b>
+                        {baseValue}
                     </> : <>
-                        {baseValue} → <b>{augmentedValue}</b>
+                        <span className={changeClassName}>{augmentedValue}</span>
                     </>
                 }
             </span>
