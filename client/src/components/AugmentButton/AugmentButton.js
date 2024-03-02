@@ -59,7 +59,7 @@ function AugmentButton({ mode, message, disabled, armorPiece, armorSet, augmentP
         {
             simulating
             ? <input type="button" value={`Cancel Simulation`} className={styles.Button} disabled={disabled} onClick={endSimulating}/>
-            : <input type="button" value={`Simulate ${mode} Augments`} className={styles.Button} disabled={disabled} onClick={startSimulating}/>
+            : <input type="button" value={`Simulate ${mode[0].toUpperCase()}${mode.substring(1)} Augments`} className={styles.Button} disabled={disabled} onClick={startSimulating}/>
         }
         <span className={messageClassName.filter(x => !!x).join(' ')} style={{backgroundSize: `${(100 * attempts)/maxAttempt}%`}}>{simulating ? `${attempts} / ${maxAttempt}` : message}</span>
     </div>;
