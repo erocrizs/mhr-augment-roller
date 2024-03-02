@@ -241,7 +241,7 @@ function AugmentPage({ setNames, skills }) {
     const successRate = validAugmentCount / maxAttempt;
     const resultMessage = !simulated ? null : (
         <>
-            <p>{validAugmentCount} passed out of {maxAttempt} attempts</p>
+            <p>{validAugmentCount.toLocaleString()} passed out of {maxAttempt.toLocaleString()} attempts</p>
             <p>Success Rate: {(successRate * 100).toLocaleString()} %</p>
             {
                 successRate > 0 && (<>
