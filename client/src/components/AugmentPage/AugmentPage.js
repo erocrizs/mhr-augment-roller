@@ -7,6 +7,7 @@ import DecoSlot from '../../library/decoSlot';
 import { augmentModes, simulateAugment } from '../../library/simulator';
 import AugmentDisplayPanel from '../AugmentDisplayPanel/AugmentDisplayPanel';
 import useInterval from '../../hooks/useInterval';
+import { fetchResource } from '../../hooks/useResource';
 
 const defaultResistanceChange = {
     defense: 'Any',
@@ -278,8 +279,7 @@ function AugmentPage({ setNames, skills }) {
 
         setLoadingSet(true);
         setSetDetails({name: setName});
-        const setDetailsResponse = await fetch(`api/sets/${setName}`);
-        const newSetDetails = await setDetailsResponse.json();
+        const newSetDetails = await fetchResource(`/api/sets/${setName}`);
 
         for (let piece of newSetDetails.pieces) {
             piece.decos = DecoSlot.parse(piece.decos);
@@ -295,8 +295,7 @@ function AugmentPage({ setNames, skills }) {
 
         setLoadingAugPool(true);
         setAugmentPool([]);
-        const augPoolResponse = await fetch(`api/augments/${newSetDetails?.augPool}`);
-        const newAugPool = await augPoolResponse.json();
+        const newAugPool = await fetchResource(`/api/augments/${newSetDetails?.augPool}`);
         setLoadingAugPool(false);
         setAugmentPool(newAugPool);
     }
