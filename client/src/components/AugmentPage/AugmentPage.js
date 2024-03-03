@@ -377,7 +377,7 @@ function AugmentPage({ setNames, skills }) {
                 setSimulating={onSimulateButtonClick}
                 maxAttempt={maxAttempt}
                 disabled={!(armorPiece && valid) || loadingAugPool}/>
-            { hasAugmentsToShow && (
+            { hasAugmentsToShow && !simulating && (
                 <> 
                     <p>Check out these possible {augmentMode} augments that fit your criteria:</p>
                     <AugmentDisplayPanel augments={validAugments} baseArmorPiece={armorPiece} skills={skills}/> 
