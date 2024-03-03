@@ -2,6 +2,15 @@ import React, { useCallback, useState } from 'react';
 import styles from './AugmentDisplayPanel.module.css';
 import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
 import SkillBar from '../SkillBar/SkillBar';
+import { DefenseIcon, DragonIcon, FireIcon, IceIcon, ThunderIcon, WaterIcon } from '../ResistanceIcon/ResistanceIcon';
+
+const resistIconMap = {
+    fire: FireIcon,
+    water: WaterIcon,
+    thunder: ThunderIcon,
+    ice: IceIcon,
+    dragon: DragonIcon
+};
 
 function generateAugmentTitle(skillsDiff, decosDiff) {
     const messages = skillsDiff.filter(({fromLevel, toLevel}) => fromLevel !== toLevel)
@@ -50,12 +59,13 @@ function AugmentMessage({ augment, data }) {
     const spanClassName = value < 0 ? styles.Negative : styles.Positive;
 
     if (type.match(/^Defense[+-]$/)) {
-        return <><span className={spanClassName}>{signValue}{absValue}</span> defense</>;
+        return <><span className={spanClassName}>{signValue}{absValue}</span> <DefenseIcon size={15}/> defense</>;
     }
 
     if (type.match(/^\w+ res[+-]$/)) {
         const element = type.match(/^(\w+) res[+-]$/)[1].toLowerCase();
-        return <><span className={spanClassName}>{signValue}{absValue}</span> {element} resistance</>;
+        const ResistIcon = resistIconMap[element];
+        return <><span className={spanClassName}>{signValue}{absValue}</span> <ResistIcon size={15}/> {element} resistance</>;
     }
 
     if (type.match(/^Skill[+-]$/)) {
@@ -114,7 +124,7 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
             <h2 className={styles.TitleRow}>{generateAugmentTitle(skillsDiff, decosDiff)}</h2>
             <div className={styles.AugmentBody}>
                 <div className={styles.ArmorStats}>
-                    <h3 className={styles.SectionHeader}>Armor Stats</h3>
+                    <h3 className={styles.SectionHeader}>Stats</h3>
                     <div className={styles.StatRow}>
                         <span className={styles.Label}>Slots</span>
                         <DecoSlotBlock decoList={baseArmorPiece.decos}
@@ -124,32 +134,38 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
                         }</span>
                     </div>
                     <div className={styles.StatRow}>
+                        <DefenseIcon size={20}/>
                         <span className={styles.Label}>Defense</span>
                         <ChangeArrow augmentedValue={augmentedArmorPiece.defense} baseValue={baseArmorPiece.defense}/>
                     </div>
                     <div className={styles.StatRow}>
+                        <FireIcon size={20}/>
                         <span className={styles.Label}>Fire Resist</span>
                         <ChangeArrow augmentedValue={augmentedArmorPiece.fireRes} baseValue={baseArmorPiece.fireRes}/>
                     </div>
                     <div className={styles.StatRow}>
+                        <WaterIcon size={20}/>
                         <span className={styles.Label}>Water Resist</span>
                         <ChangeArrow augmentedValue={augmentedArmorPiece.waterRes} baseValue={baseArmorPiece.waterRes}/>
                     </div>
                     <div className={styles.StatRow}>
+                        <ThunderIcon size={20}/>
                         <span className={styles.Label}>Thunder Resist</span>
                         <ChangeArrow augmentedValue={augmentedArmorPiece.thunderRes} baseValue={baseArmorPiece.thunderRes}/>
                     </div>
                     <div className={styles.StatRow}>
+                        <IceIcon size={20}/>
                         <span className={styles.Label}>Ice Resist</span>
                         <ChangeArrow augmentedValue={augmentedArmorPiece.iceRes} baseValue={baseArmorPiece.iceRes}/>
                     </div>
                     <div className={styles.StatRow}>
+                        <DragonIcon size={20}/>
                         <span className={styles.Label}>Dragon Resist</span>
                         <ChangeArrow augmentedValue={augmentedArmorPiece.dragonRes} baseValue={baseArmorPiece.dragonRes}/>
                     </div>
                 </div>
                 <div className={styles.ArmorSkills}>
-                    <h3 className={styles.SectionHeader}>Armor Skills</h3>
+                    <h3 className={styles.SectionHeader}>Skills</h3>
                     {
                         skillsDiff.map(({name, maxLevel, fromLevel, toLevel}) => (
                             <div className={styles.SkillRow} key={name}>
