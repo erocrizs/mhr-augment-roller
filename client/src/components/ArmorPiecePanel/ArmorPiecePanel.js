@@ -5,10 +5,11 @@ import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
 import NumberDial from '../NumberDial/NumberDial';
 import SkillRange from '../SkillRange/SkillRange';
 import SearchableSelect from '../SearchableSelect/SearchableSelect';
+import { DefenseIcon, DragonIcon, FireIcon, IceIcon, ThunderIcon, WaterIcon } from '../ResistanceIcon/ResistanceIcon';
 
 const resistanceDialOptions = ['Any', 'Increase', 'Maintain', 'Decrease'];
 
-function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, resistanceKey, label, disabled }) {
+function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, resistanceKey, label, disabled, icon }) {
     const onChangeCallback = useCallback((value) => {
         setResistanceChanges({
             ...resistanceChanges,
@@ -18,6 +19,7 @@ function ResistanceRow({ armorPiece, resistanceChanges, setResistanceChanges, re
 
     return (
         <div className={styles.ResistanceCell}>
+            {icon}
             <span className={styles.ResistanceLabel}>{label}</span>
             <span className={styles.ResistanceValue}>{(armorPiece && armorPiece[resistanceKey]) ?? '?'}</span>
             <OptionDial
@@ -90,7 +92,7 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
             <h2 className={styles.NameRow}>{armorPiece?.name ?? '???'}</h2>
             <div className={styles.Panel}>
                 <section className={styles.ArmorStats}>
-                    <h3>Skills</h3>
+                    <h3>Stats</h3>
                     <div className={styles.SlotRow}>
                         <span className={styles.SlotLabel}>Slots</span>
                         <DecoSlotBlock decoList={armorPiece?.decos ?? [0, 0, 0]}
@@ -104,36 +106,42 @@ function ArmorPiecePanel({ armorPiece, resistanceChanges, setResistanceChanges, 
                             className={styles.SlotDial}/>
                     </div>
                     <ResistanceRow  resistanceKey="defense"
+                        icon={<DefenseIcon size={20}/>}
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
                         disabled={disabled}
                         label="Defense"/>
                     <ResistanceRow resistanceKey="fireRes"
+                        icon={<FireIcon size={20}/>}
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
                         disabled={disabled}
                         label="Fire Resist"/>
                     <ResistanceRow resistanceKey="waterRes"
+                        icon={<WaterIcon size={20}/>}
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
                         disabled={disabled}
                         label="Water Resist"/>
                     <ResistanceRow resistanceKey="thunderRes"
+                        icon={<ThunderIcon size={20}/>}
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
                         disabled={disabled}
                         label="Thunder Resist"/>
                     <ResistanceRow resistanceKey="iceRes"
+                        icon={<IceIcon size={20}/>}
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}
                         disabled={disabled}
                         label="Ice Resist"/>
                     <ResistanceRow resistanceKey="dragonRes"
+                        icon={<DragonIcon size={20}/>}
                         armorPiece={armorPiece}
                         resistanceChanges={resistanceChanges}
                         setResistanceChanges={setResistanceChanges}

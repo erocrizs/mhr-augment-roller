@@ -1,11 +1,13 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import ArmorPiecePanel from '../ArmorPiecePanel/ArmorPiecePanel';
 import SearchableSelect from '../SearchableSelect/SearchableSelect';
 import styles from './AugmentPage.module.css';
 import AugmentButton from '../AugmentButton/AugmentButton';
 import DecoSlot from '../../library/decoSlot';
-import { augmentModes } from '../../library/simulator';
+import { augmentModes, simulateAugment } from '../../library/simulator';
 import AugmentDisplayPanel from '../AugmentDisplayPanel/AugmentDisplayPanel';
+import useInterval from '../../hooks/useInterval';
+import { fetchResource } from '../../hooks/useResource';
 
 const defaultResistanceChange = {
     defense: 'Any',
@@ -28,6 +30,7 @@ const modeSpecificVerifier = {
 const maxAugments = 7;
 const maxSkills = 5;
 const maxAttempt = 100_000;
+const attemptBulkSize = 100;
 
 function verifyAugmentCriteria(armorPiece, changes, mode) {
     if (!armorPiece) {
@@ -165,20 +168,105 @@ function AugmentPage({ setNames, skills }) {
     const [resistanceChanges, setResistanceChanges] = useState(defaultResistanceChange);
     const [skillChanges, setSkillChanges] = useState([]);
     const [augmentMode, setAugmentMode] = useState(augmentModes.DEFAULT);
+    const simulationAttempts = useRef(0);
     const [validAugments, setValidAugments] = useState([]);
-    const [simulating, setSimulating] = useState(false);
     const [simulated, setSimulated] = useState(false);
     const [validAugmentCount, setValidAugmentCount] = useState(0);
-    const hasAugmentsToShow = simulated && validAugments.length > 0;
 
     const getPieceName = useCallback(piece => piece.name, []);
+
+    const { valid, message: validationMessage } = verifyAugmentCriteria(
+        armorPiece,
+        {
+            slotChange,
+            skillChanges,
+            resistanceChanges,
+        },
+        augmentMode,
+    );
+
+    const simulateAugments = useCallback(() => {
+        if (simulationAttempts.current >= maxAttempt) {
+            return false;
+        }
+
+        const bulkSize = Math.min(attemptBulkSize, maxAttempt - simulationAttempts.current);
+        const validBulkAugments = [];
+        for(let i = 0; i < bulkSize; i++) {
+            const augment = simulateAugment(
+                armorPiece,
+                augmentPool,
+                setDetails.budget,
+                skills,
+                augmentMode
+            );
+            const fitsCriteria = checkAugmentVsCriteria(
+                armorPiece,
+                augment.augmentedArmorPiece,
+                {
+                    slotChange,
+                    resistanceChanges,
+                    skillChanges
+                }
+            );
+
+            if (fitsCriteria) {
+                validBulkAugments.push(augment);
+            }
+        }
+        simulationAttempts.current += bulkSize;
+        setValidAugmentCount(c => c + validBulkAugments.length);
+        setValidAugments(v => [
+            ...v,
+            ...validBulkAugments.slice(0, 10 - v.length)
+        ]);
+    }, [armorPiece, augmentMode, augmentPool, resistanceChanges, setDetails?.budget, skillChanges, skills, slotChange]);
+
+    const {
+        isRunning: simulating,
+        startInterval,
+        endInterval
+    } = useInterval(simulateAugments, 0);
+
+    const doneSimulating = simulated && !simulating;
+    const hasAugmentsToShow = doneSimulating && validAugments.length > 0;
+    const successRate = validAugmentCount / maxAttempt;
+    const resultMessage = !doneSimulating ? null : (
+        <>
+            <p>{validAugmentCount.toLocaleString()} passed out of {simulationAttempts.current.toLocaleString()} attempts</p>
+            <p>Success Rate: {(successRate * 100).toLocaleString()} %</p>
+            {
+                successRate > 0 && (<>
+                    {successRate < 0.50 && <p>Roll {Math.max(1, Math.ceil(Math.log(1 - 0.50) / Math.log(1 - successRate))).toLocaleString()} times for 50% success.</p>}
+                    {successRate < 0.75 && <p>Roll {Math.max(1, Math.ceil(Math.log(1 - 0.75) / Math.log(1 - successRate))).toLocaleString()} times for 75% success.</p>}
+                    {successRate < 0.95 && <p>Roll {Math.max(1, Math.ceil(Math.log(1 - 0.95) / Math.log(1 - successRate))).toLocaleString()} times for 95% success.</p>}
+                </>)
+            }
+        </>
+    );
+
+    const startSimulation = useCallback(() => {
+        simulationAttempts.current = 0;
+        setSimulated(true);
+        setValidAugmentCount(0);
+        setValidAugments([]);
+        startInterval();
+    }, [startInterval]);
+
+    const endSimulation = useCallback(() => {
+        simulationAttempts.current = 0;
+        setSimulated(false);
+        setValidAugmentCount(0);
+        setValidAugments([]);
+        endInterval();
+    }, [endInterval]);
 
     async function updateSet(setName) {
         if (setDetails?.name === setName) {
             return;
         }
 
-        setSimulated(false);
+        endSimulation();
         setArmorPiece(null);
         setSlotChange(defaultSlotChange);
         setResistanceChanges(defaultResistanceChange);
@@ -191,8 +279,7 @@ function AugmentPage({ setNames, skills }) {
 
         setLoadingSet(true);
         setSetDetails({name: setName});
-        const setDetailsResponse = await fetch(`api/sets/${setName}`);
-        const newSetDetails = await setDetailsResponse.json();
+        const newSetDetails = await fetchResource(`/api/sets/${setName}`);
 
         for (let piece of newSetDetails.pieces) {
             piece.decos = DecoSlot.parse(piece.decos);
@@ -208,14 +295,13 @@ function AugmentPage({ setNames, skills }) {
 
         setLoadingAugPool(true);
         setAugmentPool([]);
-        const augPoolResponse = await fetch(`api/augments/${newSetDetails?.augPool}`);
-        const newAugPool = await augPoolResponse.json();
+        const newAugPool = await fetchResource(`/api/augments/${newSetDetails?.augPool}`);
         setLoadingAugPool(false);
         setAugmentPool(newAugPool);
     }
 
     function updatePiece(newArmorPiece) {
-        setSimulated(false);
+        endSimulation();
         setArmorPiece(newArmorPiece);
         setSlotChange(defaultSlotChange);
         setResistanceChanges(defaultResistanceChange);
@@ -227,77 +313,6 @@ function AugmentPage({ setNames, skills }) {
             }
         })) ?? []);
     }
-
-    const { valid, message: validationMessage } = verifyAugmentCriteria(
-        armorPiece,
-        {
-            slotChange,
-            skillChanges,
-            resistanceChanges,
-        },
-        augmentMode,
-    );
-
-    const successRate = validAugmentCount / maxAttempt;
-    const resultMessage = !simulated ? null : (
-        <>
-            <p>{validAugmentCount} passed out of {maxAttempt} attempts</p>
-            <p>Success Rate: {(successRate * 100).toLocaleString()} %</p>
-            {
-                successRate > 0 && (
-                    <p>
-                        Roll {Math.max(1, Math.ceil(Math.log(1 - 0.50) / Math.log(1 - successRate)))}x for 50% success,{' '}
-                        {Math.max(1, Math.ceil(Math.log(1 - 0.75) / Math.log(1 - successRate)))}x for 75% success,
-                        and {Math.max(1, Math.ceil(Math.log(1 - 0.95) / Math.log(1 - successRate)))}x for 95% success.
-                    </p>
-                )
-            }
-        </>
-    );
-
-    const onValidAugment = useCallback(augment => {
-        const fitsCriteria = checkAugmentVsCriteria(
-            armorPiece,
-            augment.augmentedArmorPiece,
-            {
-                slotChange,
-                resistanceChanges,
-                skillChanges
-            }
-        );
-
-        if (!fitsCriteria) {
-            return;
-        }
-
-        setValidAugmentCount(c => c + 1);
-        setValidAugments(v => {
-            if (v.length < 10) {
-                return [...v, augment];
-            }
-
-            return v;
-        });
-    }, [armorPiece, resistanceChanges, skillChanges, slotChange]);
-
-    const onCancelAugment = useCallback(() => {
-        setSimulated(false);
-        setValidAugmentCount(0);
-        setValidAugments([]);
-    }, []);
-
-    const onSimulateButtonClick = useCallback((newSimulating) => {
-        if (newSimulating !== simulating) {
-            if (simulating) {
-                setSimulated(true);
-            }
-            else {
-                setValidAugmentCount(0);
-                setValidAugments([]);
-            }
-            setSimulating(newSimulating);
-        }
-    }, [simulating]);
 
     return (
         <div className={styles.AugmentPage}>
@@ -329,7 +344,7 @@ function AugmentPage({ setNames, skills }) {
                     {Object.values(augmentModes).map(
                         mode => <span key={mode} onClick={() => {
                             if (!simulating) {
-                                setSimulated(false);
+                                endSimulation();
                                 setAugmentMode(mode);
                             }
                         }} className={styles.AugmentModeButton}>
@@ -338,7 +353,7 @@ function AugmentPage({ setNames, skills }) {
                                 value={mode}
                                 disabled={simulating}
                                 onChange={() => {
-                                    setSimulated(false);
+                                    endSimulation();
                                     setAugmentMode(mode);
                                 }}/>
                             <label className={mode === augmentMode ? styles.SelectedMode : ''}>
@@ -352,34 +367,31 @@ function AugmentPage({ setNames, skills }) {
                 armorPiece={armorPiece}
                 slotChange={slotChange}
                 setSlotChange={v => {
-                    setSimulated(false);
+                    endSimulation();
                     setSlotChange(v);
                 }}
                 resistanceChanges={resistanceChanges}
                 setResistanceChanges={v => {
-                    setSimulated(false);
+                    endSimulation();
                     setResistanceChanges(v);
                 }}
                 skills={skills}
                 skillChanges={skillChanges}
                 disabled={simulating}
                 setSkillChanges={v => {
-                    setSimulated(false);
+                    endSimulation();
                     setSkillChanges(v);
                 }}/>
-            <AugmentButton mode={augmentMode}
-                message={resultMessage ?? validationMessage}
-                armorPiece={armorPiece}
-                armorSet={setDetails}
-                augmentPool={augmentPool}
-                skills={skills}
-                onValidAugment={onValidAugment}
-                onCancel={onCancelAugment}
-                simulating={simulating}
-                setSimulating={onSimulateButtonClick}
+            <AugmentButton
+                attempts={simulationAttempts.current}
                 maxAttempt={maxAttempt}
+                mode={augmentMode}
+                message={resultMessage ?? validationMessage}
+                simulating={simulating}
+                startSimulation={startSimulation}
+                endSimulation={endSimulation}
                 disabled={!(armorPiece && valid) || loadingAugPool}/>
-            { hasAugmentsToShow && (
+            { hasAugmentsToShow && !simulating && (
                 <> 
                     <p>Check out these possible {augmentMode} augments that fit your criteria:</p>
                     <AugmentDisplayPanel augments={validAugments} baseArmorPiece={armorPiece} skills={skills}/> 

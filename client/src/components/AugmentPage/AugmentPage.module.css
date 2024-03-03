@@ -3,8 +3,6 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    
-    margin-bottom: 150px;
 }
 
 .EquipmentRow {
@@ -58,8 +56,9 @@
 
 @media (min-width: 700px) {
     .AugmentPage {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 90px;
+        padding-right: 90px;
+        padding-bottom: 90px;
     }
 
     .EquipmentRow .EquipmentSelectGroup {

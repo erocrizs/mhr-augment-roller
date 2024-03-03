@@ -142,18 +142,12 @@
 .AugmentBody {
     display: grid;
     grid-template-columns: repeat(1, 280px);
-    column-gap: 40px;
-    row-gap: 10px;
+    row-gap: 40px;
+    column-gap: 80px;
 }
 
 @media (min-width: 900px) {
     .AugmentBody {
         grid-template-columns: repeat(2, 280px);
-    }
-}
-
-@media (min-width: 1200px) {
-    .AugmentBody {
-        grid-template-columns: repeat(3, 280px);
     }
 }

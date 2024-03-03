@@ -56,15 +56,7 @@ input[type="radio"]:checked {
     background-color: var(--highlight-color);
 }
 
-#root {
-    border-bottom: 100px solid transparent;
-}
-
 @media (min-width: 700px) {
-    #root {
-        border-bottom: 0px;
-    }
-
     body {
         background-image: linear-gradient(
         to bottom, transparent, #222222

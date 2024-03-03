@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-async function fetchResource(path) {
-    const response = await fetch(path);
+export async function fetchResource(path) {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_DOMAIN}${path}`);
     const data = await response.json();
     return data;
 }
