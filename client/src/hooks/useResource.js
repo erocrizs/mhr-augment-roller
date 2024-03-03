@@ -10,7 +10,7 @@ export function useResource(path, defaultValue) {
     const [resource, setResource] = useState(defaultValue);
 
     useEffect(() => {
-        fetchResource(path).then(setResource);
+        fetchResource(`${process.env.REACT_APP_BACKEND_DOMAIN}${path}`).then(setResource);
     }, [path]);
 
     return resource;
