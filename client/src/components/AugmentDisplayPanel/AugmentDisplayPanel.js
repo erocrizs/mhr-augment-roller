@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import styles from './AugmentDisplayPanel.module.css';
 import DecoSlotBlock from '../DecoSlotBlock/DecoSlotBlock';
 import SkillBar from '../SkillBar/SkillBar';
@@ -77,10 +77,17 @@ function AugmentMessage({ augment, data }) {
     }
 }
 
+const swipeMinDistance = 50;
+const swipeMaxDurationMs = 500;
+
 function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
+    const touchStartPosition = useRef(null);
+    const touchEndPosition = useRef(null);
+    const touchStartTime = useRef(0);
+
     const [index, setIndex] = useState(0);
     const moveIndex = useCallback(
-        change => setIndex(i => Math.max(0, Math.min(i + change, augments.length))),
+        change => setIndex(i => Math.max(0, Math.min(i + change, augments.length - 1))),
         [augments.length]
     );
     const { augmentedArmorPiece, augmentsApplied } = augments[index];
@@ -106,8 +113,37 @@ function AugmentDisplayPanel({ augments, baseArmorPiece, skills }) {
         });
     }
 
+    // swipe handling
+    const onTouchStart = useCallback(e => {
+        touchEndPosition.current = null;
+        touchStartPosition.current = e.targetTouches[0].clientX;
+        touchStartTime.current = Date.now();
+    }, []);
+
+    const onTouchMove = useCallback(e => {
+        touchEndPosition.current = e.targetTouches[0].clientX;
+    }, []);
+
+    const onTouchEnd = useCallback(e => {
+        const touchEndTime = Date.now();
+        const touchDuration = touchEndTime - touchStartTime.current;
+        if (!touchStartPosition.current || !touchEndPosition.current || touchDuration > swipeMaxDurationMs) {
+            return;
+        }
+
+        const swipeDistance = touchEndPosition.current - touchStartPosition.current;
+        if (swipeDistance > swipeMinDistance) {
+            // Right swipe
+            moveIndex(-1);
+        }
+        else if (swipeDistance < -swipeMinDistance) {
+            // Left swipe
+            moveIndex(1);
+        }
+    }, [moveIndex]);
+
     return (
-        <div className={styles.AugmentDisplayPanel}>
+        <div className={styles.AugmentDisplayPanel} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
             <div className={styles.IndexDial}>
                 <button className={styles.DialButton} onClick={() => moveIndex(-1)} disabled={index <= 0}>
                     <span className={styles.LeftTriangle}/>
