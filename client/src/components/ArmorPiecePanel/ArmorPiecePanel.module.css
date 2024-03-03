@@ -87,7 +87,7 @@
         max-width: none;
         display: grid;
         grid-template-columns: repeat(2, 400px);
-        gap: 40px;
+        gap: 100px;
     }
 }
 
